@@ -30,5 +30,6 @@ No guidelines yet, apart from the overall comments that
 
 ### To whom do I talk? ###
 
-Owner of the BitBucket repo is Graeme Costin; when this app reaches releasable stage
-it will most likely be an open source freeware app provided by Wycliffe Bible Translators.
+Graeme Costin	graeme_costin@wycliffe.org.au
+Erik Brommers	erik_brommers@sil.org
+Bruce Waters		bruce_waters@sil.org
