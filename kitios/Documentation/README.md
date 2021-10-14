@@ -28,5 +28,7 @@
 ### To whom do I talk? ###
 
 Graeme Costin	graeme_costin@wycliffe.org.au
+
 Erik Brommers	erik_brommers@sil.org
+
 Bruce Waters	bruce_waters@sil.org
