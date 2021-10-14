@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/verseitemlayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E1E1E1">
+
+    <Button
+        android:id="@+id/btn_popover"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_margin="0dp"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="#FFFFFF"
+        android:padding="2sp"
+        android:text="Popover"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_verseitem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="#FFFFFF"
+        android:clickable="true"
+        android:cursorVisible="true"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:isScrollContainer="true"
+        android:maxLines="10"
+        android:minLines="1"
+        android:padding="1dp"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:text="verseitem"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textIsSelectable="true"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_popover" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_verseitem" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Key It</string>
+    <string name="KIT_logo_descr">Key It logo</string>
+    <string name="hintBibleName">Bible Name</string>
+    <string name="startWork">Go</string>
+    <string name="txt_splash">Key It helps you keyboard\nScripture for use with Adapt It</string>
+    <string name="txt_bk_prompt">Choose Book</string>
+    <string name="txt_ch_prompt">Choose Chapter</string>
+    <string name="nm_chapter">Chapter</string>
+    <string name="nm_psalm">Psalm</string>
+    <string name="btn_books_txt"><![CDATA[< Books]]></string>
+    <string name="btn_setup_txt"><![CDATA[< Setup]]></string>
+    <string name="btn_tochapters"><![CDATA[< Chapters]]></string>
+    <string name="txt_ed_prompt">Edit Chapter</string>
+    <string name="publication_menuitem">Pub</string>
+    <string name="export_usfm_menuitem">Exp</string>
+    <string name="txt_usfm">TextView</string>
+</resources>
