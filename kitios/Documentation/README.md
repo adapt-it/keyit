@@ -1,16 +1,14 @@
 # README #
 
-### What is this repository for? ###
+### What is this kitios repository for? ###
 
 * Development of Key It as an iOS app
 
 ### How do I get set up? ###
 
-* Get Xcode 11.4 or later
+* Get Xcode 12 or later
 
-* Set up the necessary account for BitBucket (get details from Graeme Costin)
-
-* Use Xcode's version control to clone the repo from BitBucket, and open the project.
+* Use Xcode's version control to clone the repo from github.com/adapt-it/keyit/kitios, and open the Xcode project.
 
 * The SQLite database that is included with iOS is used.
 
@@ -32,4 +30,4 @@ No guidelines yet, apart from the overall comments that
 
 Graeme Costin	graeme_costin@wycliffe.org.au
 Erik Brommers	erik_brommers@sil.org
-Bruce Waters		bruce_waters@sil.org
+Bruce Waters	bruce_waters@sil.org
