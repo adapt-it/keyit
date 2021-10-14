@@ -13,9 +13,7 @@
 
 ### Contribution guidelines ###
 
-* On iOS all interaction with SQLite is kept inside the file KITDAO.swift - the rest of the
-  code is straight Swift code.
-  On Android all interaction with SQLite is kept inside the file KITDAO.kt - the rest of the
+* On Android all interaction with SQLite is kept inside the file KITDAO.kt - the rest of the
   code is straight Kotlin code.
 
 * Comments about the software design are contained in comments in the source code.
@@ -26,8 +24,10 @@
 	
 	KIT Design Document Popovers.ods
 
-### Whom do I talk to? ###
+### To whom do I talk? ###
 
-* Owner of this Github repo is Graeme Costin.
+Graeme Costin	graeme_costin@wycliffe.org.au
 
-* This app will be released as an open source freeware app provided by Wycliffe Bible Translators.
+Erik Brommers	erik_brommers@sil.org
+
+Bruce Waters	bruce_waters@sil.org
