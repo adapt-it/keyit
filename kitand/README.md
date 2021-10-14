@@ -4,17 +4,19 @@
 
 * Development of Key It as an Android app
 
-### How do I get set up? ###
+### How do I get set up for Android? ###
 
-* Get Android Studio 4 or later 
-* Get the URL for the repository from Graeme Costin
-* Use Android Studio's Source Control to clone the repo from Github, and open the kitand project
-* The SQLite database that is included in recent Android systems is used.
-
+* Get Android Studio Arctic Fox
+* Use Android Studio's Git menu to clone the repo from Github, and open the file build.gradle
+* The SQLite database that is included in recent Android systems is used. The kitand sources
+  use Android's SQLiteOpenHelper and its API to deal with the SQLite database.
 
 ### Contribution guidelines ###
 
-* All interaction with SQLite is kept inside the file KITDAO.kt - the rest of the code is straight Kotlin code.
+* On iOS all interaction with SQLite is kept inside the file KITDAO.swift - the rest of the
+  code is straight Swift code.
+  On Android all interaction with SQLite is kept inside the file KITDAO.kt - the rest of the
+  code is straight Kotlin code.
 
 * Comments about the software design are contained in comments in the source code.
 
