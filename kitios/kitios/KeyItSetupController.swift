@@ -59,6 +59,18 @@ class KeyItSetupController: UIViewController, UITextFieldDelegate {
 		} catch {
 			appDelegate.ReportError(DBR_BibErr)		// Bible record could not be read
 		}
+		if #available(iOS 13, *) {
+			// Use UINavigationBarAppearance
+			let standard = UINavigationBarAppearance()
+			standard.configureWithOpaqueBackground()
+			standard.backgroundColor = .systemGray6
+			standard.titleTextAttributes = [.foregroundColor: UIColor.red]
+			UINavigationBar.appearance().standardAppearance = standard
+			UINavigationBar.appearance().scrollEdgeAppearance = standard
+		} else {
+			// Use UINavigationBar.appearance() for any changes from the Storyboard settings
+		}
+
 	}
 
 	//	Once the user has dealt with the Setup scene, subsequent launches skip the Setup scene.
