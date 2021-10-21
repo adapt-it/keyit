@@ -67,10 +67,16 @@ class KeyItSetupController: UIViewController, UITextFieldDelegate {
 			standard.titleTextAttributes = [.foregroundColor: UIColor.red]
 			UINavigationBar.appearance().standardAppearance = standard
 			UINavigationBar.appearance().scrollEdgeAppearance = standard
+//	For KIT it is not necessary to set compactScrollEdgeAppearance so omit this code
+//			if #available(iOS 15.0, *) {
+//				UINavigationBar.appearance().compactScrollEdgeAppearance = standard
+//			} else {
+//				// Fallback on earlier versions
+//			}
 		} else {
 			// Use UINavigationBar.appearance() for any changes from the Storyboard settings
+			// For KIT the settings put into the storyboard suffice so nothing to do here
 		}
-
 	}
 
 	//	Once the user has dealt with the Setup scene, subsequent launches skip the Setup scene.

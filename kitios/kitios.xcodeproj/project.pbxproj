@@ -12,6 +12,7 @@
 		C81D380C2702C46600080D8A /* contributors.md in Resources */ = {isa = PBXBuildFile; fileRef = C81D380A2702C46600080D8A /* contributors.md */; };
 		C81DC9F2246D01A500553D89 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C81DC9F1246D01A400553D89 /* README.md */; };
 		C857BCE72553B8A900476AB6 /* PubItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C857BCE62553B8A900476AB6 /* PubItemsViewController.swift */; };
+		C87EFE8D272124E6001AA35D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87EFE8C272124E6001AA35D /* SceneDelegate.swift */; };
 		C8AA65DF245FCE0E00B456AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA65DE245FCE0E00B456AE /* AppDelegate.swift */; };
 		C8AA65E6245FCE0E00B456AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8AA65E4245FCE0E00B456AE /* Main.storyboard */; };
 		C8AA65E8245FCE2F00B456AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8AA65E7245FCE2F00B456AE /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		C85A83B926AADE2400512C04 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C85A83BA26AADF7E00512C04 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/Main.strings"; sourceTree = "<group>"; };
 		C85A83BB26AADF7E00512C04 /* en-AU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-AU"; path = "en-AU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		C87EFE8C272124E6001AA35D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C8AA65DB245FCE0E00B456AE /* kitios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kitios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8AA65DE245FCE0E00B456AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8AA65E5245FCE0E00B456AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C801D67F25EE474F00C3DF2D /* UIPubItemCell.swift */,
 				C8AA660F245FEBAD00B456AE /* ExportChapterViewController.swift */,
 				C8AA65DE245FCE0E00B456AE /* AppDelegate.swift */,
+				C87EFE8C272124E6001AA35D /* SceneDelegate.swift */,
 				C8AA65E4245FCE0E00B456AE /* Main.storyboard */,
 				C8AA65E7245FCE2F00B456AE /* Assets.xcassets */,
 				C8AA65E9245FCE2F00B456AE /* LaunchScreen.storyboard */,
@@ -243,6 +246,7 @@
 				C8EB83D4256B242300D25EC4 /* VIMenu.swift in Sources */,
 				C8AA6614245FEBAE00B456AE /* KeyItSetupController.swift in Sources */,
 				C8AA6604245FE78300B456AE /* Book.swift in Sources */,
+				C87EFE8D272124E6001AA35D /* SceneDelegate.swift in Sources */,
 				C8AA6616245FEBAE00B456AE /* ChaptersTableViewController.swift in Sources */,
 				C857BCE72553B8A900476AB6 /* PubItemsViewController.swift in Sources */,
 				C8AA6606245FE78300B456AE /* Bible.swift in Sources */,

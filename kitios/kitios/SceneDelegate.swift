@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  kitios
 //
-//  Created by Graeme Costin on 4/5/20.
-//  Copyright © 2020 Costin Computing Services. All rights reserved.
+//  Created automatically by Xcode on 4/5/20.
+//  Not currently customised for kitios - so far (21OCT21) there is no need to.
 //
 
 import UIKit

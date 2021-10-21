@@ -323,6 +323,22 @@ SWIFT_CLASS("_TtC6kitios22PubItemsViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIScene;
+@class UISceneSession;
+@class UISceneConnectionOptions;
+
+SWIFT_CLASS("_TtC6kitios13SceneDelegate") SWIFT_AVAILABILITY(ios,introduced=13.0)
+@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+@property (nonatomic, strong) UIWindow * _Nullable window;
+- (void)scene:(UIScene * _Nonnull)scene willConnectToSession:(UISceneSession * _Nonnull)session options:(UISceneConnectionOptions * _Nonnull)connectionOptions;
+- (void)sceneDidDisconnect:(UIScene * _Nonnull)scene;
+- (void)sceneDidBecomeActive:(UIScene * _Nonnull)scene;
+- (void)sceneWillResignActive:(UIScene * _Nonnull)scene;
+- (void)sceneWillEnterForeground:(UIScene * _Nonnull)scene;
+- (void)sceneDidEnterBackground:(UIScene * _Nonnull)scene;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIImageView;
 @class UILabel;
 
