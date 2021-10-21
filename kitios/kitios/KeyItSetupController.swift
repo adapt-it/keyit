@@ -9,6 +9,7 @@
 //	Once the name of the Bible has been set and its Books records have been created
 //	this scene is bypassed on subsequent launches.
 //
+//
 //	GDLC 20OCT21 Added use of UINavigationBarAppearance class when running on iOS13 and later
 //	GDLC 30JUL21 No need for local var bInst
 //	GDLC 27JUL21 Added better error reporting
