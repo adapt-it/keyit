@@ -4,17 +4,17 @@
 
 * Development of Key It as an Android app
 
-### How do I get set up? ###
+### How do I get set up for Android? ###
 
-* Get Android Studio 4 or later 
-* Get the URL for the repository from Graeme Costin
-* Use Android Studio's Source Control to clone the repo from Github, and open the kitand project
-* The SQLite database that is included in recent Android systems is used.
-
+* Get Android Studio Arctic Fox
+* Use Android Studio's Git menu to clone the repo from Github, and open the file build.gradle
+* The SQLite database that is included in recent Android systems is used. The kitand sources
+  use Android's SQLiteOpenHelper and its API to deal with the SQLite database.
 
 ### Contribution guidelines ###
 
-* All interaction with SQLite is kept inside the file KITDAO.kt - the rest of the code is straight Kotlin code.
+* On Android all interaction with SQLite is kept inside the file KITDAO.kt - the rest of the
+  code is straight Kotlin code.
 
 * Comments about the software design are contained in comments in the source code.
 
@@ -24,8 +24,10 @@
 	
 	KIT Design Document Popovers.ods
 
-### Whom do I talk to? ###
+### To whom do I talk? ###
 
-* Owner of this Github repo is Graeme Costin.
+Graeme Costin	graeme_costin@wycliffe.org.au
 
-* This app will be released as an open source freeware app provided by Wycliffe Bible Translators.
+Erik Brommers	erik_brommers@sil.org
+
+Bruce Waters	bruce_waters@sil.org

@@ -1,22 +1,23 @@
 # README #
 
-### What is this repository for? ###
+### What is this kitios repository for? ###
 
 * Development of Key It as an iOS app
 
-### How do I get set up? ###
+### How do I get set up for iOS? ###
 
-* Get Xcode 11.4 or later
-
-* Set up the necessary account for BitBucket (get details from Graeme Costin)
-
-* Use Xcode's version control to clone the repo from BitBucket, and open the project.
-
-* The SQLite database that is included with iOS is used.
+* Get Xcode 12 
+* Use Xcode's Source Control to clone the repo from Github, and open the Xcode project
+* The SQLite database that is included in recent iOS systems is used. The Xcode project
+  includes settings to use the bridge from Swift to C for source code that calls the
+  C API of SQLite.
 
 ### Contribution guidelines ###
 
-No guidelines yet, apart from the overall comments that
+* On iOS all interaction with SQLite is kept inside the file KITDAO.swift - the rest of the
+  code is straight Swift code.
+
+* Comments about the software design are contained in comments in the source code.
 
 * There are two design documents that describe and give some details of the app design:
 
@@ -24,12 +25,10 @@ No guidelines yet, apart from the overall comments that
 	
 	KIT Design Document Popovers.ods
 
-* all interaction with SQLite is kept inside the file KITDAO.swift - the rest of the code is straight Swift code; and
-
-* comments about the software design are contained in comments in the source code.
-
 ### To whom do I talk? ###
 
 Graeme Costin	graeme_costin@wycliffe.org.au
+
 Erik Brommers	erik_brommers@sil.org
-Bruce Waters		bruce_waters@sil.org
+
+Bruce Waters	bruce_waters@sil.org
