@@ -13,7 +13,7 @@ $dark-grey: #333333;
 $light-grey: #eeeeee;
 
 #container {
-	max-width: 700px;
+	max-width: 400px;
 	background-color: light-grey;
 	font-size: xx-large;
 }
@@ -28,7 +28,6 @@ $light-grey: #eeeeee;
 	font-size: 24px;
 }
 #container #bodytext p {
-	color: #D7D4D4;
 	padding-top: 2px;
 }
 #container #table {
