@@ -13,7 +13,7 @@ $dark-grey: #333333;
 $light-grey: #eeeeee;
 
 #container {
-	width: 100%;
+	width: 50%;
 	background-color: light-grey;
 	font-size: xx-large;
 }
