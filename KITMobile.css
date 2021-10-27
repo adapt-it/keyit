@@ -32,6 +32,7 @@ $light-grey: #eeeeee;
 	padding-top: 5px;
 }
 #container #table {
+	color: dark-blue;
 	font-weight: bold;
 	font-size: 48px;
 }
