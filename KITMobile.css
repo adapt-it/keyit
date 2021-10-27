@@ -18,12 +18,14 @@ $light-grey: #eeeeee;
 	font-size: xx-large;
 }
 #container #header {
-	width: inherit;
+	max-width: 500px;
+	margin: auto;
 	text-align: center;
 	color: dark-blue;
 }
 #container #bodytext {
-	width: inherit;
+	max-width: 500px;
+	margin: auto;
 	text-align: center;
 	font-size: 30px;
 }
