@@ -15,12 +15,13 @@ $light-grey: #eeeeee;
 #container {
 	width: 100%;
 	background-color: #ffffff;
-	font-size: medium;
+	font-size: large;
 }
 #container #header {
 	min-height: 100px;
 	width: inherit;
 	text-align: center;
+	background-color: turquoise;
 	color: dark-blue;
 }
 #container #section1 {
