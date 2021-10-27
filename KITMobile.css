@@ -23,6 +23,12 @@ $light-grey: #eeeeee;
 	text-align: center;
 	color: dark-blue;
 }
+#container #bodytext {
+	min-height: 200px;
+	width: inherit;
+	text-align: center;
+	font-size: xx-large;
+}
 #container #section1 {
 	clear: both;
 	width: inherit;	
