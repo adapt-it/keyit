@@ -23,13 +23,9 @@ $light-grey: #eeeeee;
 	color: dark-blue;
 }
 #container #bodytext {
-	width: inherit;
+	width: 50%;
 	text-align: center;
 	font-size: xx-large;
-}
-#container #section1 {
-	clear: both;
-	width: inherit;	
 }
 #container #footer {
 	text-align: center;
