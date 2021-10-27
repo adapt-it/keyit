@@ -28,11 +28,12 @@ $light-grey: #eeeeee;
 	font-size: 24px;
 }
 #container #bodytext p {
-	padding-top: 2px;
+	color: #000000;
+	padding-top: 5px;
 }
 #container #table {
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 48px;
 }
 #container #footer {
 	text-align: center;
