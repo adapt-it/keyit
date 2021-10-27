@@ -15,7 +15,7 @@ $light-grey: #eeeeee;
 #container {
 	width: 100%;
 	background-color: turquoise;
-	font-size: 30px;
+	font-size: xx-large;
 }
 #container #header {
 	min-height: 100px;
