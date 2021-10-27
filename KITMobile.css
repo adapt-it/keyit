@@ -25,7 +25,15 @@ $light-grey: #eeeeee;
 #container #bodytext {
 	width: inherit;
 	text-align: center;
-	font-size: xx-large;
+	font-size: 24px;
+}
+#container #bodytext p {
+	color: #D7D4D4;
+	padding-top: 2px;
+}
+#container #table {
+	font-weight: bold;
+	font-size: 24px;
 }
 #container #footer {
 	text-align: center;
