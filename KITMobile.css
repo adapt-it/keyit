@@ -15,7 +15,7 @@ $light-grey: #eeeeee;
 #container {
 	max-width: 500px;
 	background-color: light-grey;
-	font-size: large;
+	font-size: x-large;
 }
 #container #header {
 	max-width: 500px;
