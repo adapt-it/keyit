@@ -13,9 +13,8 @@ $dark-grey: #333333;
 $light-grey: #eeeeee;
 
 #container {
-	max-width: 500px;
 	background-color: light-grey;
-	font-size: x-large;
+	font-size: xx-large;
 }
 #container #header {
 	max-width: 500px;
