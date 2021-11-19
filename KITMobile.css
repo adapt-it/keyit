@@ -17,7 +17,6 @@ $light-grey: #eeeeee;
 	font-size: xx-large;
 }
 #container #header {
-	max-width: 500px;
 	margin: auto;
 	text-align: center;
 	color: dark-blue;
