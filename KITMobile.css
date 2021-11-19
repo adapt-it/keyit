@@ -23,7 +23,6 @@ $light-grey: #eeeeee;
 	color: dark-blue;
 }
 #container #bodytext {
-	max-width: 500px;
 	margin: auto;
 	text-align: left;
 	font-size: 40px;
