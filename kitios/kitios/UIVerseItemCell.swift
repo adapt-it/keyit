@@ -80,18 +80,32 @@ class UIVerseItemCell: UITableViewCell, UITextViewDelegate {
 		itText.isSelectable = selectable
 		itText.isEditable = editable
 		if active {
-			itText.backgroundColor = UIColor.init(red: 0.95, green: 0.90, blue: 1.0, alpha: 1.0)
+			if #available(iOS 13.0, *) {
+				itText.backgroundColor = UIColor.systemGray6
+			} else {
+				itText.backgroundColor = UIColor.init(red: 0.95, green: 0.90, blue: 1.0, alpha: 1.0)
+			}
 			itText.becomeFirstResponder()
 		} else {
-			itText.backgroundColor = UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+			if #available(iOS 13.0, *) {
+				itText.backgroundColor = UIColor.systemGray3
+			} else {
+				itText.backgroundColor = UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+			}
 // GDLC 25AUG21 Testing what happens if this resign is omitted
+//	It has been commented out for months with no ill effects, so delete it!
 //			itText.resignFirstResponder()
 		}
 	}
 
 	func setCellDeselected() {
 		// Don't change isSelectable or isEditable, just reset background colour
-		itText.backgroundColor = UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+		// GDLC Added colour settings to suit Light and Dark modes
+		if #available(iOS 13.0, *) {
+			itText.backgroundColor = UIColor.systemGray3
+		} else {
+			itText.backgroundColor = UIColor.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+		}
 	}
 }
 

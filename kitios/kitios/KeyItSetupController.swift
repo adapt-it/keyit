@@ -77,7 +77,7 @@ class KeyItSetupController: UIViewController, UITextFieldDelegate {
 //			}
 		} else {
 			// Use UINavigationBar.appearance() for any changes from the Storyboard settings
-			// For KIT the settings put into the storyboard suffice so nothing to do here
+			UINavigationBar.appearance().backgroundColor = UIColor.white
 		}
 	}
 

@@ -28,6 +28,9 @@ class PubItemsViewController: UITableViewController {
 		chInst = appDelegate.chapInst
 		popMenu = chInst!.curPoMenu
 		VTVCtrl = appDelegate.VTVCtrl
+		if #available(iOS 13.0, *) {
+			self.popoverPresentationController?.backgroundColor = UIColor.systemGray
+		}
     }
 
     // MARK: - Table view data source
@@ -44,6 +47,10 @@ class PubItemsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UIPubItemCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "popOverCell", for: indexPath) as! UIPubItemCell
+// GDLC this made no difference to popover menu colour!
+//		if #available(iOS 13.0, *) {
+//			cell.backgroundColor = UIColor.systemGray6
+//		}
 		let pMenu = popMenu!.VIMenuItems[indexPath.row]
 		let pImage = cell.poImage
 		let textLabel = cell.poLabel
@@ -53,19 +60,20 @@ class PubItemsViewController: UITableViewController {
 //		textLabel!.minimumScaleFactor = 9
 		switch pMenu.VIMenuIcon {
 		case "C":
-			cell.textLabel!.textColor = .blue
+// GDLC These text colors made no difference so delete them?
+//			cell.textLabel!.textColor = UIColor.systemBlue
 			pImage?.image = UIImage(named: "CreatePubItem.png")
 		case "D":
-			cell.textLabel!.textColor = .red
+//			cell.textLabel!.textColor = UIColor.systemRed
 			pImage?.image = UIImage(named: "DeletePubItem.png")
 		case "B":
-			cell.textLabel!.textColor = .purple
+//			cell.textLabel!.textColor = UIColor.systemPurple
 			pImage?.image = UIImage(named: "BridgePubItem.png")
 		case "U":
-			cell.textLabel!.textColor = .purple
+//			cell.textLabel!.textColor = UIColor.systemPurple
 			pImage?.image = UIImage(named: "UnbridgePubItem.png")
 		default:
-			cell.textLabel!.textColor = .blue
+//			cell.textLabel!.textColor = UIColor.systemBlue
 			pImage?.image = UIImage(named: "CreatePubItem.png")
 		}
         return cell

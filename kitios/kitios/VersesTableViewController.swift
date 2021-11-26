@@ -252,6 +252,7 @@ class VersesTableViewController: UITableViewController, UITextViewDelegate {
 		var anchorRect    = tableView.convert(showRect, to: tableView)
 		anchorRect        = tableView.convert(anchorRect, to: view)
 		let vc: PubItemsViewController = self.storyboard?.instantiateViewController(withIdentifier: "PubItemsViewController") as! PubItemsViewController
+//		vc.view.backgroundColor = UIColor.systemYellow	// BUT this does not work!
 		// Preferred Size
 		let screenWidth = UIScreen.main.bounds.size.width
 		let poMenuWidth = chInst?.curPoMenu?.menuLabelLength ?? 120
@@ -268,6 +269,7 @@ class VersesTableViewController: UITableViewController, UITextViewDelegate {
 		popover.sourceView = view
 		popover.sourceRect = anchorRect
 		popover.permittedArrowDirections = .left
+//		popover.backgroundColor = UIColor.systemYellow	// BUT this does not work!
 		present(vc, animated: true, completion:nil)
 	}
 
