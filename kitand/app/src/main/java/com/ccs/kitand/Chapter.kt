@@ -555,9 +555,10 @@ class Chapter(
 				try {
 					dao.itemsDeleteRec(nextItem.itID)
 					numIt = numIt - 1
+					currIt = prevItID
 					// Update the database Chapter record so that the original VerseItem becomes the current item
 					try {
-						dao.chaptersUpdateRecPub (chID, numIt, prevItID, vsNum)
+						dao.chaptersUpdateRecPub (chID, numIt, currIt, vsNum)
 					} catch (e:SQLiteUpdateRecExc) {
 						throw SQLiteUpdateRecExc(e.message + "\ndeleteParagraphCont()")
 					}
@@ -747,7 +748,8 @@ class Chapter(
 		// Get the most recent BridgeItems record for this verse
 		BridItems.clear()
 		try {
-			dao.bridgeGetRecs(BibItems[currItOfst].itID, this)
+//			dao.bridgeGetRecs(BibItems[currItOfst].itID, this)
+			dao.bridgeGetRecs(currIt, this)
 			// The most recent bridge item will be the last in the list
 			val curBridItem = BridItems.last()
 			// Create the verse record being removed from the bridge
@@ -773,7 +775,8 @@ class Chapter(
 						// Update the database Chapter record so that the bridge head VerseItem remains the current item
 						// and the number of items is updated
 						try {
-							dao.chaptersUpdateRecPub (chID, numIt, BibItems[currItOfst].itID, vsNum)
+//							dao.chaptersUpdateRecPub (chID, numIt, BibItems[currItOfst].itID, vsNum)
+							dao.chaptersUpdateRecPub (chID, numIt, currIt, vsNum)
 						} catch (e:SQLiteUpdateRecExc) {
 							throw SQLiteUpdateRecExc(e.message + "\nunbridgeLastVerse()")
 						}

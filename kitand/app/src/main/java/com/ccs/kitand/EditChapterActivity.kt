@@ -129,6 +129,8 @@ class EditChapterActivity : AppCompatActivity() {
 					layout_height = recyclerView.getMeasuredHeight()
 					(viewManager as LinearLayoutManager).scrollToPositionWithOffset(currItOfst, layout_height/2)
 					viewAdapter?.selectCurrItem(currItOfst)
+// Doesn't work to make soft keyboard appear
+//					getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN)
 					return true
 				}
 				return false

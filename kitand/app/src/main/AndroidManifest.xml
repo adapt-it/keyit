@@ -25,6 +25,7 @@
         <activity
             android:name=".EditChapterActivity"
             android:parentActivityName=".ChooseChapterActivity"
+            android:windowSoftInputMode="stateAlwaysVisible"
             android:screenOrientation="sensor" />
         <activity
             android:name=".ExportChapterActivity"

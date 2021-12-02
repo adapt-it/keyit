@@ -4,5 +4,9 @@
 <dict>
 	<key>application-identifier</key>
 	<string>YMY6HM7S6S.CCS.kitios</string>
+	<key>keychain-access-groups</key>
+	<array>
+		<string>YMY6HM7S6S.CCS.kitios</string>
+	</array>
 </dict>
 </plist>
