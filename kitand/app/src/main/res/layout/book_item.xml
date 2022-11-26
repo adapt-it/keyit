@@ -4,26 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/book_item"
     android:layout_width="match_parent"
-    android:layout_height="33dp">
+    android:layout_height="35dp">
 
-    <TextView
+    <EditText
         android:id="@+id/bookName"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:textSize="20sp"
+        android:inputType="none"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/bookInfo"
         android:layout_width="175dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:importantForAccessibility="no"
         android:textAlignment="viewEnd"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bookName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookInfo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

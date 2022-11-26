@@ -114,6 +114,7 @@ class ChaptersTableViewController: UITableViewController {
 			}
 			numVsItText += "(" + String(chapter.numVs) + " vs)"
 		}
+		numVsItText += " >"
 		cell.detailTextLabel?.text = numVsItText
 		if chapter.itRCr {
 			cell.textLabel!.textColor = UIColor.systemBlue

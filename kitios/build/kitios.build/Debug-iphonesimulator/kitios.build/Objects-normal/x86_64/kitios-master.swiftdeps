@@ -1,12 +1,12 @@
-version: "Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)"
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
 options: "ed2ef92c0c0d1bc5c13680217551a4c9d7533af5bf52979e786e806eb89ed773"
-build_start_time: [1637903241, 232735157]
-build_end_time: [1637903242, 536636829]
+build_start_time: [1643167068, 511704921]
+build_end_time: [1643167212, 833114147]
 inputs:
-  "/Users/graemecostin/keyit/kitios/kitios/AppDelegate.swift": [1637815488, 23773431]
-  "/Users/graemecostin/keyit/kitios/kitios/BooksTableViewController.swift": [1637820456, 730578660]
-  "/Users/graemecostin/keyit/kitios/kitios/ChaptersTableViewController.swift": [1637820456, 696166515]
-  "/Users/graemecostin/keyit/kitios/kitios/ExportChapterViewController.swift": [1637815488, 43080329]
+  "/Users/graemecostin/keyit/kitios/kitios/AppDelegate.swift": [1642677304, 747430562]
+  "/Users/graemecostin/keyit/kitios/kitios/BooksTableViewController.swift": [1643086506, 830905199]
+  "/Users/graemecostin/keyit/kitios/kitios/ChaptersTableViewController.swift": [1642590245, 816426038]
+  "/Users/graemecostin/keyit/kitios/kitios/ExportChapterViewController.swift": [1641537313, 166101932]
   "/Users/graemecostin/keyit/kitios/kitios/KeyItSetupController.swift": [1637903232, 621881008]
   "/Users/graemecostin/keyit/kitios/kitios/PubItemsViewController.swift": [1637882529, 604999542]
   "/Users/graemecostin/keyit/kitios/kitios/SceneDelegate.swift": [1637815488, 44513702]

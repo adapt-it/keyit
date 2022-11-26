@@ -13,6 +13,7 @@
     <string name="btn_tochapters"><![CDATA[< Chapters]]></string>
     <string name="txt_ed_prompt">Edit Chapter</string>
     <string name="publication_menuitem">Pub</string>
-    <string name="export_usfm_menuitem">Exp</string>
+    <string name="export_usfm_menuitem">USFM</string>
+    <string name="toAIM_usfm_menuitem">Export</string>
     <string name="txt_usfm">TextView</string>
 </resources>

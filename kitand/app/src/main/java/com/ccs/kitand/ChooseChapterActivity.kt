@@ -35,6 +35,7 @@ class ChooseChapterActivity : AppCompatActivity() {
 	lateinit var ch_name: String
 	lateinit var ps_name: String
 	lateinit var chOrPsName: String
+	var bInst: Bible? = null
 	var bkInst: Book? = null
 
 	// tableRow of the selected Chapter
@@ -62,6 +63,7 @@ class ChooseChapterActivity : AppCompatActivity() {
 		lst_chapters = findViewById(R.id.lst_chapters)
 		ch_name = KITApp.res.getString(R.string.nm_chapter)
 		ps_name = KITApp.res.getString(R.string.nm_psalm)
+		bInst = KITApp.bibInst
 		bkInst = KITApp.bkInst
 		if (bkInst!!.bkID == 19) {
 			chOrPsName = ps_name
@@ -73,8 +75,8 @@ class ChooseChapterActivity : AppCompatActivity() {
 	override fun onStart() {
 		super.onStart()
 
-		val bibName = KITApp.bibInst.bibName
-		bkInst = KITApp.bkInst
+//		bkInst = KITApp.bkInst
+		val bibName = bInst!!.bibName
 		val actionBarTitle = "Key It  -  " + bibName
 		if (suppActionBar != null) {
 			suppActionBar?.setDisplayShowTitleEnabled(true)

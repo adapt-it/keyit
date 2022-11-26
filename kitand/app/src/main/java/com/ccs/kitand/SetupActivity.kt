@@ -67,9 +67,10 @@ class SetupActivity : AppCompatActivity() {
             bkRCr = cv.getAsBoolean("3")
             currBook = cv.getAsInteger("4")
 
-            //	Once the user has dealt with the Setup scene, subsequent launches skip this step.
-            //	Any future editing of the name of the Bible will be done in a separate scene.
-            if (bkRCr) {
+            //	Once the user has dealt with the Setup scene, subsequent launches skip the Setup scene,
+            //	but the Navigation stack can come back here for any future editing of the name of
+            //	the Bible and any other matters that may be included here.
+            if (bkRCr && KITApp.bibInst == null) {
                 // Create the instance of Bible and
                 // ensure rest of app has access to the Bible instance
                 try {

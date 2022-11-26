@@ -23,7 +23,8 @@ class Book(
 	var chapRCr: Boolean,	// chapRecsCreated INTEGER
 	var numChap: Int,		// numChaps INTEGER
 	var curChID: Int,		// currChID INTEGER (the ID assigned by SQLite when the Chapter was created)
-	var curChNum: Int		// currChNum INTEGER (the Chapter number)
+	var curChNum: Int,		// currChNum INTEGER (the Chapter number)
+	var dirty: Boolean		// true if the Book name has been edited but not yet saved to the database
 ) {
 
 	// The following variables and data structures have lifetimes of the Book object
@@ -160,7 +161,7 @@ class Book(
 
 		// Update the entry in BibBooks[] for the current Book to show that its Chapter records have been created
 		// and that its number of Chapters has been found
-		bibInst.setBibBooksNumChap(numChap)
+		bibInst!!.setBibBooksNumChap(numChap)	// 10OCT22 correct fix???
 	}
 
 	// dao.readChaptersRecs() calls appendChapterToArray() for each row it reads from the kdb.sqlite database
@@ -220,7 +221,7 @@ class Book(
 		try {
 			dao.booksUpdateRec(bibID, bkID, chapRCr, numChap, curChID, curChNum)
 			// Update the curChID and curChNum for this book in BibBooks[] in bibInst
-			bibInst.setBibBooksCurChap (curChID, curChNum)
+			bibInst!!.setBibBooksCurChap (curChID, curChNum)	// 10OCT22 correct fix???
 
 			// If a different chapter is being selected allow any previous in-memory instance of Chapter
 			// to be garbage collected and create a new Chapter instance.

@@ -917,7 +917,8 @@ class Chapter(
 	}
 
 	fun calcUSFMExportText() : String {
-		var USFM = "\\id " + bkInst!!.bkCode + " " + bibInst.bibName + "\n\\c " + chNum.toString()
+		var USFM = "\\id " + bkInst!!.bkCode + " " + bibInst!!.bibName + "\n"
+		USFM = USFM + "\\h " + bkInst!!.bkName + "\n\\c " + chNum.toString()
 		for (i in 0 until numIt) {		// 0 until numIt includes zero but does not include numIt
 			var s: String
 			var vn: String

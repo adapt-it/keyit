@@ -32,6 +32,7 @@ class EditChapterActivity : AppCompatActivity() {
 	private var viewAdapter: VerseItemAdapter? = null
 	private var viewManager: RecyclerView.LayoutManager? = null
 	lateinit var edChAct: EditChapterActivity
+	var bInst: Bible? = null
 	var bkInst: Book? = null
 
 	var currItOfst = -1	// -1 until one of the VerseItems is chosen for editing;
@@ -58,6 +59,7 @@ class EditChapterActivity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_edit_chapter)
+		bInst = KITApp.bibInst
 		bkInst = KITApp.bkInst
 
 		edChAct = this
@@ -97,7 +99,7 @@ class EditChapterActivity : AppCompatActivity() {
 
 	override fun onStart() {
 		super.onStart()
-		val bibName = KITApp.bibInst.bibName
+		val bibName = bInst!!.bibName
 		val chNumStr = KITApp.chInst!!.chNum.toString()
 		val prompt = if (bkInst!!.bkID == 19)
 			"Edit " + ps_name + " " + chNumStr else
@@ -151,7 +153,8 @@ class EditChapterActivity : AppCompatActivity() {
 		super.onDestroy()
 	}
 
-	// The Android system's Action Bar calls this function when the user taps the Back button
+	// The Android system's Action Bar calls this function when the user taps
+	// either the Back button or the USFM button
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {
 		when (item.getItemId()) {
 			android.R.id.home -> onBackPressed()

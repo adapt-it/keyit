@@ -43,11 +43,24 @@ class BooksTableViewController: UITableViewController {
 		bInst = appDelegate.bibInst
 		navigationItem.title = bInst!.bibName
 		navigationItem.prompt = "Choose book"
-// GDLC 16NOV21 added to handle both Light and Dark mode
+// GDLC 10DEC21 added from KeyItSetupController to handle both Light and Dark mode
+// On first launch this code is executed in KeyItSetupController, but on subsequent
+// launches KeyItSetupController is frequently bypassed, so this code needs to be
+// here as well.
 		if #available(iOS 13.0, *) {
-			let appearance = UINavigationBarAppearance()
-			appearance.backgroundColor = UIColor.systemBackground
-			UINavigationBar.appearance().standardAppearance = appearance
+			// Use UINavigationBarAppearance
+			let standard = UINavigationBarAppearance()
+			standard.configureWithOpaqueBackground()
+			standard.backgroundColor = .systemGray6
+			standard.titleTextAttributes = [.foregroundColor: UIColor.red]
+			UINavigationBar.appearance().standardAppearance = standard
+			UINavigationBar.appearance().scrollEdgeAppearance = standard
+//	For KIT it is not necessary to set compactScrollEdgeAppearance so omit this code
+//			if #available(iOS 15.0, *) {
+//				UINavigationBar.appearance().compactScrollEdgeAppearance = standard
+//			} else {
+//				// Fallback on earlier versions
+//			}
 		}
 	}
 	
@@ -119,6 +132,7 @@ class BooksTableViewController: UITableViewController {
 			}
 			numChText += "(" + String(numCh) + " chs)"
 		}
+		numChText += " >"
 		cell.detailTextLabel?.text = numChText
 		return cell
 	}
@@ -143,6 +157,7 @@ class BooksTableViewController: UITableViewController {
 			}
 			numChText += "(" + String(nChap) + " chs)"
 		}
+		numChText += " >"
 		cell!.detailTextLabel?.text = numChText
 		cell!.textLabel!.textColor = UIColor.systemBlue
 		cell!.detailTextLabel!.textColor = UIColor.systemBlue

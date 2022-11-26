@@ -1,6 +1,8 @@
 package com.ccs.kitand
 
 import android.graphics.Color
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,19 +42,35 @@ class BookAdapter (
 				bookInfo = "Ch " + curChNum.toString() + " "
 			}
 			bookInfo += "(" + numCh.toString() + " chs)"
-			// Set info text
-			holder.bookInfo.setText(bookInfo)
-			holder.bookInfo.setTextColor(Color.parseColor("#0000CD"))
 		}
+		// Set info text
+		bookInfo = bookInfo + " >"
+		holder.bookInfo.setText(bookInfo)
+		holder.bookInfo.setTextColor(Color.parseColor("#0000CD"))
 
-		// Listeners for Book selected
+/*		// Listeners for Book selected or Book name edit
 		holder.bookName.setOnClickListener(View.OnClickListener {
-			// A BookCell icon has been tapped
+			// A BookCell bookName has been tapped
 			val bookOfst = holder.getAdapterPosition()
-			chBkAct.chooseBookAction(bookOfst)
+//			chBkAct.chooseBookAction(bookOfst)
+		})*/
+		holder.bookName.addTextChangedListener(object : TextWatcher {
+			override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+//				TODO("Not yet implemented")
+			}
+			override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+//				TODO("Not yet implemented")
+			}
+			override fun afterTextChanged(s: Editable) {
+				// Set dirty flag for this bookName
+				holder.dirty = true
+				val bookOfst = holder.getAdapterPosition()
+				BibBooks[bookOfst].dirty = true
+				BibBooks[bookOfst].bkName = s.toString()
+			}
 		})
 		holder.bookInfo.setOnClickListener(View.OnClickListener {
-			// A PopupCell menu command has been tapped
+			// A BookCell bookInfo has been tapped
 			val bookOfst = holder.getAdapterPosition()
 			chBkAct.chooseBookAction(bookOfst)
 		})
@@ -66,5 +84,6 @@ class BookAdapter (
 	inner class BookCell(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		var bookName: TextView = itemView.findViewById(R.id.bookName)
 		var bookInfo: TextView = itemView.findViewById(R.id.bookInfo)
+		var dirty: Boolean = false /* initialised to false, set true when bookName is edited */
 	}
 }

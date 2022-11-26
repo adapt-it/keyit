@@ -1,18 +1,18 @@
 
 /* Class = "UITableViewController"; title = "Select Chapter"; ObjectID = "0tX-1T-6fC"; */
-"0tX-1T-6fC.title" = "Select Chapter";
+"0tX-1T-6fC.title" = "Choisir le Chapitre";
 
 /* Class = "UITableViewController"; title = "Edit Chapter"; ObjectID = "3Gc-YA-fTx"; */
-"3Gc-YA-fTx.title" = "Edit Chapter";
+"3Gc-YA-fTx.title" = "Modifier le Chapitre";
 
 /* Class = "UINavigationItem"; prompt = "Edit Chapter X of Y"; ObjectID = "5d7-3A-F7h"; */
-"5d7-3A-F7h.prompt" = "Edit Chapter X of Y";
+"5d7-3A-F7h.prompt" = "Modifier le Chapitre X du Y";
 
 /* Class = "UINavigationItem"; title = "Verses"; ObjectID = "5d7-3A-F7h"; */
-"5d7-3A-F7h.title" = "Verses";
+"5d7-3A-F7h.title" = "Versets";
 
 /* Class = "UILabel"; text = "Name of Bible"; ObjectID = "BPQ-Eb-UjN"; */
-"BPQ-Eb-UjN.text" = "Name of Bible";
+"BPQ-Eb-UjN.text" = "Nom de la Bible";
 
 /* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "BuF-Eh-6fZ"; */
 "BuF-Eh-6fZ.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
@@ -21,67 +21,67 @@
 "Dn9-p9-aZb.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "K9t-CU-7rM"; */
-"K9t-CU-7rM.normalTitle" = "Button";
+"K9t-CU-7rM.normalTitle" = "Bouton";
 
 /* Class = "UINavigationItem"; prompt = "Choose Book"; ObjectID = "MNH-Xf-pk2"; */
-"MNH-Xf-pk2.prompt" = "Choose Book";
+"MNH-Xf-pk2.prompt" = "Choisir le Livre";
 
 /* Class = "UINavigationItem"; title = "Books"; ObjectID = "MNH-Xf-pk2"; */
-"MNH-Xf-pk2.title" = "Books";
+"MNH-Xf-pk2.title" = "Livres";
 
 /* Class = "UIViewController"; title = "Key It Setup"; ObjectID = "Mq7-GK-ujF"; */
-"Mq7-GK-ujF.title" = "Key It Setup";
+"Mq7-GK-ujF.title" = "Key It Configuration";
 
 /* Class = "UIBarButtonItem"; title = "Verses"; ObjectID = "N2e-gi-xGW"; */
-"N2e-gi-xGW.title" = "Verses";
+"N2e-gi-xGW.title" = "Versets";
 
 /* Class = "UINavigationItem"; prompt = "Export Chapter X of Y"; ObjectID = "Osw-Ww-gsG"; */
-"Osw-Ww-gsG.prompt" = "Export Chapter X of Y";
+"Osw-Ww-gsG.prompt" = "Exporter Chapitre X du Y";
 
 /* Class = "UINavigationItem"; title = "Export Chapter"; ObjectID = "Osw-Ww-gsG"; */
-"Osw-Ww-gsG.title" = "Export Chapter";
+"Osw-Ww-gsG.title" = "Exporter Chapitre";
 
 /* Class = "UITableViewController"; title = "Select Book"; ObjectID = "XA6-hc-AsZ"; */
-"XA6-hc-AsZ.title" = "Select Book";
+"XA6-hc-AsZ.title" = "Choisir le Livre";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "a2W-tw-lfU"; */
-"a2W-tw-lfU.text" = "Title";
+"a2W-tw-lfU.text" = "Titre";
 
 /* Class = "UINavigationItem"; prompt = " Select Chapter of Current Book"; ObjectID = "cZn-Rt-I63"; */
-"cZn-Rt-I63.prompt" = " Select Chapter of Current Book";
+"cZn-Rt-I63.prompt" = "Choisir le Chapitre de ce Livre";
 
 /* Class = "UINavigationItem"; title = "Chapters"; ObjectID = "cZn-Rt-I63"; */
-"cZn-Rt-I63.title" = "Chapters";
+"cZn-Rt-I63.title" = "Chapitres";
 
 /* Class = "UINavigationController"; title = "KeyIt Navigation"; ObjectID = "ep7-s1-4F9"; */
 "ep7-s1-4F9.title" = "KeyIt Navigation";
 
 /* Class = "UIViewController"; title = "Export Chapter"; ObjectID = "f0e-bE-QQt"; */
-"f0e-bE-QQt.title" = "Export Chapter";
+"f0e-bE-QQt.title" = "Exporter Chapitre";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "iOq-h2-mrh"; */
-"iOq-h2-mrh.text" = "Label";
+"iOq-h2-mrh.text" = "Etiqueter";
 
 /* Class = "UIButton"; normalTitle = "Go"; ObjectID = "iZ4-c5-6ss"; */
-"iZ4-c5-6ss.normalTitle" = "Go";
+"iZ4-c5-6ss.normalTitle" = "Aller";
 
 /* Class = "UIBarButtonItem"; title = "Chapters"; ObjectID = "ocw-1f-9vP"; */
-"ocw-1f-9vP.title" = "Chapters";
+"ocw-1f-9vP.title" = "Chapitres";
 
 /* Class = "UITableViewController"; title = "PubItemsViewController"; ObjectID = "okg-SZ-zo5"; */
 "okg-SZ-zo5.title" = "PubItemsViewController";
 
 /* Class = "UIBarButtonItem"; title = "Books"; ObjectID = "ozY-1T-xD8"; */
-"ozY-1T-xD8.title" = "Books";
+"ozY-1T-xD8.title" = "Livres";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "uYK-uG-f6b"; */
-"uYK-uG-f6b.text" = "Title";
+"uYK-uG-f6b.text" = "Titre";
 
 /* Class = "UIBarButtonItem"; title = "Export"; ObjectID = "vxd-3g-ktB"; */
-"vxd-3g-ktB.title" = "Export";
+"vxd-3g-ktB.title" = "Exporter";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "wUm-nN-Ayi"; */
-"wUm-nN-Ayi.text" = "Detail";
+"wUm-nN-Ayi.text" = "Détail";
 
 /* Class = "UILabel"; text = "Detail"; ObjectID = "xO4-UF-hhv"; */
-"xO4-UF-hhv.text" = "Detail";
+"xO4-UF-hhv.text" = "Détail";

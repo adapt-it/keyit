@@ -2,6 +2,7 @@ package com.ccs.kitand
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.ViewTreeObserver
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
@@ -37,29 +38,34 @@ class ChooseBookActivity : AppCompatActivity()  {
 
 	var suppActionBar: ActionBar? = null
 	// By the time ChooseBookActivity is started the Bible instance will have been created
-	var bInst: Bible = KITApp.bibInst
+//	var bInst: Bible = KITApp.bibInst as Bible
+	var bInst: Bible? = null
 
 	// Layout height for calculating scrolling offset
 	var layout_height = 0
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-
 		setContentView(R.layout.activity_choosebook)
 
 		// Get access to the SupportActionBar
 		suppActionBar = getSupportActionBar()
 
+		// Provide a Back button
+		suppActionBar?.setDisplayHomeAsUpEnabled(true)
+
 		// Get references to layout widgets
 		txt_bk_prompt = findViewById(R.id.txt_bk_prompt)
 		lst_booklist = findViewById(R.id.lst_books)
+
+		bInst = KITApp.bibInst
 	}
 
 	override fun onStart() {
 		super.onStart()
 
-		val bibName = KITApp.bibInst.bibName
-		bInst = KITApp.bibInst
+		val bibName = bInst!!.bibName
+//		bInst = KITApp.bibInst
 
 		val actionBarTitle = "Key It  -  " + bibName
 		if (suppActionBar != null) {
@@ -71,13 +77,15 @@ class ChooseBookActivity : AppCompatActivity()  {
 	override fun onResume() {
 		super.onResume()
 		// Most launches will have a current Book and will go straight to it
-		letUserChooseBook = bInst.canChooseAnotherBook
-		if (!letUserChooseBook && bInst.currBk > 0) {
+		letUserChooseBook = bInst!!.canChooseAnotherBook
+		if (!letUserChooseBook && bInst!!.currBk > 0) {
 			try {
-				bInst.goCurrentBook()
+				// Ensure any edited Book names are saved
+				bInst!!.saveBookNames()
+				bInst!!.goCurrentBook()
 				// Creates an instance for the current Book (from kdb.sqlite)
 				// If the user comes back to ChooseBookActivity we need to let him choose again
-				bInst.canChooseAnotherBook = true
+				bInst!!.canChooseAnotherBook = true
 				// Go to the ChooseChapterActivity
 				val i = Intent(this, ChooseChapterActivity::class.java)
 				startActivity(i)
@@ -93,7 +101,7 @@ class ChooseBookActivity : AppCompatActivity()  {
 			// set up the Books list and wait for the user to choose a Book.
 			txt_bk_prompt.setText("Choose Book")
 			viewManager = LinearLayoutManager(this)
-			viewAdapter = BookAdapter(KITApp.bibInst.BibBooks, this) as BookAdapter
+			viewAdapter = BookAdapter(bInst!!.BibBooks, this) as BookAdapter
 			recyclerView = findViewById<RecyclerView>(R.id.lst_books).apply {
 				// use this setting to improve performance if you know that changes
 				// in content do not change the layout size of the RecyclerView
@@ -111,7 +119,7 @@ class ChooseBookActivity : AppCompatActivity()  {
 						recyclerView.viewTreeObserver.removeOnPreDrawListener(this)
 						// Get the height of the layout
 						layout_height = recyclerView.getMeasuredHeight()
-						(viewManager as LinearLayoutManager).scrollToPositionWithOffset(bInst.currBookOfst, layout_height/2)
+						(viewManager as LinearLayoutManager).scrollToPositionWithOffset(bInst!!.currBookOfst, layout_height/2)
 						return true
 					}
 					return false
@@ -120,15 +128,43 @@ class ChooseBookActivity : AppCompatActivity()  {
 		}
 	}
 
+	override fun onStop() {
+		// Ensure any edited Book names are saved
+		bInst!!.saveBookNames()
+		super.onStop()
+	}
+	override fun onOptionsItemSelected(item: MenuItem): Boolean {
+		when (item.getItemId()) {
+			android.R.id.home -> onBackPressed()
+		}
+		return true
+	}
+
+	override fun onBackPressed() {
+		goToSetup()
+	}
+
+	private fun goToSetup() {
+		// Ensure any edited Book names are saved
+		bInst!!.saveBookNames()
+		// Go to the ChooseBookActivity
+		val i = Intent(this, SetupActivity::class.java)
+		startActivity(i)
+		// Dispose of ChooseChapterActivity to reduce memory usage
+		finish()
+	}
+
 	fun chooseBookAction(position: Int) {
 		val bInst = KITApp.bibInst
-		val selectedBook = bInst.BibBooks[position]
+		val selectedBook = bInst!!.BibBooks[position]
 		// Set up the selected Book as the current Book (this updates kdb.sqlite with the currBook)
 		try {
-			bInst.setupCurrentBook(selectedBook)
+			// Ensure any edited Book names are saved
+			bInst!!.saveBookNames()
+			bInst!!.setupCurrentBook(selectedBook)
 			// Current Book is selected so go to ChooseChapterActivity
 			// If the user comes back to the Choose Book scene we need to let him choose again
-			bInst.canChooseAnotherBook = true
+			bInst!!.canChooseAnotherBook = true
 			// Go to the ChooseChapterActivity
 			val i = Intent(this, ChooseChapterActivity::class.java)
 			startActivity(i)
@@ -141,5 +177,9 @@ class ChooseBookActivity : AppCompatActivity()  {
 		} catch (e:SQLiteReadRecExc) {
 			KITApp.ReportError(DBR_ChaErr, e.message + "\nchooseBookAction()\nChooseBookActivity", this)
 		}
+	}
+
+	fun editBookName(position: Int) {
+		print("Editing Book name")
 	}
 }

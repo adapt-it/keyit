@@ -202,7 +202,6 @@ class KITDAO(
 		}
 	}
 
-
 	// This function needs an Integer parameter for the current Book
 	fun bibleUpdateCurrBook (currBk:Int) {
         this.db = this.getWritableDatabase()
@@ -214,7 +213,7 @@ class KITDAO(
 		}
 	}
 
-    //--------------------------------------------------------------------------------------------
+	//--------------------------------------------------------------------------------------------
     //	Books data table
 
     // The 66 records for the Books table need to be created and populated on the initial launch of the app
@@ -290,6 +289,19 @@ class KITDAO(
 		val rows = db.update(TAB_Books, cv, COL_BibleID + " = ? AND " + COL_BookID + " = ?", whArray)
         if (rows != 1) {
         	throw SQLiteUpdateRecExc("Cannot update record for Book $bkID in booksUpdateRec()")
+		}
+	}
+
+	// The Book name needs to be updated after it is edited.
+	// This function needs a String parameter for the Book Name
+	fun booksUpdateBookName (bibID:Int, bkID:Int, bookName:String) {
+		this.db = this.getWritableDatabase()
+		val cv = ContentValues()
+		cv.put(COL_BookName, bookName)
+		val whArray = arrayOf<String>(bibID.toString(), bkID.toString())
+		val rows = db.update(TAB_Books, cv, COL_BibleID + " = ? AND " + COL_BookID + " = ?", whArray)
+		if (rows != 1) {
+			throw SQLiteUpdateRecExc("Can't update in bibleUpdateBookName()")
 		}
 	}
 

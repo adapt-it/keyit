@@ -52,7 +52,8 @@ class Bible (
 		var chapRCr: Boolean,	// chapRecsCreated INTEGER
 		var numCh: Int,			// numChaps INTEGER
 		var curChID: Int,		// currChID INTEGER
-		var curChNum: Int		// currChNum INTEGER
+		var curChNum: Int,		// currChNum INTEGER
+		var dirty: Boolean		// true if the bookName has been edited but not yet saved
 
 	)	{
 		override fun toString(): String {
@@ -101,6 +102,18 @@ class Bible (
 				dao.readBooksRecs(this)
 			} catch (e: SQLiteReadRecExc) {
 				throw SQLiteReadRecExc(e.message + "\nBible.init()")
+			}
+		}
+	}
+
+	// This function should be called prior to sending the instance of Bible to the garbage collector
+	// It will save to kitdao any edited Book name that might be in the BibBooks[] array
+	fun saveBookNames() {
+		for (book in BibBooks) {
+			if (book.dirty) {
+				// save book.bkName to kitdao
+				dao.booksUpdateBookName(book.bibID, book.bkID, book.bkName)
+				book.dirty = false
 			}
 		}
 	}
@@ -174,7 +187,7 @@ class Bible (
 
 	fun appendBibBookToArray (bkID:Int, bibID:Int, bkCode:String, bkName:String,
 							chapRCr:Boolean, numCh:Int, curChID:Int, curChNum:Int) {
-		val bkRec = BibBook(bkID, bibID, bkCode, bkName, chapRCr, numCh, curChID, curChNum)
+		val bkRec = BibBook(bkID, bibID, bkCode, bkName, chapRCr, numCh, curChID, curChNum, false)
 		BibBooks.add(bkRec)
 	}
 
@@ -188,7 +201,7 @@ class Bible (
 
 		// create a Book instance for the currently selected book
 		try {
-			bookInst = Book(book.bkID, book.bibID, book.bkCode, book.bkName, book.chapRCr, book.numCh, book.curChID, book.curChNum)
+			bookInst = Book(book.bkID, book.bibID, book.bkCode, book.bkName, book.chapRCr, book.numCh, book.curChID, book.curChNum, book.dirty)
 			// keep a weak ref on KITApp
 			KITApp.bkInst = bookInst
 		} catch (e:SQLiteCreateRecExc) {
@@ -213,7 +226,7 @@ class Bible (
 
 			// create a Book instance for the currently selected book
 			try {
-				bookInst = Book(book.bkID, book.bibID, book.bkCode, book.bkName, book.chapRCr, book.numCh, book.curChID, book.curChNum)
+				bookInst = Book(book.bkID, book.bibID, book.bkCode, book.bkName, book.chapRCr, book.numCh, book.curChID, book.curChNum, book.dirty)
 			} catch (e:SQLiteCreateRecExc) {
 				throw SQLiteCreateRecExc(e.message + "\nsetupCurrentBook()")
 			} catch (e:SQLiteReadRecExc) {

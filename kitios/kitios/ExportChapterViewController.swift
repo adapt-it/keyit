@@ -19,6 +19,7 @@ class ExportChapterViewController: UIViewController {
 	var bInst: Bible?
 	weak var bkInst: Book?
 	weak var chInst: Chapter?
+	var USFMexp: String = ""
 	
 	// Get access to the AppDelegate
 	let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -36,7 +37,7 @@ class ExportChapterViewController: UIViewController {
 		navigationItem.prompt = "Export chapter " + String(chInst!.chNum) + " of " + bkInst!.bkName
 
 		// Generate the USFM text
-		let USFMexp = chInst!.calcUSFMExportText()
+		USFMexp = chInst!.calcUSFMExportText()
 		// Display it to the user
 		ExportUSFM.text = USFMexp
 		// Save it into the current Chapter record of kdb.sqlite
@@ -48,5 +49,11 @@ class ExportChapterViewController: UIViewController {
 		} catch {
 			appDelegate.ReportWarning(DBU_ChaUSFMErr)
 		}
+		// When a better method of sending to Adapt It Mobile is implemented this line will change
+		copyToClipboard()
     }
+	
+	func copyToClipboard() {
+		UIPasteboard.general.string = USFMexp
+	}
 }

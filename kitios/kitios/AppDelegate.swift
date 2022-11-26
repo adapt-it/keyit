@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 			// Once a Chapter of a Book is opened there will be a VersesTableViewController
 			// Weak ref; the strong ref is just itself, and the various references to it are weak refs
 
-	// May be used by the function ReportError()
+	// May be used by the function ReportError(); currently not used
 	var errorNum: Int = 0		// Error number to report to the developers; see list in ErrorNumbers.swift
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

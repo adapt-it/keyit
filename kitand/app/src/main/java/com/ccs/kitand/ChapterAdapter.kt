@@ -37,9 +37,11 @@ class ChapterAdapter (
 			if (curVsNum > 0) {
 				numVsItText = "Vs " + curVsNum.toString() + " "
 			}
-			numVsItText += "(" + bibChap.numVs.toString() + " vs)"
+			numVsItText += "(" + bibChap.numVs.toString() + " vs) >"
 			// Set colour of text
 			holder.chapInfo.setTextColor(Color.parseColor("#0000CD"))
+		} else {
+			numVsItText = numVsItText + " >"
 		}
 		holder.chapInfo.setText(numVsItText)
 
