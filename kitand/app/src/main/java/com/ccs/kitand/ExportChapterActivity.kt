@@ -124,6 +124,8 @@ class ExportChapterActivity : AppCompatActivity() {
 				putExtra(Intent.EXTRA_STREAM, contentUri)
 				type = "text/plain"
 			}
+			exportIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+			exportIntent.setDataAndType(contentUri, contentResolver.getType(contentUri))
 			startActivity(exportIntent)
 		} catch (e: Exception) {
 			e.printStackTrace()
