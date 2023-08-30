@@ -158,6 +158,7 @@ class KITDAO(
     // cv("3") = COL_BookRecsCr
     // cv("4") = COL_CurrentBook
 
+	// XXX Multiple Bibles
     fun bibleGetRec(): ContentValues {
         this.db = this.getReadableDatabase()
         val sql = "SELECT * FROM " + TAB_Bibles + " WHERE " + COL_BibleID + " = 1"
@@ -179,6 +180,7 @@ class KITDAO(
 	//	* to set the flag that indicates that the Books records have been created (on first launch)
 	//	* to change the current Book whenever the user selects a different Book to work on
 
+	// XXX Multiple Bibles
 	// This function needs a String parameter for the revised Bible name
 	fun bibleUpdateName(bibName:String) {
 		this.db = this.getWritableDatabase()
@@ -190,6 +192,7 @@ class KITDAO(
 		}
 	}
 
+	// XXX Multiple Bibles
 	// The bookRecsCreated flag starts as false and is changed to true during the first launch;
 	// it is never changed back to false, and so this function does not need any parameters.
 	fun bibleUpdateRecsCreated() {
@@ -202,6 +205,7 @@ class KITDAO(
 		}
 	}
 
+	// XXX Multiple Bibles
 	// This function needs an Integer parameter for the current Book
 	fun bibleUpdateCurrBook (currBk:Int) {
         this.db = this.getWritableDatabase()
@@ -242,6 +246,7 @@ class KITDAO(
     //
     //  Returns column values via the call back function appendBibBookToArray()
 
+	// XXX Multiple Bibles
     fun readBooksRecs(bibInst: Bible) {
         this.db = this.getReadableDatabase()
         val sql = "SELECT * FROM " + TAB_Books + " WHERE " + COLF_BibID + " = 1 ORDER BY " + COL_BookID
@@ -453,6 +458,7 @@ class KITDAO(
 	// The VerseItems records for the current Chapter need to be read in order to set up the scrolling display of
 	// VerseItem records that the user interacts with. These records need to be sorted in ascending order of itemOrder.
 
+	// TODO: The parameter Chapter is not used! Remove it?
 	fun readVerseItemsRecs (chap:Chapter) {
         this.db = this.getReadableDatabase()
         val sql1 = "SELECT itemID, chapterID, verseNumber, itemType, itemOrder, itemText, intSeq, isBridge, lastVsBridge FROM " + TAB_VerseItems
@@ -568,6 +574,7 @@ class KITDAO(
 	// following verse that is about to be restored. There may be more than one BridgeItems record
 	// for the current VerseItem; the one that will be used during the unbridging is the most recent one.
 
+	// TODO: The parameter Chapter is not used! Remove it?
 	fun bridgeGetRecs(itemID:Int, chInst:Chapter) {
 		this.db = this.getReadableDatabase()
 		val sql = "SELECT bridgeID, textCurrBridge, textExtraVerse FROM BridgeItems WHERE itemID = ?1 ORDER BY bridgeID;"

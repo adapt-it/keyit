@@ -59,23 +59,25 @@ class VerseItemAdapter(
 		// Customise the popover button title
 		var buttonText = ""
 		when (itemType) {
-		"Title" -> buttonText = "Main Title"
-		"Para", "ParaCont" -> {
-			buttonText = "Paragraph"
-		}
-		"ParlRef" -> buttonText = "Parallel Ref"
-		"VerseCont" -> buttonText = "Verse " + verseNo.toString() + " (cont)"
-		"Verse" -> {
-			if (BibItem.isBrg) {
-				buttonText = "Verses " + verseNo.toString() + "-" + BibItem.lvBrg.toString()
-			} else {
-				buttonText = "Verse " + verseNo.toString()
+			"Title" -> buttonText = "Main Title"
+			"ChapLabel" -> buttonText = "Chapter Label"
+			"ChapDesc" -> buttonText = "Chapter Description"
+			"Para", "ParaCont" -> {
+				buttonText = "Paragraph"
 			}
-		}
-		"InTitle" -> buttonText = "Intro Title"
-		"InSubj" -> buttonText = "Intro Heading"
-		"InPara" -> buttonText = "Intro Paragraph"
-		else -> buttonText = itemType
+			"ParlRef" -> buttonText = "Parallel Ref"
+			"VerseCont" -> buttonText = "Verse " + verseNo.toString() + " (cont)"
+			"Verse" -> {
+				if (BibItem.isBrg) {
+					buttonText = "Verses " + verseNo.toString() + "-" + BibItem.lvBrg.toString()
+				} else {
+					buttonText = "Verse " + verseNo.toString()
+				}
+			}
+			"InTitle" -> buttonText = "Intro Title"
+			"InSubj" -> buttonText = "Intro Heading"
+			"InPara" -> buttonText = "Intro Paragraph"
+			else -> buttonText = itemType
 		}
 		holder.popoverButton.setText(buttonText)
 		// Set the VerseItem text into the cell

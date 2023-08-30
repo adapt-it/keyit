@@ -4,19 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.10701438848920863" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/kitlogo_background.xml" value="0.2895" />
+        <entry key="app/src/main/res/drawable/popborder.xml" value="0.2895" />
         <entry key="app/src/main/res/layout/activity_choosebook.xml" value="0.24003623188405798" />
         <entry key="app/src/main/res/layout/activity_choosechapter.xml" value="0.3359375" />
         <entry key="app/src/main/res/layout/activity_edit_chapter.xml" value="0.3359375" />
         <entry key="app/src/main/res/layout/activity_exportchapter.xml" value="0.3359375" />
         <entry key="app/src/main/res/layout/activity_setup.xml" value="0.3359375" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.23777173913043478" />
         <entry key="app/src/main/res/layout/book_item.xml" value="0.33" />
         <entry key="app/src/main/res/layout/chapter_item.xml" value="0.24003623188405798" />
         <entry key="app/src/main/res/menu/editchaptermenu.xml" value="0.3359375" />
         <entry key="app/src/main/res/menu/exportchaptermenu.xml" value="0.33489583333333334" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/kitlogo.xml" value="0.1915" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/kitlogo_round.xml" value="0.141" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

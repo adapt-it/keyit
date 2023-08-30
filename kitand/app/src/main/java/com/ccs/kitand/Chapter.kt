@@ -96,6 +96,8 @@ class Chapter(
 	var hasInTitle = false			// true if Chapter 1 has an introductory matter Title
 	var nextIntSeq = 1				// next value to be used for an IntSeq field. Starts at 1 because
 									// InTitle is in effect IntSeq = 0
+	var hasChapLabel = false		// true if the Chapter has a Chapter Label
+	var hasChapDesc = false			// true if the Chapter has a Chapter Description
 
 	// When the instance of current Book creates the instance for the current Chapter it supplies
 	// the values for the currently selected Chapter from the BibChaps array
@@ -142,6 +144,22 @@ class Chapter(
 					dao.chaptersUpdateRecPub (chID, numIt, currIt, currVN)
 			} catch (e:SQLiteUpdateRecExc) {
 				throw SQLiteUpdateRecExc(e.message + "\nChapter.init()")
+			}
+		}
+		// Initialise the variables used to control which menu items
+		// are included in the popover menus
+		for (item in BibItems) {
+			when (item.itTyp) {
+				"Ascription" -> hasAscription = true
+				"Title" -> hasTitle = true
+				"InTitle" -> {
+					hasInTitle = true
+					nextIntSeq = item.intSeq + 1
+				}
+				"InSubj" -> nextIntSeq = item.intSeq + 1
+				"InPara" -> nextIntSeq = item.intSeq + 1
+				"ChapLabel" -> hasChapLabel = true
+				"ChapDesc" -> hasChapDesc = true
 			}
 		}
 	}
@@ -314,10 +332,14 @@ class Chapter(
 //		this.vItAda = vItAda
 		try {
 			when (act) {
-				"crAsc" -> createAscription()
-				"delAsc" -> deleteAscription()
 				"crTitle" -> createTitle()
 				"delTitle" -> deleteTitle()
+				"crChLbl" -> createChapterLabel()
+				"delChLab" -> deleteChapterLabel()
+				"crChDesc" -> createChapterDescription()
+				"delChDesc" -> deleteChapterDescription()
+				"crAsc" -> createAscription()
+				"delAsc" -> deleteAscription()
 				"crParaBef" -> createParagraphBefore()
 				"delPara" -> deleteParagraphBefore()
 				"crParaCont" -> createParagraphCont(cursPos)
@@ -453,6 +475,91 @@ class Chapter(
 		}
 	}
 
+	// Create a chapter label
+	fun createChapterLabel () {
+		try {
+			val newItemID:Long = dao.verseItemsInsertRec (chID, 1, "ChapLabel", 74, "", 0, false, 0)
+			// Make the new Chapter Label the current VerseItem
+			currIt = newItemID.toInt()
+			currVN = 1
+			// Note that the Chapter now has a Chapter Label
+			hasChapLabel = true
+			// Increment number of items
+			numIt = numIt + 1
+			// Update the database Chapter record so that the new ChapterLabel item becomes the current item
+			try {
+				dao.chaptersUpdateRecPub (chID, numIt, currIt, currVN)
+			} catch (e:SQLiteUpdateRecExc) {
+				throw SQLiteUpdateRecExc(e.message + "\ncreateChapLabel()")
+			}
+		} catch (e:SQLiteCreateRecExc) {
+			throw SQLiteCreateRecExc(e.message + "\ncreateChapLabel()")
+		}
+	}
+
+	// Delete a chapter label
+	fun deleteChapterLabel () {
+		try {
+			dao.itemsDeleteRec(currIt)
+			// Note that the Book no longer has a Chapter Label
+			hasChapLabel = false
+			// Decrement number of items
+			numIt = numIt - 1
+			// Make the next VerseItem the current one
+			currIt = BibItems[currItOfst + 1].itID
+			// Update the database Chapter record so that the following item becomes the current item
+			try {
+				dao.chaptersUpdateRecPub (chID, numIt, currIt, currVN)
+			} catch (e:SQLiteUpdateRecExc) {
+				throw SQLiteUpdateRecExc(e.message + "\ndeleteChapLabel()")
+			}
+		} catch (e:SQLiteDeleteRecExc) {
+			throw SQLiteDeleteRecExc(e.message + "\ndeleteChapLabel()")
+		}
+	}
+
+	// Create a chapter label
+	fun createChapterDescription () {
+		try {
+			val newItemID:Long = dao.verseItemsInsertRec (chID, 1, "ChapDesc", 73, "", 0, false, 0)
+			// Make the new Chapter Description the current VerseItem
+			currIt = newItemID.toInt()
+			currVN = 1
+			// Note that the Chapter now has a Chapter Description
+			hasChapDesc = true
+			// Increment number of items
+			numIt = numIt + 1
+			// Update the database Chapter record so that the new ChapterDesc item becomes the current item
+			try {
+				dao.chaptersUpdateRecPub (chID, numIt, currIt, currVN)
+			} catch (e:SQLiteUpdateRecExc) {
+				throw SQLiteUpdateRecExc(e.message + "\ncreateChapDesc()")
+			}
+		} catch (e:SQLiteCreateRecExc) {
+			throw SQLiteCreateRecExc(e.message + "\ncreateChapDesc()")
+		}
+	}
+
+	// Delete a chapter label
+	fun deleteChapterDescription () {
+		try {
+			dao.itemsDeleteRec(currIt)
+			// Note that the Book no longer has a Chapter Description
+			hasChapDesc = false
+			// Decrement number of items
+			numIt = numIt - 1
+			// Make the next VerseItem the current one
+			currIt = BibItems[currItOfst + 1].itID
+			// Update the database Chapter record so that the following item becomes the current item
+			try {
+				dao.chaptersUpdateRecPub (chID, numIt, currIt, currVN)
+			} catch (e:SQLiteUpdateRecExc) {
+				throw SQLiteUpdateRecExc(e.message + "\ndeleteChapDesc()")
+			}
+		} catch (e:SQLiteDeleteRecExc) {
+			throw SQLiteDeleteRecExc(e.message + "\ndeleteChapDesc()")
+		}
+	}
 
 	// Create a paragraph break before a verse.
 	fun createParagraphBefore () {
@@ -942,6 +1049,8 @@ class Chapter(
 				"InTitle" -> s = "\n\\imt " + tx
 				"InSubj" -> s = "\n\\ims " + tx
 				"InPara" -> s = "\n\\ip " + tx
+				"ChapLabel" -> s = "\n\\cl " + tx
+				"ChapDesc" -> s = "\n\\cd " + tx
 				"Ascription" -> s = "\n\\d " + tx
 				else -> s = ""
 			}

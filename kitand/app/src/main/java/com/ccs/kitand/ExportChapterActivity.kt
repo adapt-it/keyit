@@ -103,7 +103,9 @@ class ExportChapterActivity : AppCompatActivity() {
 		// Save it to a .usfm text file
 		val usfmPath = filesDir.absolutePath + File.separator + "usfm"
 		val usfmDir = File(usfmPath)
-		if (!usfmDir.exists()) usfmDir.mkdirs()
+		if (!usfmDir.exists()) {
+			usfmDir.mkdirs()
+		}
 
 //		val usfmDir = getDir("usfm", MODE_PRIVATE)
 //		val dataDir = getFilesDir()

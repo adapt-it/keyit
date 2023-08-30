@@ -73,10 +73,18 @@ class VIMenu(curItOfst: Int)
 					val viMI1 = VIMenuItem("Intro Title", "crInTit", "C")
 					VIMenuItems.add(viMI1)
 				}
-				val viMI2 = VIMenuItem("Heading After", "crHdAft", "C")
-				VIMenuItems.add(viMI2)
-				val viMI3 = VIMenuItem("Title", "delTitle", "D")
-				VIMenuItems.add(viMI3)
+				if ((bibItem.vsNum == 1) && (!chInst.hasChapLabel)) {
+					val viMI2 = VIMenuItem("Chapter Label","crChLbl", "C")
+					VIMenuItems.add(viMI2)
+				}
+				if ((bibItem.vsNum == 1) && (!chInst.hasChapDesc)) {
+					val viMI3 = VIMenuItem("Chapter Description","crChDesc", "C")
+					VIMenuItems.add(viMI3)
+				}
+				val viMI4 = VIMenuItem("Heading After", "crHdAft", "C")
+				VIMenuItems.add(viMI4)
+				val viMI5 = VIMenuItem("Title", "delTitle", "D")
+				VIMenuItems.add(viMI5)
 			}
 			"InTitle" -> {            // Title within Book introductory matter
 				val viMI1 = VIMenuItem("Intro Paragraph", "crInPar", "C")
@@ -93,33 +101,49 @@ class VIMenu(curItOfst: Int)
 				}
 				val viMI2 = VIMenuItem("Intro Paragraph", "crInPar", "C")
 				VIMenuItems.add(viMI2)
-				val viMI3 = VIMenuItem("Intro Subject", "delInSubj", "D")
+				val viMI3 = VIMenuItem("Intro Heading", "delInSubj", "D")
 				VIMenuItems.add(viMI3)
 			}
-			"InPara" -> {            // Paragraph within Book introductory matter
-				val viMI1 = VIMenuItem("Intro Paragraph", "crInPar", "C")
-				VIMenuItems.add(viMI1)
-				val viMI2 = VIMenuItem("Intro Heading", "crInHed", "C")
-				VIMenuItems.add(viMI2)
-				if ((bibItem.vsNum == 1) && (chNum == 1) && (!chInst.hasTitle)) {
-					val viMI3 = VIMenuItem("Title", "crTitle", "C")
-					VIMenuItems.add(viMI3)
-				}
-				val viMI4 = VIMenuItem("Intro Paragraph", "delInPar", "D")
-				VIMenuItems.add(viMI4)
-			}
-			"Heading" -> {            // Heading/Subject Heading
-				if ((bibItem.vsNum == 1) && (chNum == 1) && (!chInst.hasTitle)) {
-					val viMI1 = VIMenuItem("Title", "crTitle", "C")
+			"InPara" -> {            // Paragraph of text within Book introductory matter
+				if ((bibItem.vsNum == 1) && (chNum == 1) && (!chInst.hasInTitle)) {
+					val viMI1 = VIMenuItem("Intro Title", "crInTit", "C")
 					VIMenuItems.add(viMI1)
 				}
-				val viMI2 = VIMenuItem("Parallel Ref", "crPalRef", "C")
+				val viMI2 = VIMenuItem("Intro Paragraph", "crInPar", "C")
 				VIMenuItems.add(viMI2)
-				val viMI3 = VIMenuItem("Heading", "delHead", "D")
+				val viMI3 = VIMenuItem("Intro Heading", "crInHed", "C")
+				VIMenuItems.add(viMI3)
+				if ((bibItem.vsNum == 1) && (chNum == 1) && (!chInst.hasTitle)) {
+					val viMI4 = VIMenuItem("Title", "crTitle", "C")
+					VIMenuItems.add(viMI4)
+				}
+				val viMI5 = VIMenuItem("Intro Paragraph", "delInPar", "D")
+				VIMenuItems.add(viMI5)
+			}
+			"ChapLabel" -> {
+				val viMI1 = VIMenuItem("Heading After", "crHdBef", "C")
+				VIMenuItems.add(viMI1)
+				val viMI2 = VIMenuItem("Chapter Label", "delChLab", "D")
+				VIMenuItems.add(viMI2)
+			}
+			"ChapDesc" -> {
+				if ((bibItem.vsNum == 1) && (!chInst.hasChapLabel)) {
+					val viMI1 = VIMenuItem("Chapter Label","crChLbl", "C")
+					VIMenuItems.add(viMI1)
+				}
+				val viMI2 = VIMenuItem("Heading After", "crHdAft", "C")
+				VIMenuItems.add(viMI2)
+				val viMI3 = VIMenuItem("Chapter Description", "crChDesc", "D")
 				VIMenuItems.add(viMI3)
 			}
+			"Heading" -> {            // Heading/Subject Heading
+				val viMI1 = VIMenuItem("Parallel Ref", "crPalRef", "C")
+				VIMenuItems.add(viMI1)
+				val viMI2 = VIMenuItem("Heading", "delHead", "D")
+				VIMenuItems.add(viMI2)
+			}
 			"Para" -> {                // Paragraph before a verse
-				val viMI1 = VIMenuItem("Heading", "crHdAft", "C")
+				val viMI1 = VIMenuItem("Heading", "crHdBef", "C")
 				VIMenuItems.add(viMI1)
 				val viMI2 = VIMenuItem("Paragraph", "delPara", "D")
 				VIMenuItems.add(viMI2)
@@ -137,38 +161,46 @@ class VIMenu(curItOfst: Int)
 				VIMenuItems.add(viMI1)
 			}
 			"Verse" -> {            // Verse
-				if ((chInst.bkID == 19) && (bibItem.vsNum == 1) && (!chInst.hasAscription)) {
-					val viMI1 = VIMenuItem("Ascription", "crAsc", "C")
-					VIMenuItems.add(viMI1)
-				}
-				if (bibItem.vsNum == 1) {
+ 				if (bibItem.vsNum == 1) {
 					if ((chNum == 1) && (!chInst.hasInTitle)) {
-						val viMI2 = VIMenuItem("Intro Title", "crInTit", "C")
-						VIMenuItems.add(viMI2)
+						val viMI1 = VIMenuItem("Intro Title", "crInTit", "C")
+						VIMenuItems.add(viMI1)
 					}
 				}
 				if (bibItem.vsNum == 1) {
 					if ((chNum == 1) && (!chInst.hasTitle)) {
-						val viMI3 = VIMenuItem("Title", "crTitle", "C")
-						VIMenuItems.add(viMI3)
+						val viMI2 = VIMenuItem("Title", "crTitle", "C")
+						VIMenuItems.add(viMI2)
 					}
 				}
-				if (curItOfst == 0 || ( (curItOfst > 0) && (chInst.BibItems[curItOfst - 1].itTyp != "Heading") ) ) {
-					val viMI4 = VIMenuItem("Heading Before", "crHdBef", "C")
+				if ((bibItem.vsNum == 1) && (!chInst.hasChapDesc)) {
+					val viMI3 = VIMenuItem("Chapter Description","crChDesc", "C")
+					VIMenuItems.add(viMI3)
+				}
+				if ((bibItem.vsNum == 1) && (!chInst.hasChapLabel)) {
+					val viMI4 = VIMenuItem("Chapter Label","crChLbl", "C")
 					VIMenuItems.add(viMI4)
 				}
-				if (curItOfst == 0 || ( (curItOfst > 0) && (chInst.BibItems[curItOfst - 1].itTyp != "Para") ) ) {
-					val viMI5 = VIMenuItem("Paragraph Before", "crParaBef", "C")
+				if ((chInst.bkID == 19) && (bibItem.vsNum == 1) && (!chInst.hasAscription)) {
+					val viMI5 = VIMenuItem("Ascription", "crAsc", "C")
 					VIMenuItems.add(viMI5)
+				}
+				if (curItOfst == 0 || ( (curItOfst > 0) && (chInst.BibItems[curItOfst - 1].itTyp != "Heading") ) ) {
+					val viMI6 = VIMenuItem("Heading Before", "crHdBef", "C")
+					VIMenuItems.add(viMI6)
+				}
+				if (curItOfst == 0 || ( (curItOfst > 0) && (chInst.BibItems[curItOfst - 1].itTyp != "Para") ) ) {
+					val viMI7 = VIMenuItem("Paragraph Before", "crParaBef", "C")
+					VIMenuItems.add(viMI7)
 				}
 				if (curItOfst == 0 || (bibItem.itTyp != "VerseCont") ) {
 					if (!bibItem.isBrg && nextItTyp != "ParaCont") {
-						val viMI6 = VIMenuItem("Paragraph In", "crParaCont", "C")
-						VIMenuItems.add(viMI6)
+						val viMI8 = VIMenuItem("Paragraph In", "crParaCont", "C")
+						VIMenuItems.add(viMI8)
 					}
 				}
-				val viMI7 = VIMenuItem("Parallel Ref", "crPalRef", "C")
-				VIMenuItems.add(viMI7)
+				val viMI9 = VIMenuItem("Parallel Ref", "crPalRef", "C")
+				VIMenuItems.add(viMI9)
 				val brgPossible: Boolean
 				if (bibItem.isBrg) {
 					brgPossible = (bibItem.lvBrg < chInst.numVs)
@@ -179,13 +211,13 @@ class VIMenu(curItOfst: Int)
 					// GDLC 24AUG21 Don't allow verse to be bridged with a following bridge
 					val nextVI = chInst.BibItems[curItOfst + 1]
 					if (nextVI.itTyp == "Verse" && !nextVI.isBrg) {
-						val viMI8 = VIMenuItem("Bridge Next Verse", "brid", "B")
-						VIMenuItems.add(viMI8)
+						val viMI10 = VIMenuItem("Bridge Next Verse", "brid", "B")
+						VIMenuItems.add(viMI10)
 					}
 				}
 				if (bibItem.isBrg) {
-					val viMI9 = VIMenuItem("Unbridge Last Verse", "unBrid", "U")
-					VIMenuItems.add(viMI9)
+					val viMI11 = VIMenuItem("Unbridge Last Verse", "unBrid", "U")
+					VIMenuItems.add(viMI11)
 				}
 			}
 		else -> {
