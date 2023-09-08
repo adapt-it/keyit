@@ -47,7 +47,7 @@ class Chapter(
 
 	// currItOfst has custom getter and setter in order to ensure that a VIMenu is created for the
 	// current VerseItem whenever the VerseItem is selected. This avoids putting the logic in the
-	// setter is several places throughout the source code.
+	// setter in several places throughout the source code.
 	//
 	// The initial value of -1 means that there is not yet a current VerseItem
 	// (the offsets for all actual VerseItems are >= zero)
@@ -277,7 +277,7 @@ class Chapter(
 	// Set up the new current BibItem given the VerseItem's ID
 	// (as assigned by SQLite when the database's VerseItem record was created)
 	// TODO: This function is not yet used - delete it?
-	fun setupCurrentItemFromID(curIt:Int) {
+/*	fun setupCurrentItemFromID(curIt:Int) {
 		currIt = curIt
 		currItOfst = offsetToBibItem(curIt)
 		// Setting currItOfst ensures that there is a VIMenu for the current VerseItem
@@ -290,7 +290,7 @@ class Chapter(
 		} catch (e:SQLiteUpdateRecExc) {
 			throw SQLiteUpdateRecExc(e.message + "\nsetupCurrentItemFromID()")
 		}
-	}
+	}*/
 
 	fun setupCurrentItemFromRecyclerRow(pos: Int) {
 		currItOfst = pos
@@ -1025,7 +1025,7 @@ class Chapter(
 
 	fun calcUSFMExportText() : String {
 		var USFM = "\\id " + bkInst!!.bkCode + " " + bibInst!!.bibName + "\n"
-		USFM = USFM + "\\h " + bkInst!!.bkName + "\n\\c " + chNum.toString()
+		USFM = USFM + "\\h " + bkInst.bkName + "\n\\c " + chNum.toString()
 		for (i in 0 until numIt) {		// 0 until numIt includes zero but does not include numIt
 			var s: String
 			var vn: String

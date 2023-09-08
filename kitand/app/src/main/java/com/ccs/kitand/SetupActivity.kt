@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+//import com.ccs.kitand.BuildConfig
 
 //	The SetupActivity allows the user to edit the name of the Bible and then
 //	starts the creation of the Bible -> curr Book -> curr Chapter -> curr VerseItem
@@ -26,6 +28,7 @@ class SetupActivity : AppCompatActivity() {
 
     lateinit var btn_go: Button
     lateinit var txt_bibname: EditText
+    lateinit var txt_version: TextView
 
     // Safe initialisations of the four Properties of the Bible record
     // These variables of SetupActivity are used when creating the Bible instance
@@ -38,6 +41,9 @@ class SetupActivity : AppCompatActivity() {
 //    lateinit var bibInst: Bible
 // GDLC 12AUG21 No need for local var bInst
 
+// GDLC 7SEP23
+    var versionCode: Int = BuildConfig.VERSION_CODE
+    var versionName: String = BuildConfig.VERSION_NAME
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +52,9 @@ class SetupActivity : AppCompatActivity() {
         // Get references to layout widgets
         btn_go = findViewById(R.id.btn_go)
         txt_bibname = findViewById(R.id.txt_bibname)
+        txt_version = findViewById(R.id.txt_version)
+        val versTxt = getString(R.string.txt_version, versionName, versionCode)
+        txt_version.setText(versTxt)
 
         btn_go.setOnClickListener(View.OnClickListener {
             goButtonAction()

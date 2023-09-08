@@ -10,8 +10,8 @@ android {
         applicationId "com.ccs.kitand"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 3
-        versionName "1.1"
+        versionCode 4
+        versionName "1.1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
