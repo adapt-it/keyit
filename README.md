@@ -5,7 +5,7 @@
 
 ### How do I get set up for iOS? ###
 
-* Get Xcode 12 
+* Get Xcode 12 or later
 * Use Xcode's Source Control to clone the repo from Github, and open the Xcode project
 * The SQLite database that is included in recent iOS systems is used. The Xcode project
   includes settings to use the bridge from Swift to C for source code that calls the
@@ -13,7 +13,7 @@
 
 ### How do I get set up for Android? ###
 
-* Get Android Studio Arctic Fox
+* Get Android Studio Arctic Fox or later
 * Use Android Studio's Git menu to clone the repo from Github, and open the file build.gradle
 * The SQLite database that is included in recent Android systems is used. The kitand sources
   use Android's SQLiteOpenHelper and its API to deal with the SQLite database.
