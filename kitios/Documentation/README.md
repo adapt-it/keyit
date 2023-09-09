@@ -6,7 +6,7 @@
 
 ### How do I get set up for iOS? ###
 
-* Get Xcode 12 
+* Get Xcode 12 or later
 * Use Xcode's Source Control to clone the repo from Github, and open the Xcode project
 * The SQLite database that is included in recent iOS systems is used. The Xcode project
   includes settings to use the bridge from Swift to C for source code that calls the
