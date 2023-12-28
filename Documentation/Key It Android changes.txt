@@ -1,0 +1,33 @@
+----------------------------------------------
+Key It Android bug fixes and changes
+----------------------------------------------
+
+----------------------------------------------
+Version 1.1.0  ??? 2023
+----------------------------------------------
+
+* Display of versionName and versionCode added
+to the Setup screen
+
+* \h <BookName> field added to USFM file to give AIM the
+name of the Book that is to be imported.
+
+* Name of Export button on Verses screen was changed to USFM
+and an Export button was added to the USFM screen; this button
+starts AIM (Adapt It Mobile) and gives it the USFM file so that
+AIM can import it.
+
+* The Choose Book screen allows the names of the Books
+to be edited to suit the language of the translation
+being keyboarded.
+
+* Allows going back to the Setup screen so that the
+Name of the Bible can be edited if needed.
+
+----------------------------------------------
+Key It Version 1.0 initial release 6DEC2021
+----------------------------------------------
+
+Key It Version 1.0 for Android was uploaded to the Google
+PlayStore on 6DEC2021. It is a native Android app with
+Source code written in Kotlin.
