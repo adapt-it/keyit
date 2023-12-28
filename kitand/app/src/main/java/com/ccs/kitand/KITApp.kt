@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.res.Resources
 import androidx.appcompat.app.AlertDialog
 
-
 //  Created by Graeme Costin on 3JUL20.
 //
 // In place of a legal notice, here is a blessing:
@@ -49,7 +48,7 @@ class KITApp : Application() {
                 .setCancelable(false)
                 .setPositiveButton("OK", {
                     dialog, id -> dialog.cancel()
-                    System.exit(0);
+                    System.exit(0)
                 }
             )
             val alertDialog = builder.create()

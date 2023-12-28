@@ -17,4 +17,6 @@
     <string name="export_usfm_menuitem">USFM</string>
     <string name="toAIM_usfm_menuitem">Export</string>
     <string name="txt_usfm">TextView</string>
+    <string name="choose_book">Choose Book</string>
+    <string name="actBarTitle">Key It %1$s</string>
 </resources>

@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.FileProvider
 import androidx.core.content.FileProvider.getUriForFile
 import kotlinx.android.synthetic.main.activity_exportchapter.*
 import java.io.File
@@ -22,7 +23,6 @@ import java.io.FileWriter
 //    May you share freely, never taking more than you give.
 
 class ExportChapterActivity : AppCompatActivity() {
-
 	private lateinit var ch_name:String
 	private lateinit var ps_name:String
 	lateinit var txt_USFM: TextView
@@ -107,9 +107,6 @@ class ExportChapterActivity : AppCompatActivity() {
 			usfmDir.mkdirs()
 		}
 
-//		val usfmDir = getDir("usfm", MODE_PRIVATE)
-//		val dataDir = getFilesDir()
-//		val filesDir = getFilesDir()
 		val filename = KITApp.bibInst!!.bibName + "-" + KITApp.bkInst!!.bkName + "-" + "Ch" + KITApp.chInst!!.chNum.toString() + ".usfm"
 		try {
 			val usfmFile = File(usfmPath, filename)

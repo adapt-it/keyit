@@ -28,17 +28,17 @@ import androidx.recyclerview.widget.RecyclerView
 class ChooseBookActivity : AppCompatActivity()  {
 
 	// Boolean for whether to let the user choose a Book
-	var letUserChooseBook = false	// Will be set from bibInst.canChooseAnotherBook
+	private var letUserChooseBook = false	// Will be set from bibInst.canChooseAnotherBook
 
-	lateinit var txt_bk_prompt: TextView
-	lateinit var lst_booklist: RecyclerView
+	private lateinit var txt_bk_prompt: TextView
+	private lateinit var lst_booklist: RecyclerView
 	lateinit var recyclerView: RecyclerView
-	lateinit var viewAdapter: BookAdapter
+	private lateinit var viewAdapter: BookAdapter
 	private lateinit var viewManager: RecyclerView.LayoutManager
 
-	var suppActionBar: ActionBar? = null
+	private var suppActionBar: ActionBar? = null
 	// By the time ChooseBookActivity is started the Bible instance will have been created
-//	var bInst: Bible = KITApp.bibInst as Bible
+//	var bInst = KITApp.bibInst as Bible
 	var bInst: Bible? = null
 
 	// Layout height for calculating scrolling offset
@@ -67,7 +67,7 @@ class ChooseBookActivity : AppCompatActivity()  {
 		val bibName = bInst!!.bibName
 //		bInst = KITApp.bibInst
 
-		val actionBarTitle = "Key It  -  " + bibName
+		val actionBarTitle = getString(R.string.actBarTitle, bibName)
 		if (suppActionBar != null) {
 			suppActionBar?.setDisplayShowTitleEnabled(true)
 			suppActionBar?.setTitle(actionBarTitle)
@@ -99,9 +99,9 @@ class ChooseBookActivity : AppCompatActivity()  {
 		} else {
 			// On first launch, and when user wants to choose another book,
 			// set up the Books list and wait for the user to choose a Book.
-			txt_bk_prompt.setText("Choose Book")
+			txt_bk_prompt.setText(getString(R.string.choose_book))
 			viewManager = LinearLayoutManager(this)
-			viewAdapter = BookAdapter(bInst!!.BibBooks, this) as BookAdapter
+			viewAdapter = BookAdapter(bInst!!.BibBooks, this)
 			recyclerView = findViewById<RecyclerView>(R.id.lst_books).apply {
 				// use this setting to improve performance if you know that changes
 				// in content do not change the layout size of the RecyclerView
@@ -140,6 +140,7 @@ class ChooseBookActivity : AppCompatActivity()  {
 		return true
 	}
 
+	@Deprecated("Deprecated in Java")
 	override fun onBackPressed() {
 		goToSetup()
 	}
@@ -155,7 +156,6 @@ class ChooseBookActivity : AppCompatActivity()  {
 	}
 
 	fun chooseBookAction(position: Int) {
-		val bInst = KITApp.bibInst
 		val selectedBook = bInst!!.BibBooks[position]
 		// Set up the selected Book as the current Book (this updates kdb.sqlite with the currBook)
 		try {
@@ -177,9 +177,5 @@ class ChooseBookActivity : AppCompatActivity()  {
 		} catch (e:SQLiteReadRecExc) {
 			KITApp.ReportError(DBR_ChaErr, e.message + "\nchooseBookAction()\nChooseBookActivity", this)
 		}
-	}
-
-	fun editBookName(position: Int) {
-		print("Editing Book name")
 	}
 }

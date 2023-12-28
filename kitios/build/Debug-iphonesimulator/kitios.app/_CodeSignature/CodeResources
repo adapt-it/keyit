@@ -14,11 +14,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		vsQTVV+5O82F5U0p61EA3DdxSKs=
+		PeaUMFlcTMqRTDLAqG0lLkb1nV0=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		fNxelR/0/4EbshfOGbMOMLfyeAQ=
+		tnnY0CkO3AAV9uC2m9E1TM6+2QY=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -26,15 +26,15 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		HXfEL8RcBFhwu2k/l3Yg3saTZ94=
+		GY6Gk9ipbAd/jDTVpjHIZGIQjd8=
 		</data>
 		<key>Base.lproj/Main.storyboardc/0tX-1T-6fC-view-FXt-hV-anH.nib</key>
 		<data>
-		4/5b4dopbEpK/CNCC01VI0j4OZA=
+		ZsANyn4ekydao3Zar0KMxjxFXO0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/3Gc-YA-fTx-view-4Nh-0O-s3R.nib</key>
 		<data>
-		Oc8/7U56t5PIKZ138dclSFTOZpI=
+		p8F2QcQsKXT74+NvRtudEqz4K08=
 		</data>
 		<key>Base.lproj/Main.storyboardc/EditChapter.nib</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/Mq7-GK-ujF-view-tQX-Xh-rBr.nib</key>
 		<data>
-		ZR1moHhFYBnoAxImrGb+YHZzorM=
+		dzd1TqnpFcpiPxUCj/yHyGz6tQA=
 		</data>
 		<key>Base.lproj/Main.storyboardc/PubItemsViewController.nib</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-ep7-s1-4F9.nib</key>
 		<data>
-		HULcoS+C3V//8/HyOUN/H/vqvR8=
+		m4s3TiffMwO3OK4WohHlS29Qxc0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-Mq7-GK-ujF.nib</key>
 		<data>
@@ -74,19 +74,19 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/XA6-hc-AsZ-view-Qes-Oa-F25.nib</key>
 		<data>
-		0U9AxKD5iDV8QMzjLTrn9W0STrk=
+		GZqdgTK8rwkUL0/1ffKTsoZA/hk=
 		</data>
 		<key>Base.lproj/Main.storyboardc/f0e-bE-QQt-view-dFk-J1-ywt.nib</key>
 		<data>
-		kIjCEiwa99UiQhG9dhjHxKl7deI=
+		wg0483gqZeiiIs2QQqgjubNyU+o=
 		</data>
 		<key>Base.lproj/Main.storyboardc/okg-SZ-zo5-view-Ecu-0f-Got.nib</key>
 		<data>
-		NMRQV4msKwLb1sr2eE/s7J+lDGY=
+		DkCzutoNpJmHjKP1/dQG2P5wSj0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7OyWisj1F9l4t5j20Fqbn8TYbCY=
+		gRKXVbBgAt+0uW7ZnivzVCu6Tao=
 		</data>
 		<key>KIT_BooksNames.txt</key>
 		<data>
@@ -169,14 +169,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PGrWnCY6fTmWeDm+o+QVq5X8bxqzfcciGVhbRuI7Udo=
+			SRw1b+RmiLptIpToP+kRiLIhyEJlHHRma1DmmFm+EcI=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lHWzj0QZXIktgahOPbcZPwJDdFLaF6y3qtjJHF1Kxqw=
+			68ohStap74QFaflduXtKD7qg9RSz0lKIXyCYbtEFgBE=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -190,21 +190,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HcJRP6K2akV7e67gSZlSbAgnZKCGUdXfLZQjdQoCZLI=
+			1jJ4iYSVGLnpjzw1Z84ZyNyE2KZevAItNR9vGHriPMU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/0tX-1T-6fC-view-FXt-hV-anH.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mnTRX4AP9gWjYcQZcODRNiQ7/sB7D/OK8TS1m5lRZos=
+			RuZ+vo915b05yGjW8bJLfW7sz9oqb1e96ULhw2p4Czk=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/3Gc-YA-fTx-view-4Nh-0O-s3R.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yEUjiP5TsFHQO+a9opCY89V9rtP+JGvcPx41CfUmtec=
+			8qNQpyB08tW1M5qojIOH8h9rYO+xJO0VqzWZcTyxNsI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/EditChapter.nib</key>
@@ -232,7 +232,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FHrBf18irQLJOuYa8izbF+2Lsf5194RsHSIsxpgC2Rc=
+			wiT2UfSCUVml5D3D8mTueqeKc4Ycwk7Ku36Fb4XNY2g=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/PubItemsViewController.nib</key>
@@ -260,7 +260,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y2hrwdLG2HPGrOnAEUcB7VMc8ydUrHmU1PClu5EZvm8=
+			wdWBDMpMlUh19hGsdOEHIjLvi+2EUn5pFi3ySR+Xs4w=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UIViewController-Mq7-GK-ujF.nib</key>
@@ -274,21 +274,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			osVAkSUIBTYFRsZjKAr2fMF/QYjGcsyiZrBPce73FcI=
+			hgzhKSgwB3Qfq0J3/xXRqzstfCCo/JJ8CV7x/y4L4Yk=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/f0e-bE-QQt-view-dFk-J1-ywt.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k2zUcnPRPBY8sOu/eiCrqIZtPI/QDHggQsFuv+zqmf0=
+			zhJ5oCALZh6Opb786PBc3RQkiR3yuz56Xoo2Fn0iZmI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/okg-SZ-zo5-view-Ecu-0f-Got.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aiTyui693aEO7cHRQojNUTBGY97QjxdMwM3UDCtIzTA=
+			3v9xN2hI3WT7sgyuV9zeeww8USGWEENHChgwhcC155Q=
 			</data>
 		</dict>
 		<key>KIT_BooksNames.txt</key>

@@ -23,9 +23,9 @@ import java.io.BufferedReader
 //    May you share freely, never taking more than you give.
 
 class Bible (
-	val bibID: Int,			//	BibleID
+	private val bibID: Int,			//	BibleID
 	var bibName: String,	//	Bible Name
-	var bkRCr: Boolean,		//	Book Records Created
+	private var bkRCr: Boolean,		//	Book Records Created
 	var currBk: Int			//	Current Book
 ) {
 
@@ -38,7 +38,7 @@ class Bible (
 	var canChooseAnotherBook = false		// true if the user is allowed to choose another Book
 
 	// Access to the KITDAO instance for kdb.sqlite access
-	val dao = KITApp.dao
+	private val dao = KITApp.dao
 
 	var currBookOfst = - 1 			// Offset in BibBooks[] to the current book 0 to 38 (OT) 39 to 65 (NT)
 	var bookInst: Book?	= null		// Instance in memory of the current Book - this is the strong ref that owns it
@@ -120,7 +120,7 @@ class Bible (
 
 	// createBooksRecords creates the Books records for every Bible book from the text files in the
 	// app's resources and stores these records in the database kdb.sqlite
-	fun createBooksRecords(bID: Int) {
+	private fun createBooksRecords(bID: Int) {
 
 		// Open kit_bookspec and read its data
 		val res: Resources = KITApp.res
@@ -148,7 +148,7 @@ class Bible (
 		val bookNames = mutableMapOf<Int, String>()
 		// Make a look-up dictionary for book name given book ID number
 		for (nameItem in nameLines) {
-			if (!nameItem.isEmpty()) {
+			if (nameItem.isNotEmpty()) {
 				val nmStrs = nameItem.split(", ").toTypedArray()
 				val i = nmStrs[0].toInt()
 				val n = nmStrs[1]
