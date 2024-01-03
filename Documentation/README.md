@@ -1,6 +1,6 @@
 # README #
 
-### What is this kitios repository for? ###
+### What is the kitios repository for? ###
 
 * Development of Key It as an iOS app
 
