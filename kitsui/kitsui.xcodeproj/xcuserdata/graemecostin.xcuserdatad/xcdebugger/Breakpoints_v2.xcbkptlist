@@ -289,6 +289,21 @@
                   endingLineNumber = "42"
                   offsetFromSymbolStart = "620">
                </Location>
+               <Location
+                  uuid = "B397CE30-4D71-49CB-8235-409EEF859CE6 - 5ebaad01c5e45c5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.BibleModel.init() -&gt; kitsui.BibleModel"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "620">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -351,144 +366,6 @@
                   startingLineNumber = "15"
                   endingLineNumber = "15"
                   offsetFromSymbolStart = "236">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kitsui/Model/KITDAO.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
-            landmarkName = "bibleInsertRec(_:_:_:_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - bcc2510bb2f57ad7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.Int, Swift.String, Swift.Bool, Swift.Int) throws -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "194"
-                  endingLineNumber = "194"
-                  offsetFromSymbolStart = "392">
-               </Location>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - 5df644de99f5f514"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.String, Swift.Bool, Swift.Int) throws -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "194"
-                  endingLineNumber = "194"
-                  offsetFromSymbolStart = "368">
-               </Location>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - 5df644de99f5f535"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.String, Swift.Bool, Swift.Int) throws -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "195"
-                  endingLineNumber = "195"
-                  offsetFromSymbolStart = "368">
-               </Location>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - bca1b6481cd0a9f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.String, Swift.Bool, Swift.Int) -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - bca1b6481cd0a9f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.String, Swift.Bool, Swift.Int) -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "233"
-                  endingLineNumber = "233"
-                  offsetFromSymbolStart = "388">
-               </Location>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - bca1b6481cd0a76e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.String, Swift.Bool, Swift.Int) -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
-                  offsetFromSymbolStart = "360">
-               </Location>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - b6d7536ba2fcfa1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.Int, Swift.String, Swift.Bool, Swift.Int) -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
-                  offsetFromSymbolStart = "304">
-               </Location>
-               <Location
-                  uuid = "920189D7-FA20-4C01-A67A-5DD593DC8670 - 4949ce61483702a6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleInsertRec(Swift.Int, Swift.String, Swift.Bool, Swift.Int) -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "222"
-                  endingLineNumber = "222"
-                  offsetFromSymbolStart = "304">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -607,6 +484,21 @@
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Model/KITDAO.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "831969EB-4AB7-49F3-832B-A6815681B1E7 - a58560a22944121b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.KITDAO.init() -&gt; kitsui.KITDAO"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/KITDAO.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "78"
@@ -820,6 +712,21 @@
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "C4C6B8D0-3740-408C-BEA1-5D5514A333F4 - 13102c962489c545"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "56"
@@ -1219,6 +1126,36 @@
                   endingLineNumber = "42"
                   offsetFromSymbolStart = "44">
                </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - 825434964727e1b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - bfdffb7f78225e5e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "44">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1402,6 +1339,21 @@
                   endingLineNumber = "85"
                   offsetFromSymbolStart = "32">
                </Location>
+               <Location
+                  uuid = "F0BF8B44-7B87-48E3-85B9-47AE347F336B - da3472a9c7962b05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.BibleModel.getCurBibName() -&gt; Swift.String"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "32">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1555,6 +1507,21 @@
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "216">
                </Location>
+               <Location
+                  uuid = "2DF86488-402D-4C50-859A-2C4CE5D83263 - 2bd92369d5fcc851"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.SetupView.init(bibleName: Swift.String, needSetup: Swift.Bool) -&gt; kitsui.SetupView"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "216">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1687,6 +1654,21 @@
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Model/BibleModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "C38C7407-12E5-4EC7-9951-9FBFAE8BB049 - 59c5cd4715257ae3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.BibleModel.bibleUpdateName(Swift.String) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -1861,6 +1843,21 @@
                   endingLineNumber = "62"
                   offsetFromSymbolStart = "1724">
                </Location>
+               <Location
+                  uuid = "55D678D6-13ED-4427-A877-F5D307A24FEF - 5ebaad01c5e45aa2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.BibleModel.init() -&gt; kitsui.BibleModel"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "1724">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1984,6 +1981,21 @@
                   endingLineNumber = "75"
                   offsetFromSymbolStart = "44">
                </Location>
+               <Location
+                  uuid = "5D5A1EC3-D2C3-4CD6-B55A-C9ED1D848B0D - 41ae071c88db2cee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.BibleModel.setCurBibOfst(Swift.Int) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "44">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1997,8 +2009,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "createBibBooks(_:)"
             landmarkType = "7">
             <Locations>
@@ -2182,6 +2194,21 @@
                   endingLineNumber = "118"
                   offsetFromSymbolStart = "528">
                </Location>
+               <Location
+                  uuid = "71251A93-16CB-4578-847E-BB33C5E183E4 - dfaf363e1889a68c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.createBibBooks(Swift.Int) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
+                  offsetFromSymbolStart = "528">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2269,6 +2296,21 @@
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Model/BibleModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "4D0D3258-4B2D-4F2E-88EA-8A986A18D6B2 - 7197dd607e8ca9ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.BibleModel.getCurBibOfst() -&gt; Swift.Int"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -2443,6 +2485,81 @@
                   endingLineNumber = "101"
                   offsetFromSymbolStart = "848">
                </Location>
+               <Location
+                  uuid = "1B6ADA1C-BD13-4ED2-9397-0AEA8A24BDC0 - 1ad3279a5566b418"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Chapter.curPoMenu.getter : Swift.Optional&lt;kitsui.VIMenu&gt;"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Chapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "1B6ADA1C-BD13-4ED2-9397-0AEA8A24BDC0 - c6beeaa83cbcfd1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Chapter.curPoMenu.setter : Swift.Optional&lt;kitsui.VIMenu&gt;"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Chapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1B6ADA1C-BD13-4ED2-9397-0AEA8A24BDC0 - 541e73ed1412006a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Chapter.curPoMenu.modify : Swift.Optional&lt;kitsui.VIMenu&gt;"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Chapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1B6ADA1C-BD13-4ED2-9397-0AEA8A24BDC0 - eb9563e1156dce12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Chapter.curPoMenu.modify : Swift.Optional&lt;kitsui.VIMenu&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "1B6ADA1C-BD13-4ED2-9397-0AEA8A24BDC0 - 62f26998d691a29f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Chapter.init(kitsui.Book, Swift.Int, Swift.Int, Swift.Int, Swift.Int, Swift.Bool, Swift.Int, Swift.Int, Swift.Int, Swift.Int) -&gt; kitsui.Chapter"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Chapter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "848">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2456,8 +2573,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "createBibBooks(_:)"
             landmarkType = "7">
             <Locations>
@@ -2611,6 +2728,21 @@
                   endingLineNumber = "149"
                   offsetFromSymbolStart = "2648">
                </Location>
+               <Location
+                  uuid = "B37258C9-FF34-44C6-ACE8-C305B7D49322 - dfaf363e1889a28f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.createBibBooks(Swift.Int) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "2648">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2624,8 +2756,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "createBibBooks(_:)"
             landmarkType = "7">
             <Locations>
@@ -2764,6 +2896,21 @@
                   endingLineNumber = "169"
                   offsetFromSymbolStart = "3788">
                </Location>
+               <Location
+                  uuid = "5DF28F2F-8255-4C3A-AB97-50B127CFA0E9 - dfaf363e1889a11b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.createBibBooks(Swift.Int) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "3788">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2842,6 +2989,21 @@
                   endingLineNumber = "18"
                   offsetFromSymbolStart = "72">
                </Location>
+               <Location
+                  uuid = "55117E0D-7B6E-421A-9424-5ED234967385 - 41433232c7ba43d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.kitsuiApp.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/App/kitsuiApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "72">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2899,6 +3061,21 @@
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Model/BibleModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "2B812A34-D4AD-4D2D-B5E1-F348DA394348 - 5ebaad01c5e45e84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.BibleModel.init() -&gt; kitsui.BibleModel"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "32"
@@ -3661,6 +3838,36 @@
                   endingLineNumber = "34"
                   offsetFromSymbolStart = "348">
                </Location>
+               <Location
+                  uuid = "1B8FCFA8-EC2C-44C9-A234-DAABBB93EE3B - 8662bf2af5e0b569"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0 in kitsui.ChooseBookView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseBookView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "1B8FCFA8-EC2C-44C9-A234-DAABBB93EE3B - ccc132830e5bd1d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.List&lt;kitsui.Bible.bookLst, SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Spacer, SwiftUI.Text)&gt;&gt;&gt;&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Spacer, SwiftUI.Text)&gt;&gt;&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0 in kitsui.ChooseBookView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseBookView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "348">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -3769,68 +3976,20 @@
                   endingLineNumber = "87"
                   offsetFromSymbolStart = "188">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B33692AE-336E-4C56-90F7-971CBD29F01F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kitsui/Model/KITDAO.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
-            landmarkName = "bibleUpdateRecsCreated(_:)"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "B33692AE-336E-4C56-90F7-971CBD29F01F - b8c9375e4aee398d"
+                  uuid = "2803596A-0959-46FC-92C2-245FF27AC127 - 686022f861407ee7"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleUpdateRecsCreated(Swift.Int) -&gt; ()"
+                  symbolName = "kitsui.Bible.loadBibBooks(Swift.Int) -&gt; ()"
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "307"
-                  endingLineNumber = "307"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "B33692AE-336E-4C56-90F7-971CBD29F01F - b8c9375e4aee3801"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleUpdateRecsCreated(Swift.Int) -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "295"
-                  endingLineNumber = "295"
-                  offsetFromSymbolStart = "156">
-               </Location>
-               <Location
-                  uuid = "B33692AE-336E-4C56-90F7-971CBD29F01F - faed8c09b8f6fd08"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.KITDAO.bibleUpdateRecsCreated(Swift.Int) -&gt; ()"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Model/KITDAO.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "295"
-                  endingLineNumber = "295"
-                  offsetFromSymbolStart = "156">
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "188">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3848,22 +4007,6 @@
             startingLineNumber = "310"
             endingLineNumber = "310"
             landmarkName = "bibleUpdateCurrBook(_:_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8A2A7F82-150F-4734-A97F-94F6C080B0D9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kitsui/Model/KITDAO.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "245"
-            endingLineNumber = "245"
-            landmarkName = "bibleGetRec(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -3921,6 +4064,21 @@
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "770CE368-ABD1-4F3E-A672-71D2AE0F6368 - dd63254635f42149"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bibMod.getter : kitsui.BibleModel"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -4064,8 +4222,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "setupCurrentBook(_:)"
             landmarkType = "7">
             <Locations>
@@ -4123,6 +4281,21 @@
                   moduleName = "kitsui"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/graemecostin/keyit2024/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "213"
+                  endingLineNumber = "213"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "6E7809C2-BB84-4892-9B96-5B5794887101 - d4a2c02531867b1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.setupCurrentBook(kitsui.Bible.BibBook) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "213"
@@ -4268,6 +4441,21 @@
                   endingLineNumber = "74"
                   offsetFromSymbolStart = "428">
                </Location>
+               <Location
+                  uuid = "9BE0E5E8-6657-4CF3-A085-24067CCCCEC6 - 4335c6b1f1a35998"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;kitsui.Bible.bookLst&gt;) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0 in kitsui.ChooseBookView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseBookView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "428">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4281,8 +4469,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "setupChosenBook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4362,6 +4550,36 @@
                   endingLineNumber = "62"
                   offsetFromSymbolStart = "180">
                </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 819927c712c24b71"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 598868e5f7b50409"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "180">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4391,8 +4609,8 @@
             filePath = "kitsui/Model/Book.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
             landmarkName = "createChapterRecords(_:_:_:)"
             landmarkType = "7">
             <Locations>
@@ -4441,6 +4659,21 @@
                   endingLineNumber = "159"
                   offsetFromSymbolStart = "1344">
                </Location>
+               <Location
+                  uuid = "5F5E4E29-0958-43DF-A649-988B9C3D7EE8 - a7e73f77d67e2b64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Book.createChapterRecords(Swift.Int, Swift.Int, Swift.String) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Book.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "1344">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4454,8 +4687,8 @@
             filePath = "kitsui/Model/Book.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "createChapterRecords(_:_:_:)"
             landmarkType = "7">
             <Locations>
@@ -4504,6 +4737,21 @@
                   endingLineNumber = "181"
                   offsetFromSymbolStart = "2696">
                </Location>
+               <Location
+                  uuid = "404077C9-4D0A-4880-B505-D134371B823D - a7e73f77d67e2db2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Book.createChapterRecords(Swift.Int, Swift.Int, Swift.String) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Book.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "2696">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4517,8 +4765,8 @@
             filePath = "kitsui/Model/Book.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "goCurrentChapter()"
             landmarkType = "7">
          </BreakpointContent>
@@ -4533,8 +4781,8 @@
             filePath = "kitsui/Model/Book.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "setupCurrentChapter(withOffset:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4549,8 +4797,8 @@
             filePath = "kitsui/Model/Book.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
             landmarkName = "setCurVItem(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4565,8 +4813,8 @@
             filePath = "kitsui/Model/Book.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
+            startingLineNumber = "267"
+            endingLineNumber = "267"
             landmarkName = "updateBookName(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4581,8 +4829,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "setBibBooksNumChap(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -4597,8 +4845,8 @@
             filePath = "kitsui/Views/ChooseChapterView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -4662,7 +4910,145 @@
                   endingLineNumber = "24"
                   offsetFromSymbolStart = "336">
                </Location>
+               <Location
+                  uuid = "F54EAF51-509B-47E6-80D8-29BC99B8C2B4 - 4f6674539a16cee2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt;&gt; in kitsui.ChooseChapterView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseChapterView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  uuid = "F54EAF51-509B-47E6-80D8-29BC99B8C2B4 - 838aae75b28bbb9b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt; in closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt;&gt; in kitsui.ChooseChapterView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseChapterView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "F54EAF51-509B-47E6-80D8-29BC99B8C2B4 - 4f6674539a16cdfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt;&gt; in kitsui.ChooseChapterView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseChapterView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "F54EAF51-509B-47E6-80D8-29BC99B8C2B4 - 838aae75b28bb884"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt; in closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt;&gt; in kitsui.ChooseChapterView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseChapterView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "376">
+               </Location>
+               <Location
+                  uuid = "F54EAF51-509B-47E6-80D8-29BC99B8C2B4 - 4f6674539a16cdfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt;&gt; in kitsui.ChooseChapterView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseChapterView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "F54EAF51-509B-47E6-80D8-29BC99B8C2B4 - a94a565eb6d914fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt; in closure #1 () -&gt; SwiftUI.ScrollView&lt;SwiftUI.LazyVGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Book.chapLst&gt;, kitsui.Book.chapLst, SwiftUI.Text&gt;&gt;&gt; in kitsui.ChooseChapterView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseChapterView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "376">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FE34A20-C9E6-4341-96AD-B84FE957A578"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Model/Book.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "init(_:_:_:_:_:_:_:_:_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "94BCCCF1-6112-4991-B1C4-E1BEA5B7DE2D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Model/KITDAO.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "478"
+            endingLineNumber = "478"
+            landmarkName = "readChaptersRecs(_:_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9AE279E-0CD6-4810-ACB1-615C8A636AAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Model/Book.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "offsetToBibChap(withID:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

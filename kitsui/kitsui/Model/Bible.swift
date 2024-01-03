@@ -35,7 +35,7 @@ class Bible: ObservableObject {
 	var currBookOfst = -1	// Offset in BibBooks[] to the current book 0 to 38 (OT) 39 to 65 (NT)
 							// -1 means that a current Book has not yet been selected
 	var bookInst: Book?		// Instance in memory of the current Book - this is the strong ref that owns it
-	@Published var goChooseBook = false	// Assume no need for ChooseBookView
+	@Published var needChooseBook = false	// Assume no need for ChooseBookView
 
 	init (bibleID bibID: Int, bibleName bibName: String, bkRecsCr bkRCr: Bool, currBk curBk: Int, bibMod: BibleModel) {
 		self.bibleID = bibID
@@ -106,8 +106,10 @@ class Bible: ObservableObject {
 
 			}
 		}
-		if bibMod.getCurBibInst().currBk == 0 {
-			goChooseBook = true	// Need to choose a Book
+		if currBk == 0 {
+			needChooseBook = true	// Need to choose a Book
+		} else {
+			goCurrentBook()
 		}
 	}
 	
@@ -181,25 +183,17 @@ class Bible: ObservableObject {
 		 BibBooks.append(bkRec)
 	 }
 
-	// Refresh display of the Bible Books table on return to foreground
-	 
-	 func refreshUIAfterReturnToForeground () {
-		 // TODO: Check whether there anything to do here?
-	 }
-
  // If there is a current Book (as read from kdb.sqlite) then instantiate that Book.
 	 func goCurrentBook () {
-		 if currBookOfst == -1 {
-			 currBookOfst = 39		// Assume Matthew; this error should never happen
-		 }
-		 let book = BibBooks[currBookOfst]
+		 currBookOfst = (currBk > 39 ? currBk - 2 : currBk - 1 )
+		 let cBook = BibBooks[currBookOfst]
 
 		 // delete any previous in-memory instance of Book
 		 bookInst = nil
 
 		 // Create a Book instance for the currently selected book
-		 bookInst = Book(self, book.bookID, book.bibleID, book.bookCode, book.bookName,
-						book.chapRecsCreated, book.numChaps, book.currChID, book.currChNum, bibMod)
+		 bookInst = Book(self, cBook.bookID, cBook.bibleID, cBook.bookCode, cBook.bookName,
+						 cBook.chapRecsCreated, cBook.numChaps, cBook.currChID, cBook.currChNum, bibMod)
 	 }
 
  // When the user selects a book from the ChooseBookView it needs to be recorded as the

@@ -77,7 +77,7 @@ struct ChooseBookView: View {
 			})
 		}
 		.navigationDestination(isPresented: $goChooseChapter){
-			ChooseChapterView().environmentObject(bibMod)
+			ChooseChapterView(needChooseChapter: (bibMod.getCurBibInst().bookInst!.needChooseChapter)).environmentObject(bibMod)
 		}
 		.navigationTitle(bibMod.getCurBibName() + " - Choose Book")
 	}
@@ -85,6 +85,5 @@ struct ChooseBookView: View {
 
 
 #Preview {
-//	@EnvironmentObject var bibMod: BibleModel
 	ChooseBookView(needChooseBook: true)
 }

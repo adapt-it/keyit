@@ -14,19 +14,28 @@ import SwiftUI
 
 struct ChooseChapterView: View {
 	@EnvironmentObject var bibMod: BibleModel
+	var needChooseChapter: Bool
 	@State var goEditChapter = false
-	private var gridItemLayout = Array(repeating: GridItem(.flexible(), spacing: 20), count: 5)
+	
+	init(needChooseChapter:Bool) {
+		self.needChooseChapter = needChooseChapter
+		self._goEditChapter = State(wrappedValue: !needChooseChapter)
+	}
+
+	private var gridItemLayout = Array(repeating: GridItem(.flexible(), spacing: 40), count: 5)
 	
 	var body: some View {
 		NavigationStack {
 			// 5 column flexible horizontal grid layout
 			ScrollView(.horizontal) {
-				LazyHGrid(rows: gridItemLayout, spacing: 20) {
+				LazyVGrid(columns: gridItemLayout, spacing: 10) {
 					ForEach(bibMod.getCurBibInst().bookInst!.chapsInBk, id: \.self) { chapLst in
 						Text("\(chapLst.chapNum)")
+							.font(.title)
 					}
 				}
-			}		}
+			}
+		}
 		.navigationDestination(isPresented: $goEditChapter){
 			EditChapterView().environmentObject(bibMod)
 		}
@@ -35,5 +44,5 @@ struct ChooseChapterView: View {
 }
 
 #Preview {
-    ChooseChapterView()
+	ChooseChapterView(needChooseChapter: true)
 }

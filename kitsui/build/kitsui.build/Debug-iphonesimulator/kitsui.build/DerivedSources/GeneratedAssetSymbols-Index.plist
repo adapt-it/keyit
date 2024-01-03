@@ -8,7 +8,7 @@
 	<array>
 		<dict>
 			<key>catalogPath</key>
-			<string>/Users/graemecostin/keyit2024/kitsui/kitsui/Assets.xcassets</string>
+			<string>/Users/graemecostin/keyit/kitsui/kitsui/Assets.xcassets</string>
 			<key>objcSymbol</key>
 			<string>ACImageNameAppLogo</string>
 			<key>relativePath</key>
@@ -18,7 +18,7 @@
 		</dict>
 		<dict>
 			<key>catalogPath</key>
-			<string>/Users/graemecostin/keyit2024/kitsui/kitsui/Assets.xcassets</string>
+			<string>/Users/graemecostin/keyit/kitsui/kitsui/Assets.xcassets</string>
 			<key>objcSymbol</key>
 			<string>ACImageNameKITLogoD</string>
 			<key>relativePath</key>

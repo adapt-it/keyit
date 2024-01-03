@@ -42,6 +42,8 @@ public class Book:NSObject, ObservableObject {
 	var curChNum: Int = 0		// currChNum INTEGER
 	var currChapOfst: Int = -1	// offset to the current Chapter in BibChaps[] array (-1 means not yet set)
 	
+	@Published var needChooseChapter = false	// Assume no need for ChooseChapterView
+	
 	var chapInst: Chapter?	// instance in memory of the current Chapter
 	var chapName: String?	// Name used for chapters (most books have "chapter", Psalms have "psalm")
 
@@ -136,6 +138,11 @@ var BibChaps: [BibChap] = []
 			chapsInBk.append(chapLst(chapID: BibChap.chID, chapNum: BibChap.chNum))
 		}
 
+		if curChID == 0 {
+			needChooseChapter = true	// Need to choose a Book
+		} else {
+			goCurrentChapter()
+		}
 	}
 
 	func createChapterRecords (_ book:Int, _ bib:Int, _ code:String) {

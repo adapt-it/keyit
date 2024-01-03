@@ -480,7 +480,7 @@ public class KITDAO:/*NSObject, */ObservableObject {
 
 		sqlite3_prepare_v2(db, sql, nByte, &sqlite3_stmt, nil)
 		sqlite3_bind_int(sqlite3_stmt, 1, Int32(bibID))
-//		sqlite3_bind_int(sqlite3_stmt, 2, Int32(bkInst.bkID))
+		sqlite3_bind_int(sqlite3_stmt, 2, Int32(bkInst.bkID))
 		var result:Int32 = 0
 		repeat {
 			result = sqlite3_step(sqlite3_stmt)
