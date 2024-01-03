@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>colors</key>
+	<array/>
+	<key>images</key>
+	<array>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameBridgePubItem</string>
+			<key>relativePath</key>
+			<string>./BridgePubItem.imageset</string>
+			<key>swiftSymbol</key>
+			<string>bridgePubItem</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameCreatePubItem</string>
+			<key>relativePath</key>
+			<string>./CreatePubItem.imageset</string>
+			<key>swiftSymbol</key>
+			<string>createPubItem</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameDeletePubItem</string>
+			<key>relativePath</key>
+			<string>./DeletePubItem.imageset</string>
+			<key>swiftSymbol</key>
+			<string>deletePubItem</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameKITLogo</string>
+			<key>relativePath</key>
+			<string>./KIT Logo.imageset</string>
+			<key>swiftSymbol</key>
+			<string>kitLogo</string>
+		</dict>
+		<dict>
+			<key>catalogPath</key>
+			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<key>objcSymbol</key>
+			<string>ACImageNameUnbridgePubItem</string>
+			<key>relativePath</key>
+			<string>./UnbridgePubItem.imageset</string>
+			<key>swiftSymbol</key>
+			<string>unbridgePubItem</string>
+		</dict>
+	</array>
+	<key>symbols</key>
+	<array/>
+</dict>
+</plist>

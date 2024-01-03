@@ -1,0 +1,24 @@
+{
+  "source": "/Users/graemecostin/keyit2024/kitsui/kitsui/Views/ChooseBookView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "NT"
+      },
+      {
+        "comment": "",
+        "key": "OT"
+      },
+      {
+        "comment": "",
+        "key": "Old Testament"
+      },
+      {
+        "comment": "",
+        "key": "New Testament"
+      }
+    ]
+  },
+  "version": 1
+}

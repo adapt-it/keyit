@@ -1,0 +1,20 @@
+{
+  "source": "/Users/graemecostin/keyit2024/kitsui/kitsui/Views/SetupView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Go to Choose Book"
+      },
+      {
+        "comment": "",
+        "key": "Bible Name"
+      },
+      {
+        "comment": "",
+        "key": "Name of Bible"
+      }
+    ]
+  },
+  "version": 1
+}

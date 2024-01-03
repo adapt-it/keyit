@@ -1,0 +1,18 @@
+"/Users/graemecostin/keyit2024/kitios/kitios/UIVerseItemCell.swift":
+  swift-dependencies: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.swiftdeps"
+  object: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.o"
+  dependencies: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.d"
+  diagnostics: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.dia"
+  const-values: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.swiftconstvalues"
+"/Users/graemecostin/keyit2024/kitios/kitios/UIPubItemCell.swift":
+  swift-dependencies: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.swiftdeps"
+  diagnostics: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.dia"
+  object: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.o"
+  dependencies: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.d"
+  const-values: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.swiftconstvalues"
+"/Users/graemecostin/keyit2024/kitios/models/ErrorNumbers.swift":
+  dependencies: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.d"
+  const-values: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.swiftconstvalues"
+  swift-dependencies: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.swiftdeps"
+  diagnostics: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.dia"
+  object: "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.o"

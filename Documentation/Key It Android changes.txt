@@ -3,8 +3,10 @@ Key It Android bug fixes and changes
 ----------------------------------------------
 
 ----------------------------------------------
-Version 1.1.0  ??? 2023
+Version 1.1.1 (5) 28DEC2023
 ----------------------------------------------
+
+* Direct export to Adapt It Mobile tested OK
 
 * Display of versionName and versionCode added
 to the Setup screen
