@@ -518,8 +518,8 @@
             filePath = "kitsui/Views/SetupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -733,6 +733,51 @@
                   endingLineNumber = "56"
                   offsetFromSymbolStart = "36">
                </Location>
+               <Location
+                  uuid = "C4C6B8D0-3740-408C-BEA1-5D5514A333F4 - 13102c962489c41f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "C4C6B8D0-3740-408C-BEA1-5D5514A333F4 - 1fb9de004ac87577"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.Text)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "C4C6B8D0-3740-408C-BEA1-5D5514A333F4 - 1fb9de004ac8742c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.Text)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "36">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -746,8 +791,8 @@
             filePath = "kitsui/Views/SetupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1156,6 +1201,96 @@
                   endingLineNumber = "42"
                   offsetFromSymbolStart = "44">
                </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - 825434964727ef09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - bfdffb7f78225fe8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - 31620ddc2f8887a5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.Text)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - 3bad70377ce80910"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.Text)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - 31620ddc2f88871e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.Text)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "99C6215D-BEC8-430A-9D9D-A6FE2EC2E7B8 - 3bad70377ce808b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(kitsui.RoundedRectImage, SwiftUI.Form&lt;SwiftUI.Section&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.font(Swift.Optional&lt;SwiftUI.Font&gt;) -&gt; some&gt;&gt;.0, SwiftUI.EmptyView&gt;&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Text&gt;, SwiftUI.Spacer, SwiftUI.Text)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "44">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1367,8 +1502,8 @@
             filePath = "kitsui/Views/SetupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "init(bibleName:needSetup:)"
             landmarkType = "7">
             <Locations>
@@ -1521,6 +1656,21 @@
                   startingLineNumber = "23"
                   endingLineNumber = "23"
                   offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "2DF86488-402D-4C50-859A-2C4CE5D83263 - 2bd92369d5fcc870"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.SetupView.init(bibleName: Swift.String, needSetup: Swift.Bool) -&gt; kitsui.SetupView"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "224">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2209,6 +2359,21 @@
                   endingLineNumber = "118"
                   offsetFromSymbolStart = "528">
                </Location>
+               <Location
+                  uuid = "71251A93-16CB-4578-847E-BB33C5E183E4 - dfaf363e1889a74a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.createBibBooks(Swift.Int) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "528">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2743,6 +2908,21 @@
                   endingLineNumber = "149"
                   offsetFromSymbolStart = "2648">
                </Location>
+               <Location
+                  uuid = "B37258C9-FF34-44C6-ACE8-C305B7D49322 - dfaf363e1889a34d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.createBibBooks(Swift.Int) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "2648">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2909,6 +3089,21 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "169"
                   endingLineNumber = "169"
+                  offsetFromSymbolStart = "3788">
+               </Location>
+               <Location
+                  uuid = "5DF28F2F-8255-4C3A-AB97-50B127CFA0E9 - dfaf363e1889a1d9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.createBibBooks(Swift.Int) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
                   offsetFromSymbolStart = "3788">
                </Location>
             </Locations>
@@ -4020,8 +4215,8 @@
             filePath = "kitsui/Views/SetupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "getBibleName()"
             landmarkType = "7">
             <Locations>
@@ -4085,6 +4280,36 @@
                   endingLineNumber = "30"
                   offsetFromSymbolStart = "0">
                </Location>
+               <Location
+                  uuid = "770CE368-ABD1-4F3E-A672-71D2AE0F6368 - dd63254635f4252f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bibMod.getter : kitsui.BibleModel"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "770CE368-ABD1-4F3E-A672-71D2AE0F6368 - dd63254635f4210f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "bibMod.getter : kitsui.BibleModel"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "0">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4098,8 +4323,8 @@
             filePath = "kitsui/Views/SetupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "SetupView"
             landmarkType = "14">
             <Locations>
@@ -4302,6 +4527,21 @@
                   endingLineNumber = "213"
                   offsetFromSymbolStart = "48">
                </Location>
+               <Location
+                  uuid = "6E7809C2-BB84-4892-9B96-5B5794887101 - d4a2c02531867a67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Bible.setupCurrentBook(kitsui.Bible.BibBook) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Bible.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
+                  offsetFromSymbolStart = "48">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4485,8 +4725,8 @@
             filePath = "kitsui/Views/SetupView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -4578,6 +4818,96 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "62"
                   endingLineNumber = "62"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 819927c712c24a3f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 598868e5f7b502c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 819927c712c24ce6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 598868e5f7b5039c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 819927c712c24c28"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "500">
+               </Location>
+               <Location
+                  uuid = "3E6AC610-F711-45BE-BF53-FFC58CDA2CBC - 598868e5f7b500d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationDestination&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.View&gt;(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, destination: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in kitsui.SetupView.body.getter : some"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
                   offsetFromSymbolStart = "180">
                </Location>
             </Locations>
@@ -4674,6 +5004,21 @@
                   endingLineNumber = "159"
                   offsetFromSymbolStart = "1344">
                </Location>
+               <Location
+                  uuid = "5F5E4E29-0958-43DF-A649-988B9C3D7EE8 - a7e73f77d67e2b8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Book.createChapterRecords(Swift.Int, Swift.Int, Swift.String) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Book.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "166"
+                  endingLineNumber = "166"
+                  offsetFromSymbolStart = "1344">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -4750,6 +5095,21 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "181"
                   endingLineNumber = "181"
+                  offsetFromSymbolStart = "2696">
+               </Location>
+               <Location
+                  uuid = "404077C9-4D0A-4880-B505-D134371B823D - a7e73f77d67e2cdb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.Book.createChapterRecords(Swift.Int, Swift.Int, Swift.String) -&gt; ()"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Model/Book.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
                   offsetFromSymbolStart = "2696">
                </Location>
             </Locations>
@@ -5049,6 +5409,54 @@
             endingLineNumber = "210"
             landmarkName = "offsetToBibChap(withID:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CB1E9EA-D965-4155-B95A-335642E4F9AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/SetupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "getAppVersion()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4CB1E9EA-D965-4155-B95A-335642E4F9AC - 9d3121644e9b9b03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.SetupView.getAppVersion() -&gt; Swift.String"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "4CB1E9EA-D965-4155-B95A-335642E4F9AC - 9d3121644e9b9b22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.SetupView.getAppVersion() -&gt; Swift.String"
+                  moduleName = "kitsui"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
