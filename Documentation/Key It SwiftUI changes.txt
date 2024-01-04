@@ -1,0 +1,24 @@
+----------------------------------------------
+Key It Android bug fixes and changes
+----------------------------------------------
+
+----------------------------------------------
+Version 2.0 (10) ???2024
+----------------------------------------------
+
+
+* Display of versionName and versionCode added
+to the Setup screen
+
+* Allows going back to the Setup screen so that the
+Name of the Bible can be edited if needed.
+
+* Reimplemented in SwiftUI for iOS 16 and later
+ 
+----------------------------------------------
+Key It Version 1.0 initial release 6DEC2021
+----------------------------------------------
+
+Key It Version 1.0 for iOS was uploaded to the Google
+PlayStore on 4DEC2021. It is a native iOS app with
+Source code written in Swift.
