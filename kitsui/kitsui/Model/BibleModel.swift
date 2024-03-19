@@ -85,6 +85,14 @@ class BibleModel: ObservableObject {
 		return bibArray[curBibOfst].bibleName
 	}
 
+	func getCurBookName() -> String {
+		if let curBkName = bibArray[curBibOfst].bookInst?.bkName {
+			return curBkName
+		} else {
+			return "ERR: Book not chosen"
+		}
+	}
+	
 	// Updates the name of the current Bible in both the bibArray[] and the database
 	func bibleUpdateName(_ editedName: String) {
 		let curBibOff = getCurBibOfst()

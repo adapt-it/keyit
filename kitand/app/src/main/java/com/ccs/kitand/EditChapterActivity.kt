@@ -2,6 +2,7 @@ package com.ccs.kitand
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
 import android.view.*
 import android.view.ViewTreeObserver.OnPreDrawListener
 import android.widget.*

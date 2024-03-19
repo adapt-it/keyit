@@ -2,7 +2,9 @@
 /Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseChapterView.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Model/Chapter.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Views/SetupView.swift
+/Users/graemecostin/keyit/kitsui/kitsui/Model/VerseItem.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Model/BibleModel.swift
+/Users/graemecostin/keyit/kitsui/kitsui/Views/BookNameView.swift
 /Users/graemecostin/keyit/kitsui/kitsui/App/kitsuiApp.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseBookView.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Model/Book.swift
@@ -10,5 +12,7 @@
 /Users/graemecostin/keyit/kitsui/kitsui/Views/RoundedRectImage.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Model/KITDAO.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Views/EditChapterView.swift
+/Users/graemecostin/keyit/kitsui/kitsui/Views/VerseItemView.swift
 /Users/graemecostin/keyit/kitsui/kitsui/Model/VIMenu.swift
+/Users/graemecostin/keyit/kitsui/kitsui/Views/ChapterNumberView.swift
 /Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/DerivedSources/GeneratedAssetSymbols.swift

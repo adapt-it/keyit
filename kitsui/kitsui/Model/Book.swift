@@ -22,7 +22,8 @@
 //    May you share freely, never taking more than you give.
 
 
-import UIKit
+import Foundation
+import SwiftUI
 
 public class Book:NSObject, ObservableObject {
 
@@ -49,8 +50,8 @@ public class Book:NSObject, ObservableObject {
 
 // This struct and the BibChaps array are used for letting the user select the
 // Chapter to keyboard in the current selected Book.
-
-	struct BibChap {
+		
+	struct BibChap: Identifiable, Hashable {
 		var chID: Int		// chapterID INTEGER PRIMARY KEY
 		var bibID: Int		// bibleID INTEGER
 		var bkID: Int		// bookID INTEGER
@@ -60,7 +61,10 @@ public class Book:NSObject, ObservableObject {
 		var numIt: Int		// numItems INTEGER
 		var curIt: Int		// currItem INTEGER (ID of current VerseItem
 		var curVN: Int		// currVsNum INTEGER (verse number for curIt)
-		init (_ chID:Int, _ bibID:Int, _ bkID:Int, _ chNum:Int, _ itRCr:Bool, _ numVs:Int, _ numIt:Int, _ curIt:Int, _ curVN:Int) {
+		var selected: Bool
+		var id = UUID()
+		init (chID:Int, bibID:Int, bkID: Int, chNum: Int, itRCr: Bool,
+			  numVs:Int, numIt:Int, curIt:Int, curVN:Int, selected:Bool = false) {
 			self.chID = chID
 			self.bibID = bibID
 			self.bkID = bkID
@@ -70,20 +74,12 @@ public class Book:NSObject, ObservableObject {
 			self.numIt = numIt
 			self.curIt = curIt
 			self.curVN = curVN
+			self.selected = selected
 		}
 	}
 
-var BibChaps: [BibChap] = []
-
-	// struct chapLst is used in SwiftUI Grid Views for choosing a Chapter
-	struct chapLst: Identifiable, Hashable {
-		var chapID: Int
-		var chapNum: Int
-		var id = UUID()
-	}
-
-	var chapsInBk: [chapLst] = []
-
+	@Published var BibChaps: [BibChap] = []
+ 
 // When the instance of Bible creates the instance for the current Book it supplies the values for the
 // currently selected book from the BibBooks array
 	// Initialisation of an instance of class Book with an array of Chapters to select from
@@ -132,14 +128,8 @@ var BibChaps: [BibChap] = []
 		dao!.readChaptersRecs (bibID, self)
 		// calls readChaptersRecs() in KITDAO.swift to read the kdb.sqlite database Books table
 		// readChaptersRecs() calls appendChapterToArray() in this file for each ROW read from kdb.sqlite
-		
-		// Load chapsInBk
-		for BibChap in BibChaps {
-			chapsInBk.append(chapLst(chapID: BibChap.chID, chapNum: BibChap.chNum))
-		}
-
 		if curChID == 0 {
-			needChooseChapter = true	// Need to choose a Book
+			needChooseChapter = true	// Need to choose a Chapter
 		} else {
 			goCurrentChapter()
 		}
@@ -198,8 +188,11 @@ var BibChaps: [BibChap] = []
 
 //	dao.readChaptersRecs() calls appendChapterToArray() for each row it reads from the kdb.sqlite database
 	func appendChapterToArray(_ chapID:Int, _ bibID:Int, _ bookID:Int,
-							  _ chNum:Int, _ itRCr:Bool, _ numVs:Int, _ numIt:Int, _ curIt:Int, _ curVNm:Int) {
-		let chRec = BibChap(chapID, bibID, bookID, chNum, itRCr, numVs, numIt, curIt, curVNm)
+							  _ chNum:Int, _ itRCr:Bool, _ numVs:Int, _ numIt:Int, _ curIt:Int, _ curVN:Int) {
+		var chRec = BibChap(chID: chapID, bibID: bibID, bkID: bookID, chNum: chNum, itRCr: itRCr, numVs: numVs, numIt: numIt, curIt: curIt, curVN: curVN)
+		if chapID == self.curChID {
+			chRec.selected = true
+		}
 		BibChaps.append(chRec)
 	}
 
@@ -216,10 +209,6 @@ var BibChaps: [BibChap] = []
 	}
 
 // If, from kdb.sqlite, there is already a current Chapter for the current Book then go to it
-// Go to the current BibChap
-// This function is called by the ChaptersTableViewController to find out which Chapter
-// in the current Book is the current Chapter, and to make the Book instance and
-// the Book record remember that selection.
 	func goCurrentChapter() {
 		currChapOfst = offsetToBibChap(withID: curChID)
 		
@@ -231,19 +220,33 @@ var BibChaps: [BibChap] = []
 		chapInst = Chapter(self, chap.chID, chap.bibID, chap.bkID, chap.chNum, chap.itRCr, chap.numVs, chap.numIt, chap.curIt, chap.curVN)
 	}
 	
-// When the user selects a Chapter from the UITableView of Chapters it needs to be recorded as the
+// When the user selects a Chapter from the Grid view of Chapters it needs to be recorded as the
 // current Chapter and initialisation of data structures in a new Chapter instance must happen.
 	
-	func setupCurrentChapter(withOffset chapOfst: Int) {
-		let newChap = (chapOfst != currChapOfst) || (curChNum == 0)
-		let chap = BibChaps[chapOfst]
-		curChNum = chap.chNum
-		curChID = chap.chID		// ChapterID
-		currChapOfst = chapOfst		// Chapter offset (1 less than Chapter Number seen by users)
+	func setupChosenChapter(_ chapChosen: BibChap) {
+		let newChID = chapChosen.chID			// update to new ChapterID
+		let newChOfst = offsetToBibChap(withID: newChID)
+		
+		// Set newChap true if the user is changing to a different Chapter
+		// or if there was not yet a chosen Chapter
+		let newChap = (newChOfst != currChapOfst) || (currChapOfst == -1)
+		
+		// If there is a current chapter, make it not selected
+		if currChapOfst >= 0 {
+			BibChaps[currChapOfst].selected = false
+		}
+
+		// update to new Chapter number, offset, selected
+		curChID = newChID
+		curChNum = chapChosen.chNum
+		currChapOfst = newChOfst
+		BibChaps[currChapOfst].selected = true
+		let chap = BibChaps[currChapOfst]
+
 		// update Book record in kdb.sqlite to show this current Chapter
 		dao!.booksUpdateRec(bibID, bkID, chapRCr, numChap, curChID, curChNum)
-		// Update the curChID and curChNum for this book in BibBooks[] in bInst
-//		bibInst!.setBibBooksCurChap(curChID, curChNum)
+		// Update the curChID and curChNum for this book in BibBooks[] in bibInst
+		bibInst!.setBibBooksCurChap(curChID, curChNum)
 
 		// If the user has changed to a different Chapter then
 		// delete any previous in-memory instance of Chapter and create a new one

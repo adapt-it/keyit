@@ -85,6 +85,16 @@
     "swift-dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/KITDAO.swiftdeps",
     "swiftmodule" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/KITDAO~partial.swiftmodule"
   },
+  "/Users/graemecostin/keyit/kitsui/kitsui/Model/VerseItem.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem.dia",
+    "index-unit-output-path" : "/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem.o",
+    "llvm-bc" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem.bc",
+    "object" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItem~partial.swiftmodule"
+  },
   "/Users/graemecostin/keyit/kitsui/kitsui/Model/VIMenu.swift" : {
     "const-values" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VIMenu.swiftconstvalues",
     "dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VIMenu.d",
@@ -94,6 +104,26 @@
     "object" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VIMenu.o",
     "swift-dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VIMenu.swiftdeps",
     "swiftmodule" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VIMenu~partial.swiftmodule"
+  },
+  "/Users/graemecostin/keyit/kitsui/kitsui/Views/BookNameView.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView.dia",
+    "index-unit-output-path" : "/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView.o",
+    "llvm-bc" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView.bc",
+    "object" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/BookNameView~partial.swiftmodule"
+  },
+  "/Users/graemecostin/keyit/kitsui/kitsui/Views/ChapterNumberView.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView.dia",
+    "index-unit-output-path" : "/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView.o",
+    "llvm-bc" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView.bc",
+    "object" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChapterNumberView~partial.swiftmodule"
   },
   "/Users/graemecostin/keyit/kitsui/kitsui/Views/ChooseBookView.swift" : {
     "const-values" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/ChooseBookView.swiftconstvalues",
@@ -144,5 +174,15 @@
     "object" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/SetupView.o",
     "swift-dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/SetupView.swiftdeps",
     "swiftmodule" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/SetupView~partial.swiftmodule"
+  },
+  "/Users/graemecostin/keyit/kitsui/kitsui/Views/VerseItemView.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView.dia",
+    "index-unit-output-path" : "/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView.o",
+    "llvm-bc" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView.bc",
+    "object" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitsui/build/kitsui.build/Debug-iphonesimulator/kitsui.build/Objects-normal/arm64/VerseItemView~partial.swiftmodule"
   }
 }

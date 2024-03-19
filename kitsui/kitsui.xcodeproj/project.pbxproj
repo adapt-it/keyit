@@ -12,15 +12,19 @@
 		C80673002B04AC3E007FA4DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80672FF2B04AC3E007FA4DE /* Assets.xcassets */; };
 		C80673032B04AC3E007FA4DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80673022B04AC3E007FA4DE /* Preview Assets.xcassets */; };
 		C814374B2B1AB584008E260A /* VIMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C814374A2B1AB584008E260A /* VIMenu.swift */; };
+		C81FF4D82B648EFF00508F98 /* VerseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81FF4D72B648EFF00508F98 /* VerseItemView.swift */; };
 		C879FCBF2B0889BD0074E6CF /* KITDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C879FCBE2B0889BD0074E6CF /* KITDAO.swift */; };
 		C87FABE92B4186D200B15BAE /* EditChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87FABE82B4186D200B15BAE /* EditChapterView.swift */; };
 		C88777862B04D7E1001E84D4 /* BibleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88777852B04D7E1001E84D4 /* BibleModel.swift */; };
 		C887778A2B050063001E84D4 /* RoundedRectImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88777892B050063001E84D4 /* RoundedRectImage.swift */; };
 		C88C33DE2B06373000D05224 /* KIT_BooksSpec.txt in Resources */ = {isa = PBXBuildFile; fileRef = C88C33DD2B06373000D05224 /* KIT_BooksSpec.txt */; };
 		C88C33E02B06375600D05224 /* KIT_BooksNames.txt in Resources */ = {isa = PBXBuildFile; fileRef = C88C33DF2B06375600D05224 /* KIT_BooksNames.txt */; };
+		C893D2772B7F49F500F9B4AF /* VerseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C893D2762B7F49F500F9B4AF /* VerseItem.swift */; };
+		C8A5678C2B79CACB00F22D1E /* BookNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A5678B2B79CACB00F22D1E /* BookNameView.swift */; };
 		C8AAB7652B0DB6F400C1D108 /* ErrorNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AAB7642B0DB6F400C1D108 /* ErrorNumbers.swift */; };
 		C8C10BC32B071C0B00140F44 /* ChooseBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C10BC22B071C0B00140F44 /* ChooseBookView.swift */; };
 		C8D183C82B357127002A44D1 /* ChooseChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D183C72B357127002A44D1 /* ChooseChapterView.swift */; };
+		C8DA63742B4CEB6F0088BF86 /* ChapterNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DA63732B4CEB6F0088BF86 /* ChapterNumberView.swift */; };
 		C8EC69D52B11D9F700BF73F3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC69D42B11D9F700BF73F3 /* Book.swift */; };
 		C8EC69D72B11DE0700BF73F3 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EC69D62B11DE0700BF73F3 /* Chapter.swift */; };
 		C8EDDB322B11AB3E003525E9 /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EDDB312B11AB3E003525E9 /* Bible.swift */; };
@@ -33,16 +37,20 @@
 		C80672FF2B04AC3E007FA4DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C80673022B04AC3E007FA4DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C814374A2B1AB584008E260A /* VIMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIMenu.swift; sourceTree = "<group>"; };
+		C81FF4D72B648EFF00508F98 /* VerseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseItemView.swift; sourceTree = "<group>"; };
 		C879FCBE2B0889BD0074E6CF /* KITDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KITDAO.swift; sourceTree = "<group>"; };
 		C87FABE82B4186D200B15BAE /* EditChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChapterView.swift; sourceTree = "<group>"; };
 		C88777852B04D7E1001E84D4 /* BibleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleModel.swift; sourceTree = "<group>"; };
 		C88777892B050063001E84D4 /* RoundedRectImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedRectImage.swift; sourceTree = "<group>"; };
 		C88C33DD2B06373000D05224 /* KIT_BooksSpec.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KIT_BooksSpec.txt; sourceTree = "<group>"; };
 		C88C33DF2B06375600D05224 /* KIT_BooksNames.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KIT_BooksNames.txt; sourceTree = "<group>"; };
+		C893D2762B7F49F500F9B4AF /* VerseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseItem.swift; sourceTree = "<group>"; };
 		C89687442B0DACEB0006C58E /* SQLite3Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLite3Bridge.h; sourceTree = "<group>"; };
+		C8A5678B2B79CACB00F22D1E /* BookNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookNameView.swift; sourceTree = "<group>"; };
 		C8AAB7642B0DB6F400C1D108 /* ErrorNumbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorNumbers.swift; sourceTree = "<group>"; };
 		C8C10BC22B071C0B00140F44 /* ChooseBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBookView.swift; sourceTree = "<group>"; };
 		C8D183C72B357127002A44D1 /* ChooseChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseChapterView.swift; sourceTree = "<group>"; };
+		C8DA63732B4CEB6F0088BF86 /* ChapterNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterNumberView.swift; sourceTree = "<group>"; };
 		C8EC69D42B11D9F700BF73F3 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		C8EC69D62B11DE0700BF73F3 /* Chapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		C8EDDB312B11AB3E003525E9 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
@@ -108,10 +116,13 @@
 			isa = PBXGroup;
 			children = (
 				C80672FD2B04AC3D007FA4DE /* SetupView.swift */,
-				C8C10BC22B071C0B00140F44 /* ChooseBookView.swift */,
-				C8D183C72B357127002A44D1 /* ChooseChapterView.swift */,
-				C87FABE82B4186D200B15BAE /* EditChapterView.swift */,
 				C88777892B050063001E84D4 /* RoundedRectImage.swift */,
+				C8C10BC22B071C0B00140F44 /* ChooseBookView.swift */,
+				C8A5678B2B79CACB00F22D1E /* BookNameView.swift */,
+				C8D183C72B357127002A44D1 /* ChooseChapterView.swift */,
+				C8DA63732B4CEB6F0088BF86 /* ChapterNumberView.swift */,
+				C87FABE82B4186D200B15BAE /* EditChapterView.swift */,
+				C81FF4D72B648EFF00508F98 /* VerseItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,6 +134,7 @@
 				C8EDDB312B11AB3E003525E9 /* Bible.swift */,
 				C8EC69D42B11D9F700BF73F3 /* Book.swift */,
 				C8EC69D62B11DE0700BF73F3 /* Chapter.swift */,
+				C893D2762B7F49F500F9B4AF /* VerseItem.swift */,
 				C814374A2B1AB584008E260A /* VIMenu.swift */,
 				C879FCBE2B0889BD0074E6CF /* KITDAO.swift */,
 				C8AAB7642B0DB6F400C1D108 /* ErrorNumbers.swift */,
@@ -216,7 +228,9 @@
 				C8D183C82B357127002A44D1 /* ChooseChapterView.swift in Sources */,
 				C8EC69D72B11DE0700BF73F3 /* Chapter.swift in Sources */,
 				C80672FE2B04AC3D007FA4DE /* SetupView.swift in Sources */,
+				C893D2772B7F49F500F9B4AF /* VerseItem.swift in Sources */,
 				C88777862B04D7E1001E84D4 /* BibleModel.swift in Sources */,
+				C8A5678C2B79CACB00F22D1E /* BookNameView.swift in Sources */,
 				C80672FC2B04AC3D007FA4DE /* kitsuiApp.swift in Sources */,
 				C8C10BC32B071C0B00140F44 /* ChooseBookView.swift in Sources */,
 				C8EC69D52B11D9F700BF73F3 /* Book.swift in Sources */,
@@ -224,7 +238,9 @@
 				C887778A2B050063001E84D4 /* RoundedRectImage.swift in Sources */,
 				C879FCBF2B0889BD0074E6CF /* KITDAO.swift in Sources */,
 				C87FABE92B4186D200B15BAE /* EditChapterView.swift in Sources */,
+				C81FF4D82B648EFF00508F98 /* VerseItemView.swift in Sources */,
 				C814374B2B1AB584008E260A /* VIMenu.swift in Sources */,
+				C8DA63742B4CEB6F0088BF86 /* ChapterNumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

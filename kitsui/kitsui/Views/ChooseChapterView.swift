@@ -16,31 +16,69 @@ struct ChooseChapterView: View {
 	@EnvironmentObject var bibMod: BibleModel
 	var needChooseChapter: Bool
 	@State var goEditChapter = false
-	
-	init(needChooseChapter:Bool) {
+	@State private var selectedChapter: Book.BibChap?
+
+	init(needChooseChapter: Bool) {
 		self.needChooseChapter = needChooseChapter
-		self._goEditChapter = State(wrappedValue: !needChooseChapter)
+
+// GDLC 6FEB24 Removed this setting of goEditChapter so that it is not set true until
+// onAppear(), by which time all initialisations will have been done.
+//		self._goEditChapter = State(wrappedValue: !needChooseChapter)
 	}
 
-	private var gridItemLayout = Array(repeating: GridItem(.flexible(), spacing: 40), count: 5)
+	private var gridItemLayout = Array(repeating: GridItem(.flexible(), spacing: 1), count: 5)
 	
 	var body: some View {
 		NavigationStack {
-			// 5 column flexible horizontal grid layout
-			ScrollView(.horizontal) {
-				LazyVGrid(columns: gridItemLayout, spacing: 10) {
-					ForEach(bibMod.getCurBibInst().bookInst!.chapsInBk, id: \.self) { chapLst in
-						Text("\(chapLst.chapNum)")
-							.font(.title)
+			VStack {
+				Text("Choose \(getChapterName())")
+				// 5 column flexible horizontal grid layout
+				ScrollView(.vertical) {
+					LazyVGrid(columns: gridItemLayout, spacing: 10) {
+						ForEach(bibMod.getCurBibInst().bookInst!.BibChaps, id: \.self) { chap in
+							ChapterNumberView(chp: chap).environmentObject(bibMod)
+							.onTapGesture {
+								selectedChapter = chap
+								print("Tapped \(chap.chNum) _ \(chap.selected)")
+								setupChosenChapter(selectedChapter!)
+								print("selectedChapter changed to \(String(describing: selectedChapter?.chNum))")
+								goEditChapter = true
+							}
+						}
 					}
 				}
 			}
 		}
 		.navigationDestination(isPresented: $goEditChapter){
-			EditChapterView().environmentObject(bibMod)
+			EditChapterView(currItOfst: 0).environmentObject(bibMod)
 		}
-		.navigationTitle(bibMod.getCurBibName() + " - Choose Chapter")
+		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
+		.onAppear() {
+			if !needChooseChapter {
+				goEditChapter = true
+			}
+		}
+		.onDisappear() {
+			selectedChapter = nil
+		}
     }
+	
+	func getChapterName() -> String {
+		if let bkInst = bibMod.getCurBibInst().bookInst {
+			return bkInst.chapName!
+		} else {
+			return "ERR: Book not yet chosen"
+		}
+	}
+	
+	func setupChosenChapter(_ selectedChapter:Book.BibChap) {
+		if let bkInst = bibMod.getCurBibInst().bookInst {
+			bkInst.setupChosenChapter(selectedChapter)
+		} else {
+			print("ERR: Book not yet chosen")
+		}
+	}
+	
 }
 
 #Preview {

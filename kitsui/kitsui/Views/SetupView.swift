@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SetupView.swift
 //  kitsui
 //
 //  Created by Graeme Costin on 15/11/2023.
@@ -24,37 +24,12 @@ struct SetupView: View {
 		self.bibleName = bibleName
 		self._editedName = State(wrappedValue: bibleName)
 		self.needSetup = needSetup
-		self._goChooseBook = State(wrappedValue: !needSetup)
-		showAppVersion()
+// GDLC 6FEB24 Removed this setting of goChooseBook so that it is not set true until
+// onAppear(), by which time all initialisations will have been done.
+//		self._goChooseBook = State(wrappedValue: !needSetup)
 	}
 
-	func getBibleName () -> String {
-		@EnvironmentObject var bibMod: BibleModel
-		return bibMod.getCurBibName()
-	}
-
-	func getAppVersion() -> String {
-		var appVerText: String
-		if let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
-			appVerText = "App version: \(appVersion)"
-			if let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String {
-				appVerText = appVerText + " (" + buildNumber + ")"
-			}
-		} else {
-			appVerText = "App version not available."
-		}
-		return appVerText
-	}
-	
-	func showAppVersion() {
-		if let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
-			print("App version: \(appVersion)")
-		} else {
-			print("your platform does not support this feature.")
-		}
-	}
-
-    var body: some View {
+	var body: some View {
         NavigationStack {
             VStack {
                 RoundedRectImage(roundRect: Image("KITLogoD"))
@@ -62,7 +37,7 @@ struct SetupView: View {
                     Section {
                         TextField("Bible Name", text: $editedName, onEditingChanged: {
                             (changed) in
-                            if changed {
+                              if changed {
                                 print("Bible Name edit has begun")
                             } else {
                                 print("Editing Bible Name")
@@ -84,11 +59,29 @@ struct SetupView: View {
 					.font(.system(size: 10.0))
             }
 			.navigationDestination(isPresented: $goChooseBook){
-				ChooseBookView(needChooseBook: (bibMod.getCurBibInst().currBk == 0)).environmentObject(bibMod)
+				ChooseBookView(needChooseBook: bibMod.getCurBibInst().needChooseBook).environmentObject(bibMod)
 			}
 		}
 		.padding()
+		.onAppear() {
+			if !needSetup {
+				goChooseBook = true
+			}
+		}
     }
+
+	func getAppVersion() -> String {
+		var appVerText: String
+		if let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
+			appVerText = "App version: \(appVersion)"
+			if let buildNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String {
+				appVerText = appVerText + " (" + buildNumber + ")"
+			}
+		} else {
+			appVerText = "App version not available."
+		}
+		return appVerText
+	}
 }
 
 #Preview {

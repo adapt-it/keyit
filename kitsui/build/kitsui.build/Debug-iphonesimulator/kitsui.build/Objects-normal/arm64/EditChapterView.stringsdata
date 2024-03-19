@@ -4,7 +4,7 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "Edit Chapter View"
+        "key": "Edit %@ %lld, %lld VerseItems"
       }
     ]
   },

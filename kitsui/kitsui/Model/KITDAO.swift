@@ -63,7 +63,7 @@ enum SQLiteError: Error {
 }
 
 public class KITDAO:/*NSObject, */ObservableObject {
-    var bibInst: Bible? // During the launch of KIT an instance of the class Bible will be created REALLY???
+//    var bibInst: Bible? // During the launch of KIT an instance of the class Bible will be created REALLY???
                         // This is the strong ref to bibInst which lasts for the entire run of the app
 
 //    var databaseAvail:Bool = false
@@ -74,7 +74,6 @@ public class KITDAO:/*NSObject, */ObservableObject {
 	internal let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
 
 	init() {
-//        super.init()
         let docsDir:URL = FileManager.default.urls (for: .documentDirectory, in: .userDomainMask).first!
         let kdbPath:URL = docsDir.appendingPathComponent ("kdb.sqlite")
         if !FileManager.default.fileExists(atPath: kdbPath.path) {
@@ -90,7 +89,6 @@ public class KITDAO:/*NSObject, */ObservableObject {
                 ReportError(DB_opErr)
             }
         }
-//		databaseAvail = true
 	}
 	
 	// Ensure that the kdb.sqlite database is closed
@@ -498,9 +496,9 @@ public class KITDAO:/*NSObject, */ObservableObject {
 				let numVs = Int(sqlite3_column_int(sqlite3_stmt, 5))
 				let numIt = Int(sqlite3_column_int(sqlite3_stmt, 6))
 				let curIt = Int(sqlite3_column_int(sqlite3_stmt, 7))
-				let curVNm = Int(sqlite3_column_int(sqlite3_stmt, 8))
+				let curVN = Int(sqlite3_column_int(sqlite3_stmt, 8))
 
-				bkInst.appendChapterToArray(chapID, bibID, bookID, chNum, itRCr, numVs, numIt, curIt, curVNm)
+				bkInst.appendChapterToArray(chapID, bibID, bookID, chNum, itRCr, numVs, numIt, curIt, curVN)
 			}
 		} while (result != SQLITE_DONE)
 		sqlite3_finalize(sqlite3_stmt)
@@ -550,7 +548,7 @@ public class KITDAO:/*NSObject, */ObservableObject {
 	}
 
 	// Set the value of the field USFMText when the Export scene is used
-	func updateUSFMText (_ chID:Int, _ text:String) throws {
+	func updateUSFMText (_ chID:Int, _ text:String) {
 		var sqlite3_stmt:OpaquePointer?=nil
 		let sql:String = "UPDATE Chapters SET USFMText = ?2 WHERE chapterID = ?1;"
 		let nByte:Int32 = Int32(sql.utf8.count)
@@ -560,8 +558,8 @@ public class KITDAO:/*NSObject, */ObservableObject {
 		sqlite3_bind_text(sqlite3_stmt, 2, text.cString(using:String.Encoding.utf8)!, -1, SQLITE_TRANSIENT)
 		sqlite3_step(sqlite3_stmt)
 		let result = sqlite3_finalize(sqlite3_stmt)
-		guard result == 0 else {
-			throw SQLiteError.cannotUpdateRecord
+		if result != 0 {
+			ReportError(DBU_ChaUSFMErr)
 		}
 	}
 

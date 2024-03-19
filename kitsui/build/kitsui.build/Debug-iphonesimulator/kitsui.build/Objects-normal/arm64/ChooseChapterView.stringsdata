@@ -4,7 +4,7 @@
     "Localizable": [
       {
         "comment": "",
-        "key": "%lld"
+        "key": "Choose %@"
       }
     ]
   },

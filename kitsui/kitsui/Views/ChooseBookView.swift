@@ -17,7 +17,7 @@ import SwiftUI
 struct ChooseBookView: View {
 	@EnvironmentObject var bibMod: BibleModel
 	var needChooseBook: Bool
-//	var bibInst: Bible
+
 	@State private var goChooseChapter = false
 	@State private var selectedBook: Bible.bookLst?
 	@State private var showOT = false
@@ -25,7 +25,10 @@ struct ChooseBookView: View {
 
 	init(needChooseBook:Bool) {
 		self.needChooseBook = needChooseBook
-		self._goChooseChapter = State(wrappedValue: !needChooseBook)
+
+// GDLC 6FEB24 Removed this setting of goChooseChapter so that it is not set true until
+// onAppear(), by which time all initialisations will have been done.
+//		self._goChooseChapter = State(wrappedValue: !needChooseBook)
 	}
  
 	var body: some View {
@@ -37,12 +40,7 @@ struct ChooseBookView: View {
 							isExpanded: $showOT,
 							content: {
 								ForEach (bibMod.getCurBibInst().booksOT, id: \.self) { bookLst in
-									HStack {
-										Text(bookLst.bookCode)
-										Text(bookLst.bookName)
-										Spacer()
-										Text(bookLst.bookInNT ? "NT" : "OT")
-									}
+									BookNameView(bookLst: bookLst)
 								}
 							},
 							label: {
@@ -55,12 +53,7 @@ struct ChooseBookView: View {
 							isExpanded: $showNT,
 							content: {
 								ForEach (bibMod.getCurBibInst().booksNT, id: \.self) { bookLst in
-									HStack {
-										Text(bookLst.bookCode)
-										Text(bookLst.bookName)
-										Spacer()
-										Text(bookLst.bookInNT ? "NT" : "OT")
-									}
+									BookNameView(bookLst: bookLst)
 								}
 							},
 							label: {
@@ -71,18 +64,36 @@ struct ChooseBookView: View {
 				}
 			}
 			.onChange(of: self.selectedBook, perform: {_ in
-				print("selectedBook changed to \(selectedBook!.bookName)")
-				bibMod.getCurBibInst().setupChosenBook(selectedBook!)
-				goChooseChapter = true
+				if selectedBook != nil {
+					print("selectedBook changed to \(selectedBook!.bookName)")
+					bibMod.getCurBibInst().setupChosenBook(selectedBook!)
+					selectedBook!.selected = true
+					goChooseChapter = true
+				}
 			})
 		}
 		.navigationDestination(isPresented: $goChooseChapter){
-			ChooseChapterView(needChooseChapter: (bibMod.getCurBibInst().bookInst!.needChooseChapter)).environmentObject(bibMod)
+			ChooseChapterView(needChooseChapter: getNeedChooseChapter()).environmentObject(bibMod)
 		}
 		.navigationTitle(bibMod.getCurBibName() + " - Choose Book")
+		.onAppear() {
+			if !needChooseBook {
+				goChooseChapter = true
+			}
+		}
+		.onDisappear() {
+			selectedBook = nil
+		}
+	}
+
+	func getNeedChooseChapter() -> Bool {
+		if let bkInst = bibMod.getCurBibInst().bookInst {
+			return bkInst.needChooseChapter
+		} else {
+			return true
+		}
 	}
 }
-
 
 #Preview {
 	ChooseBookView(needChooseBook: true)

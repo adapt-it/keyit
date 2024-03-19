@@ -63,12 +63,13 @@ class Bible: ObservableObject {
 
 	var BibBooks: [BibBook] = []
 
-	// struct bookLst is used in SwiftUI List Views for choosing a Book
+	// The struct bookLst is used in SwiftUI List Views for choosing a Book
 	struct bookLst: Identifiable, Hashable {
 		var bookID: Int
 		var bookCode: String
 		var bookName: String
 		var bookInNT: Bool
+		var selected: Bool = false	// true if this is the current Book (user tap, or SQLite currBook)
 		var id = UUID()
 	}
 
@@ -80,9 +81,9 @@ class Bible: ObservableObject {
 	//		createBooksRecords()
 	//		appendBibBookToArray()  - called by dao.readBooksRecs()
 
-	// CHANGES:- setCurBibOfst() of BibleModel should call
-	// loadBibBooks(_ bID: Int) and this function will create the Book records if they have
-	// not yet been created and then read the Book records into BibBooks[]
+	// setCurBibOfst() of BibleModel calls loadBibBooks(_ bID: Int) and this function
+	// creates the Book records if they have not yet been created and
+	// then reads the Book records into BibBooks[]
 	func loadBibBooks(_ bID: Int) {
 		let dao = bibMod.dao		// Instance of KITDAO
 		if !bkRecsCr {
@@ -100,10 +101,11 @@ class Bible: ObservableObject {
 		// Load booksOT and booksNT
 		for BibBook in BibBooks {
 			if BibBook.bookID < 40 {
-				booksOT.append(bookLst(bookID: BibBook.bookID, bookCode: BibBook.bookCode, bookName: BibBook.bookName, bookInNT: false))
+				booksOT.append(bookLst(bookID: BibBook.bookID, bookCode: BibBook.bookCode,
+									   bookName: BibBook.bookName, bookInNT: false, selected: (BibBook.bookID == currBk ? true : false)))
 			} else {
-				booksNT.append(bookLst(bookID: BibBook.bookID, bookCode: BibBook.bookCode, bookName: BibBook.bookName, bookInNT: true))
-
+				booksNT.append(bookLst(bookID: BibBook.bookID, bookCode: BibBook.bookCode,
+									   bookName: BibBook.bookName, bookInNT: true, selected: (BibBook.bookID == currBk ? true : false)))
 			}
 		}
 		if currBk == 0 {
@@ -199,22 +201,46 @@ class Bible: ObservableObject {
  // When the user selects a book from the ChooseBookView it needs to be recorded as the
  // current book and initialisation of data structures in a new Book instance must happen.
 	func setupChosenBook(_ bookChosen: bookLst) {
-		let chosenBkOfst = (bookChosen.bookID > 39 ? bookChosen.bookID - 2 : bookChosen.bookID - 1 )
-		setupCurrentBook(BibBooks[chosenBkOfst])
-	}
+		// Update booksOT or booksNT to turn off selection for currBk
+		for i in 0..<booksNT.count {
+			if booksNT[i].bookID == currBk {
+				booksNT[i].selected = false
+				break
+			}
+		}
+		for i in 0..<booksOT.count {
+			if booksOT[i].bookID == currBk {
+				booksOT[i].selected = false
+				break
+			}
+		}
+		// Update booksOT or booksNT - turn on selection for bookChosen
+		if bookChosen.bookInNT {
+			for i in 0..<booksNT.count {
+				if booksNT[i].bookID == bookChosen.bookID {
+					booksNT[i].selected = true
+					break
+				}
+			}
+		} else {
+			for i in 0..<booksOT.count {
+				if booksOT[i].bookID == bookChosen.bookID {
+					booksOT[i].selected = true
+					break
+				}
+			}
+		}
+		currBk = bookChosen.bookID
+		currBookOfst = (bookChosen.bookID > 39 ? bookChosen.bookID - 2 : bookChosen.bookID - 1 )
+		let book = BibBooks[currBookOfst]
 
-	func setupCurrentBook(_ book: BibBook) {
 		let dao = bibMod.dao		// Instance of KITDAO
-		currBk = book.bookID
-		currBookOfst = (currBk > 39 ? currBk - 2 : currBk - 1 )
-		// update Bible record in kdb.sqlite to show this current book
 		dao.bibleUpdateCurrBook(bibMod.getCurBibInst().bibleID, currBk)
 
 		// delete any previous in-memory instance of Book
 		bookInst = nil		// strong ref
 
 		// Create a Book instance for the currently selected book (strong ref)
-		// and copy the reference to the AppDelegate
 		bookInst = Book(self, book.bookID, book.bibleID, book.bookCode, book.bookName,
 			book.chapRecsCreated, book.numChaps, book.currChID, book.currChNum, bibMod)
 	}
@@ -228,17 +254,16 @@ class Bible: ObservableObject {
 		 BibBooks[currBookOfst].chapRecsCreated = true
 		 BibBooks[currBookOfst].numChaps = numChap
 	 }
-	/*
+
 	 func getCurrBookOfst() -> Int {
-		 return (currBook > 39 ? currBook - 2 : currBook - 1 )
+		 return (currBk > 39 ? currBk - 2 : currBk - 1 )
 	 }
 
  // When a Chapter is selected as the current Chapter (in ChaptersTableViewController), the entry
  // for the current Book in the Bible's BibBooks[] array must be updated.
 
 	 func setBibBooksCurChap(_ curChID: Int, _ curChNum: Int) {
-		 BibBooks[currBookOfst].curChID = curChID
-		 BibBooks[currBookOfst].curChNum = curChNum
+		 BibBooks[currBookOfst].currChID = curChID
+		 BibBooks[currBookOfst].currChNum = curChNum
 	  }
-*/
 }

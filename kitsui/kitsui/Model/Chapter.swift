@@ -26,7 +26,8 @@
 //    May you find forgiveness for yourself and forgive others.
 //    May you share freely, never taking more than you give.
 
-import UIKit
+import Foundation
+import SwiftUI
 
 public class Chapter: NSObject, ObservableObject {
 
@@ -40,7 +41,12 @@ public class Chapter: NSObject, ObservableObject {
 	var numIt: Int = 0		// numItems INTEGER
 	var currIt: Int = 0		// currItem INTEGER (the ID assigned by SQLite when the VerseItem was created)
 	var currVN: Int = 0		// currVsNum INTEGER (the Verse number associated with the current VerseItem)
+	var currItOfst: Int = -1
 	
+/*	Try creating the curPoMenu when the action button is tapped, instead of whenever the VerseItem is
+	selected as the current one; the logic in the following getter and setter will then be changed
+	so that it runs at that time and thus only when the user wants to see the pop over menu, instead
+	of every time any VerseItem is selected.
 	// currItOfst has custom getter and setter in order to ensure that a VIMenu is created for the
 	// current VerseItem whenever the VerseItem is selected. This avoids putting the logic in the
 	// setter in several places throughout the source code.
@@ -63,39 +69,16 @@ public class Chapter: NSObject, ObservableObject {
 			field = ofst
 		}
 	}
+*/
 	
 	weak var dao: KITDAO?		// access to the KITDAO instance for using kdb.sqlite
 	weak var bibInst: Bible? 	// access to the instance of Bible for updating BibBooks[]
 	weak var bkInst: Book?		// access to the instance for the current Book
 
-// This struct and the BibItems array are used for letting the user select the
-// VerseItem to edit in the current Chapter of the current Book.
+// BibItems is an array of instances of the class VItem that are used for letting
+// the user edit VerseItems in the current Chapter of the current Book.
 
-	struct BibItem {
-		var itID: Int		// itemID INTEGER PRIMARY KEY
-		var chID: Int		// chapterID INTEGER
-		var vsNum: Int		// verseNumber INTEGER
-		var itTyp: String	// itemType TEXT
-		var itOrd: Int		// itemOrder INTEGER
-		var itTxt: String	// itemText TEXT
-		var intSeq: Int		// intSeq INTEGER
-		var isBrg: Bool		// isBridge INTEGER
-		var lvBrg: Int		// last verse of bridge
-
-		init (_ itID:Int, _ chID:Int, _ vsNum:Int, _ itTyp:String, _ itOrd:Int, _ itTxt:String, _ itSeq:Int, _ isBrg:Bool, _ lvBrg:Int) {
-			self.itID = itID
-			self.chID = chID
-			self.vsNum = vsNum
-			self.itTyp = itTyp
-			self.itOrd = itOrd
-			self.itTxt = itTxt
-			self.intSeq = itSeq
-			self.isBrg = isBrg
-			self.lvBrg = lvBrg
-		}
-	}
-
-	var BibItems: [BibItem] = []
+	@Published var BibItems: [VItem] = []
 
 	// Properties of the Chapter instance related to popover menus
 	var curPoMenu: VIMenu?		// instance in memory of the current popover menu
@@ -141,13 +124,17 @@ public class Chapter: NSObject, ObservableObject {
 		// and when the user chooses a different VerseItem to edit.
 		// Its life will end when the user chooses a different Chapter or Book to edit.
 		
-		// Calls readVerseItemsRecs() in KITDAO.swift to read the kdb.sqlite database VerseItems table
+		// Calls readVerseItemsRecs() in KITDAO.swift to read the kdb.sqlite database VerseItems table.
 		// readVerseItemsRecs() calls appendItemToArray() in this file for each ROW read from kdb.sqlite
+		// and appends an instance of class VItem for each ROW read.
 		dao!.readVerseItemsRecs (self)
 
 		// Ensure that numIt is correct (to guard against any accumulated data errors)
 		self.numIt = BibItems.count
 		dao!.chaptersUpdateRecPub (chID, self.numIt, self.currIt, self.currVN)
+		
+		// Setup for editing VerseItems in Chapter
+		currItOfst = goCurrentItem()
 	}
 
 	deinit {
@@ -191,8 +178,9 @@ public class Chapter: NSObject, ObservableObject {
 	// in order to append the records read to the array BibItems[]
 	// appendItemToArray() also finds the largest value of intSeq in the VerseItem records read
 	// and sets nextIntSeq to one more than the largest one found.
+
 	func appendItemToArray(_ itID:Int, _ chID:Int, _ vsNum:Int, _ itTyp:String, _ itOrd:Int, _ itTxt:String, _ intSeq:Int, _ isBrg:Bool, _ lvBrg:Int) {
-		let itRec = BibItem(itID, chID, vsNum, itTyp, itOrd, itTxt, intSeq, isBrg, lvBrg)
+		let itRec = VItem(itID: itID, chID: chID, vsNum: vsNum, itTyp: itTyp, itOrd: itOrd, itTxt: itTxt, intSeq: intSeq, isBrg: isBrg, lvBrg: lvBrg)
 		BibItems.append(itRec)
 		if itTyp == "Ascription" {hasAscription = true}
 		if itTyp == "Title" {hasTitle = true}
@@ -221,7 +209,7 @@ public class Chapter: NSObject, ObservableObject {
 
 	// Return the BibItem at an index
 	
-	func getBibItem(at index:Int) -> BibItem {
+	func getBibItem(at index:Int) -> VItem {
 		return BibItems[index]
 	}
 	
@@ -235,7 +223,8 @@ public class Chapter: NSObject, ObservableObject {
 
 	func goCurrentItem() -> Int {
 		if currIt == 0 {
-			// Make the first VerseItem the current one
+			// If SQLite does not have a current VerseItem,
+			// make the first VerseItem the current one
 			currItOfst = 0		// Take first item in BibItems[] array
 			currIt = BibItems[currItOfst].itID	// Get its itemID
 			//GDLC 31JUL21 Added setting of currVN
@@ -248,26 +237,36 @@ public class Chapter: NSObject, ObservableObject {
 			currVN = BibItems[currItOfst].vsNum	// Get its verse number
 			// Setting currItOfst ensures that there is a VIMenu for the current VerseItem
 		}
+		// Set the VItem so that it is displayed as the current item
+		BibItems[currItOfst].isCurVsItem = true
 		// Update the database Chapter record
 		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
 		return currItOfst
 	}
 
-	func setupCurrentItemFromTableRow(_ tableRow: Int) {
-		currItOfst = tableRow
-		// Setting currItOfst ensures that there is a VIMenu for the current VerseItem
-		currIt = BibItems[tableRow].itID
-		currVN = BibItems[tableRow].vsNum
-		// Update the BibChap record for this Chapter
-		bkInst!.setCurVItem (currIt, currVN)
-		// Update the database Chapter record
-		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
+	// Copy the current VerseItem's text BibItems[]
+	func copyCurrentVItemText(_ text: String) {
+		BibItems[currItOfst].itTxt = text
 	}
 
-	// Copy and save the current VerseItem's text
-	func copyAndSaveVItem(_ ofSt: Int, _ text: String) {
-		BibItems[ofSt].itTxt = text
-		dao!.itemsUpdateRecText (BibItems[currItOfst].itID, BibItems[currItOfst].itTxt)
+	// Copy and save the text of the VerseItem whose ID is itID
+	func copyAndSaveVItem(_ itID: Int, _ text: String) {
+		let itOfst = offsetToBibItem(withID: itID)
+		BibItems[itOfst].itTxt = text
+		dao!.itemsUpdateRecText (BibItems[itOfst].itID, BibItems[itOfst].itTxt)
+	}
+
+	// Function to make the VItem the current VItem
+	func makeVItemCurrent(_ vItem: VItem) {
+		// The current VItem ceases to be the current one
+		BibItems[currItOfst].isCurVsItem = false
+		// Now set the new current VItem
+		currItOfst = offsetToBibItem(withID: vItem.itID)
+		BibItems[currItOfst].isCurVsItem = true
+		currIt = vItem.itID
+		currVN = vItem.vsNum
+		// Update the database Chapter record
+		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
 	}
 
 	// Function to carry out on the data model the actions required for the popover menu items
@@ -737,11 +736,7 @@ public class Chapter: NSObject, ObservableObject {
 		return USFM
 	}
 
-	func saveUSFMText (_ chID:Int, _ text:String) throws {
-		do {
-			try dao!.updateUSFMText (chID, text)
-		} catch {
-			throw SQLiteError.cannotUpdateRecord
-		}
+	func saveUSFMText (_ chID:Int, _ text:String) {
+		dao!.updateUSFMText (chID, text)
 	}
 }
