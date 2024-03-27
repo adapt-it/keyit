@@ -8,7 +8,7 @@
 	<array>
 		<dict>
 			<key>catalogPath</key>
-			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<string>/Users/graemecostin/keyit/kitios/kitios/Assets.xcassets</string>
 			<key>objcSymbol</key>
 			<string>ACImageNameBridgePubItem</string>
 			<key>relativePath</key>
@@ -18,7 +18,7 @@
 		</dict>
 		<dict>
 			<key>catalogPath</key>
-			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<string>/Users/graemecostin/keyit/kitios/kitios/Assets.xcassets</string>
 			<key>objcSymbol</key>
 			<string>ACImageNameCreatePubItem</string>
 			<key>relativePath</key>
@@ -28,7 +28,7 @@
 		</dict>
 		<dict>
 			<key>catalogPath</key>
-			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<string>/Users/graemecostin/keyit/kitios/kitios/Assets.xcassets</string>
 			<key>objcSymbol</key>
 			<string>ACImageNameDeletePubItem</string>
 			<key>relativePath</key>
@@ -38,7 +38,7 @@
 		</dict>
 		<dict>
 			<key>catalogPath</key>
-			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<string>/Users/graemecostin/keyit/kitios/kitios/Assets.xcassets</string>
 			<key>objcSymbol</key>
 			<string>ACImageNameKITLogo</string>
 			<key>relativePath</key>
@@ -48,7 +48,7 @@
 		</dict>
 		<dict>
 			<key>catalogPath</key>
-			<string>/Users/graemecostin/keyit2024/kitios/kitios/Assets.xcassets</string>
+			<string>/Users/graemecostin/keyit/kitios/kitios/Assets.xcassets</string>
 			<key>objcSymbol</key>
 			<string>ACImageNameUnbridgePubItem</string>
 			<key>relativePath</key>

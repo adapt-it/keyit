@@ -28,21 +28,25 @@ struct VerseItemView: View {
 		VStack {
 			HStack {
 				Button(getItemTypText(vItem)) {
-					
+					print("User tapped button for Verse \(vItem.vsNum)")
+					showPopoverMenu()
 				}
-				.padding([.leading], 2)
-				.font(.system(size: 11, weight: (isFocused || vItem.isCurVsItem ? .bold : .regular)))
+//				.padding(.leading, 2)
+				.font(.system(size: 10, weight: (isFocused || vItem.isCurVsItem ? .bold : .regular)))
+				.buttonStyle(.bordered)
+				.controlSize(.mini)
 				Spacer()
 			}
-			if vItem.itTyp != "Para" {
+			if vItem.itTyp != "Para" && vItem.itTyp != "ParaCont"{
 				TextEditor(text: $editedTxt)
-					.font(.system(size: 12))
+					.font(.system(size: 11))
 					.multilineTextAlignment(.leading)
 					.lineSpacing(2)
 					.autocorrectionDisabled(true)
 					.autocapitalization(.none)
-					.frame(maxHeight: .infinity)
-					.padding(.vertical, -8)
+//					.border(Color.gray, width: 1)
+					.frame(minHeight: 13, maxHeight: .infinity)
+					.padding(.vertical, 0)
 					.onTapGesture {
 						beginEditing()
 					}
@@ -88,6 +92,13 @@ struct VerseItemView: View {
 
 	func beginEditing() {
 		bibMod.getCurBibInst().bookInst!.chapInst!.makeVItemCurrent(vItem)
+		vItem.isCurVsItem = true
+		isFocused = true
+		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
+	}
+
+	func showPopoverMenu() {
+		bibMod.getCurBibInst().bookInst!.chapInst!.createVIMenu(vItem)
 		vItem.isCurVsItem = true
 		isFocused = true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")

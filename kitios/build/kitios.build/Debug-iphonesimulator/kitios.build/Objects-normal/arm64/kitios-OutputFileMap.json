@@ -1,178 +1,178 @@
 {
   "" : {
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master.dia",
-    "emit-module-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master-emit-module.d",
-    "emit-module-diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master-emit-module.dia",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master.swiftdeps"
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master.dia",
+    "emit-module-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master-emit-module.dia",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/kitios-master.swiftdeps"
   },
-  "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/DerivedSources/GeneratedAssetSymbols.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+  "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/AppDelegate.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/AppDelegate.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/BooksTableViewController.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/BooksTableViewController.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/BooksTableViewController~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/ChaptersTableViewController.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/ChaptersTableViewController.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ChaptersTableViewController~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/ExportChapterViewController.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/ExportChapterViewController.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ExportChapterViewController~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/KeyItSetupController.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/KeyItSetupController.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KeyItSetupController~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/PubItemsViewController.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/PubItemsViewController.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/PubItemsViewController~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/SceneDelegate.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/SceneDelegate.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/SceneDelegate~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/UIPubItemCell.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/UIPubItemCell.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIPubItemCell~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/UIVerseItemCell.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/UIVerseItemCell.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/UIVerseItemCell~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/kitios/VersesTableViewController.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.dia",
+  "/Users/graemecostin/keyit/kitios/kitios/VersesTableViewController.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VersesTableViewController~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/models/Bible.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.dia",
+  "/Users/graemecostin/keyit/kitios/models/Bible.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Bible~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/models/Book.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.dia",
+  "/Users/graemecostin/keyit/kitios/models/Book.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Book~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/models/Chapter.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.dia",
+  "/Users/graemecostin/keyit/kitios/models/Chapter.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/Chapter~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/models/ErrorNumbers.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.dia",
+  "/Users/graemecostin/keyit/kitios/models/ErrorNumbers.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/ErrorNumbers~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/models/KITDAO.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.dia",
+  "/Users/graemecostin/keyit/kitios/models/KITDAO.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/KITDAO~partial.swiftmodule"
   },
-  "/Users/graemecostin/keyit2024/kitios/models/VIMenu.swift" : {
-    "const-values" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.swiftconstvalues",
-    "dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.d",
-    "diagnostics" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.dia",
+  "/Users/graemecostin/keyit/kitios/models/VIMenu.swift" : {
+    "const-values" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.swiftconstvalues",
+    "dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.d",
+    "diagnostics" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.dia",
     "index-unit-output-path" : "/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.o",
-    "llvm-bc" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.bc",
-    "object" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.o",
-    "swift-dependencies" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.swiftdeps",
-    "swiftmodule" : "/Users/graemecostin/keyit2024/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu~partial.swiftmodule"
+    "llvm-bc" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.bc",
+    "object" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.o",
+    "swift-dependencies" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu.swiftdeps",
+    "swiftmodule" : "/Users/graemecostin/keyit/kitios/build/kitios.build/Debug-iphonesimulator/kitios.build/Objects-normal/arm64/VIMenu~partial.swiftmodule"
   }
 }

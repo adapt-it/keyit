@@ -269,6 +269,30 @@ public class Chapter: NSObject, ObservableObject {
 		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
 	}
 
+	// Function to create a VIMenu when the user taps the Button in VerseItemView
+	func createVIMenu(_ vItem: VItem) {
+		let newOfst = offsetToBibItem(withID: vItem.itID)
+		if (curPoMenu == nil) {
+			// Now set the new current VItem and create the first VIMenu
+			currItOfst = newOfst
+			currIt = vItem.itID
+			currVN = vItem.vsNum
+		} else if (newOfst != currItOfst) /*|| (BibItems[currItOfst].itID != currIt))*/ {
+			// Delete previous popover menu
+			curPoMenu = nil
+			// The current VItem ceases to be the current one
+			BibItems[currItOfst].isCurVsItem = false
+			// Now set the new current VItem and create the menu
+			currItOfst = newOfst
+			currIt = vItem.itID
+			currVN = vItem.vsNum
+		}
+		BibItems[currItOfst].isCurVsItem = true
+		curPoMenu = VIMenu(self, currItOfst)
+		// Update the database Chapter record
+		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
+	}
+
 	// Function to carry out on the data model the actions required for the popover menu items
 	// All of the possible actions change the BibItems[] array so, after carrying out the
 	// specific action, this function clears BibItems[] and reloads it from the database;
