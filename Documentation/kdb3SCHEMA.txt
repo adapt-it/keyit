@@ -1,0 +1,48 @@
+REVISED 1-JUL-2021 20:23
+
+CREATE TABLE Bibles(
+bibleID INTEGER PRIMARY KEY, 
+name TEXT, 
+bookRecsCreated INTEGER, 
+currBook  INTEGER
+);
+CREATE TABLE Books(
+bookID INTEGER, 
+bibleID INTEGER, 
+bookCode TEXT, 
+bookName TEXT, 
+chapRecsCreated INTEGER, 
+numChaps INTEGER, 
+currChID  INTEGER,
+currChNum  INTEGER,
+USFMText TEXT
+);
+CREATE TABLE Chapters(
+chapterID INTEGER PRIMARY KEY, 
+bibleID INTEGER, 
+bookID INTEGER, 
+chapterNumber INTEGER, 
+itemRecsCreated INTEGER, 
+numVerses INTEGER, 
+numItems INTEGER, 
+currItem INTEGER, 
+currVsNum INTEGER, 
+USFMText TEXT
+);
+CREATE TABLE VerseItems(
+itemID INTEGER PRIMARY KEY, 
+chapterID INTEGER, 
+verseNumber INTEGER, 
+itemType TEXT, 
+itemOrder INTEGER, 
+itemText TEXT, 
+intSeq INTEGER, 
+isBridge INTEGER, 
+lastVsBridge INTEGER
+);
+CREATE TABLE BridgeItems(
+bridgeID INTEGER PRIMARY KEY, 
+itemID INTEGER, 
+textCurrBridge TEXT, 
+textExtraVerse TEXT
+);
