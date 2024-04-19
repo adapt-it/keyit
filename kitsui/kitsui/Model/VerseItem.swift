@@ -50,5 +50,25 @@ public class VItem: ObservableObject, Identifiable, Hashable {
 		self.isCurVsItem = isCurVsItem
 	}
 
-	
+	func getItemTypText() -> String {
+		var typeText = ""
+		switch self.itTyp {
+		case "Title": typeText = "Main Title"
+		case "Para", "ParaCont": typeText = "Paragraph"
+		case "ParlRef": typeText = "Parallel Ref"
+		case "VerseCont": typeText = "Verse" + String(self.vsNum) + " (cont)"
+		case "Verse":
+			if self.isBrg {
+				typeText = "Verses " + String(self.vsNum) + "-" + String(self.lvBrg)
+			} else {
+				typeText = "Verse " + String(self.vsNum)
+			}
+		case "InTitle": typeText = "Intro Title"
+		case "InSubj": typeText = "Intro Heading"
+		case "InPara": typeText = "Intro Paragraph"
+		default: typeText = self.itTyp
+		}
+		return typeText
+	}
+
 }

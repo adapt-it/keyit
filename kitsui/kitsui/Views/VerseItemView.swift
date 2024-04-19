@@ -14,11 +14,16 @@ import SwiftUI
 
 struct VerseItemView: View {
 	@EnvironmentObject var bibMod: BibleModel
+	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
+	@Environment(\.displayScale) var displayScale
+
 
 	@ObservedObject var vItem: VItem
 	@State var editedTxt: String
 	@FocusState var isFocused: Bool
- 
+	@State private var isVIMenuPresented: Bool = false
+	@State private var selectedCommand: VIMenuItem? = nil
+
 	init(vItem: VItem) {
 		self.vItem = vItem
 		self._editedTxt = State(wrappedValue: vItem.itTxt)
@@ -35,7 +40,15 @@ struct VerseItemView: View {
 				.font(.system(size: 10, weight: (isFocused || vItem.isCurVsItem ? .bold : .regular)))
 				.buttonStyle(.bordered)
 				.controlSize(.mini)
+				.popover(isPresented: $isVIMenuPresented,
+					attachmentAnchor: .point(.bottomTrailing)/* .rect(.rect(CGRect(x: 70, y: 15, width: 0, height: 0)))*/,
+					arrowEdge: .trailing,
+					content: {
+					VIMenuView(selectedCommand: selectedCommand ?? VIMenuItem("ERROR - nil", "crHdBef", "C"))	// temporary fix in case of nil
+						.frame(width: popoverWidth(), height: popoverHeight())
+				})
 				Spacer()
+				Text("\(displayScale)")
 			}
 			if vItem.itTyp != "Para" && vItem.itTyp != "ParaCont"{
 				TextEditor(text: $editedTxt)
@@ -69,6 +82,11 @@ struct VerseItemView: View {
 		})
 	}
 
+
+	func getChapInst() -> Chapter {
+		return bibMod.getCurBibInst().bookInst!.chapInst!
+	}
+
 	func getItemTypText(_ vItem: VItem) -> String {
 		var typeText = ""
 		switch vItem.itTyp {
@@ -97,13 +115,52 @@ struct VerseItemView: View {
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
 	}
 
+// MARKER: Popover menu functions
+	func popoverWidth() -> CGFloat {
+		var w: CGFloat	// width in points
+		
+		if horizontalSizeClass == .compact {
+			w = (getChapInst().curPoMenu?.menuLabelLength)!
+		} else {
+			w = getChapInst().curPoMenu!.menuLabelLength + 20	// Assume 20 points for the menu icon
+		}
+		// Return width in pixels
+		return w * displayScale
+	}
+
+	func popoverHeight() -> CGFloat {
+		var h: CGFloat	// Height in points
+
+		if horizontalSizeClass == .compact {
+			h = CGFloat((getChapInst().curPoMenu?.numRows)! + 1) * 17
+		} else {
+			h = CGFloat((getChapInst().curPoMenu?.numRows)! + 2) * 20
+		}
+		// Return height in pixels
+		return h * displayScale
+	}
+
+/*	func popoverTitle() -> String {
+		var t: String
+
+		if horizontalSizeClass == .compact {
+			t = "Action for this VerseItem"
+		} else {
+			t = "Choose action:"
+		}
+		return t
+	}*/
+
 	func showPopoverMenu() {
+		// Build the popover menu for this VerseItem
 		bibMod.getCurBibInst().bookInst!.chapInst!.createVIMenu(vItem)
 		vItem.isCurVsItem = true
 		isFocused = true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
+		isVIMenuPresented.toggle()
 	}
 
+// MARKER: Text colour
 	func selectTextColour() -> Color {
 		if isFocused || vItem.isCurVsItem {
 			return Color.black
@@ -116,7 +173,7 @@ struct VerseItemView: View {
 		 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 	 }
 
-
+// MARKER: Save changes
 	func saveEditedTxt() {
 		// If the text has been changed then save it to vItem, BibItems and SQLite
 		let newText = editedTxt

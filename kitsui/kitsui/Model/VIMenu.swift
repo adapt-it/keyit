@@ -35,11 +35,11 @@ extension String {
 	   }
    }
 
-class VIMenuItem : NSObject, ObservableObject {
+class VIMenuItem : NSObject, ObservableObject, Identifiable {
 	var VIMenuLabel : String	// Menu label displayed to users
 	var VIMenuAction : String	// Menu action to be done if chosen by user
 	var VIMenuIcon : String		// C = Create, D = Delete, B = Bridge, U = Unbridge
-	
+
 	init(_ label:String, _ action: String, _ highLight: String) {
 		self.VIMenuLabel = label
 		self.VIMenuAction = action
@@ -179,7 +179,7 @@ class VIMenu : NSObject {
 			VIMenuItems.append(viMI1)
 		}
 		numRows = VIMenuItems.count
-		// Calculate max popover menu label width
+		// Calculate max popover menu label width in points
 		for v in VIMenuItems {
 			let width = v.VIMenuLabel.size(OfFont: font).width
 			if width > menuLabelLength {menuLabelLength = width}

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VIMenuView: View {
 	@EnvironmentObject var bibMod: BibleModel
+	@State private var settingsDetent = PresentationDetent.medium
 
 	var selectedCommand: VIMenuItem?
 	
@@ -17,14 +18,27 @@ struct VIMenuView: View {
 	}
 	var body: some View {
 		List {
-			ForEach(getChapInst().curPoMenu!.VIMenuItems) { VIMItem in
-				VIMenuItemView(VIMItem: VIMItem).environmentObject(bibMod)
-			}
+			Section(calcMenuTitle().capitalized,
+				content: {
+				ForEach(getChapInst().curPoMenu!.VIMenuItems) { VIMItem in
+					VIMenuItemView(VIMItem: VIMItem).environmentObject(bibMod)
+						.presentationDetents(
+							[.medium, .large],
+							selection: $settingsDetent
+						 )
+					}
+				}
+			)
 		}
     }
 
 	func getChapInst() -> Chapter {
 		return bibMod.getCurBibInst().bookInst!.chapInst!
+	}
+
+	func calcMenuTitle() -> String {
+		let bibItem = getChapInst().BibItems[getChapInst().currItOfst]
+		return "Action for " + bibItem.getItemTypText() + "?"
 	}
 }
 
