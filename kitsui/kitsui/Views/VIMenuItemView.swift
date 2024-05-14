@@ -10,10 +10,11 @@ import SwiftUI
 struct VIMenuItemView: View {
 	@EnvironmentObject var bibMod: BibleModel
 	var VIMItem: VIMenuItem
+	@Binding var isVIMenuShowing: Bool
 
-	init(VIMItem:VIMenuItem) {
-		self.VIMItem = VIMItem
-	}
+//	init(VIMItem:VIMenuItem) {
+//		self.VIMItem = VIMItem
+//	}
 
 	var body: some View {
 		HStack {
@@ -22,6 +23,12 @@ struct VIMenuItemView: View {
 				.frame(width: 15.0, height: 15.0)
 			Text(VIMItem.VIMenuLabel)
 			Spacer()
+		}
+		.onTapGesture {
+			print("\(VIMItem.VIMenuLabel) tapped")
+			// Dismiss the popover
+			isVIMenuShowing = false
+			getChapInst().popMenuAction(VIMItem.VIMenuAction)
 		}
     }
 
@@ -34,13 +41,17 @@ struct VIMenuItemView: View {
 		default:  return UIImage(named: "CreatePubItem.png")!
 		}
 	}
+
+	func getChapInst() -> Chapter {
+		return bibMod.getCurBibInst().bookInst!.chapInst!
+	}
 }
 
 #Preview {
 	Group {
-		VIMenuItemView(VIMItem: VIMenuItem("Ascription", "delAsc", "D"))
-		VIMenuItemView(VIMItem: VIMenuItem("Heading Before", "crHdBef", "C"))
-		VIMenuItemView(VIMItem: VIMenuItem("Bridge Next", "brid", "B"))
-		VIMenuItemView(VIMItem: VIMenuItem("Unbridge", "unBrid", "U"))
+		VIMenuItemView(VIMItem: VIMenuItem("Ascription", "delAsc", "D"), isVIMenuShowing: .constant(true))
+		VIMenuItemView(VIMItem: VIMenuItem("Heading Before", "crHdBef", "C"), isVIMenuShowing: .constant(true))
+		VIMenuItemView(VIMItem: VIMenuItem("Bridge Next", "brid", "B"), isVIMenuShowing: .constant(true))
+		VIMenuItemView(VIMItem: VIMenuItem("Unbridge", "unBrid", "U"), isVIMenuShowing: .constant(true))
 	}
 }

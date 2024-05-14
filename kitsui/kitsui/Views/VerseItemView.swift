@@ -21,12 +21,12 @@ struct VerseItemView: View {
 	@ObservedObject var vItem: VItem
 	@State var editedTxt: String
 	@FocusState var isFocused: Bool
-	@State private var isVIMenuPresented: Bool = false
-	@State private var selectedCommand: VIMenuItem? = nil
+	@State var isVIMenuShowing: Bool = false
 
 	init(vItem: VItem) {
 		self.vItem = vItem
 		self._editedTxt = State(wrappedValue: vItem.itTxt)
+//		self._isVIMenuPresented = State(isVIMenuPresented)
 	}
 
 	var body: some View {
@@ -36,28 +36,25 @@ struct VerseItemView: View {
 					print("User tapped button for Verse \(vItem.vsNum)")
 					showPopoverMenu()
 				}
-//				.padding(.leading, 2)
 				.font(.system(size: 10, weight: (isFocused || vItem.isCurVsItem ? .bold : .regular)))
 				.buttonStyle(.bordered)
 				.controlSize(.mini)
-				.popover(isPresented: $isVIMenuPresented,
-					attachmentAnchor: .point(.bottomTrailing)/* .rect(.rect(CGRect(x: 70, y: 15, width: 0, height: 0)))*/,
+				.popover(isPresented: $isVIMenuShowing,
+					attachmentAnchor: .point(.bottomTrailing),
 					arrowEdge: .trailing,
 					content: {
-					VIMenuView(selectedCommand: selectedCommand ?? VIMenuItem("ERROR - nil", "crHdBef", "C"))	// temporary fix in case of nil
+					VIMenuView(isVIMenuShowing: $isVIMenuShowing)
 						.frame(width: popoverWidth(), height: popoverHeight())
 				})
 				Spacer()
-				Text("\(displayScale)")
 			}
 			if vItem.itTyp != "Para" && vItem.itTyp != "ParaCont"{
 				TextEditor(text: $editedTxt)
-					.font(.system(size: 11))
+					.font(.system(size: 13))
 					.multilineTextAlignment(.leading)
 					.lineSpacing(2)
 					.autocorrectionDisabled(true)
 					.autocapitalization(.none)
-//					.border(Color.gray, width: 1)
 					.frame(minHeight: 13, maxHeight: .infinity)
 					.padding(.vertical, 0)
 					.onTapGesture {
@@ -78,7 +75,7 @@ struct VerseItemView: View {
 		})
 		.onDisappear(perform: {
 			saveEditedTxt()
-			print("Verse \(vItem.vsNum) now off screen")
+			print("Verse \(vItem.vsNum) \(vItem.itTyp) now off screen")
 		})
 	}
 
@@ -118,38 +115,35 @@ struct VerseItemView: View {
 // MARKER: Popover menu functions
 	func popoverWidth() -> CGFloat {
 		var w: CGFloat	// width in points
-		
-		if horizontalSizeClass == .compact {
-			w = (getChapInst().curPoMenu?.menuLabelLength)!
+
+		if isVIMenuShowing && bibMod.getCurBibInst().bookInst!.chapInst!.curPoMenu != nil {
+			if horizontalSizeClass == .compact {
+				w = (getChapInst().curPoMenu?.menuLabelLength)!
+			} else {
+				w = getChapInst().curPoMenu!.menuLabelLength + 20	// Assume 20 points for the menu icon
+			}
+			// Return width in pixels
+			return w * displayScale
 		} else {
-			w = getChapInst().curPoMenu!.menuLabelLength + 20	// Assume 20 points for the menu icon
+			return displayScale * 130	// Most popover menus will not need more than 130pixels width
 		}
-		// Return width in pixels
-		return w * displayScale
 	}
 
 	func popoverHeight() -> CGFloat {
 		var h: CGFloat	// Height in points
 
-		if horizontalSizeClass == .compact {
-			h = CGFloat((getChapInst().curPoMenu?.numRows)! + 1) * 17
+		if isVIMenuShowing && bibMod.getCurBibInst().bookInst!.chapInst!.curPoMenu != nil {
+			if horizontalSizeClass == .compact {
+				h = CGFloat((getChapInst().curPoMenu?.numRows)! + 1) * 17
+			} else {
+				h = CGFloat((getChapInst().curPoMenu?.numRows)! + 2) * 20
+			}
+			// Return height in pixels
+			return h * displayScale
 		} else {
-			h = CGFloat((getChapInst().curPoMenu?.numRows)! + 2) * 20
+			return displayScale * 7 * 17	// Popover menus will seldom have more than 7 rows
 		}
-		// Return height in pixels
-		return h * displayScale
 	}
-
-/*	func popoverTitle() -> String {
-		var t: String
-
-		if horizontalSizeClass == .compact {
-			t = "Action for this VerseItem"
-		} else {
-			t = "Choose action:"
-		}
-		return t
-	}*/
 
 	func showPopoverMenu() {
 		// Build the popover menu for this VerseItem
@@ -157,10 +151,17 @@ struct VerseItemView: View {
 		vItem.isCurVsItem = true
 		isFocused = true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
-		isVIMenuPresented.toggle()
+		// Display the popover menu
+		isVIMenuShowing = true
 	}
 
-// MARKER: Text colour
+/*	// TODO: From where could this be called?
+	func dismissPopoverMenu() {
+		isVIMenuPresented = false
+	}
+*/
+
+	// MARKER: Text colour
 	func selectTextColour() -> Color {
 		if isFocused || vItem.isCurVsItem {
 			return Color.black

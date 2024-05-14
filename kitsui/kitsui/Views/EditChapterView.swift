@@ -20,7 +20,8 @@ struct EditChapterView: View {
 	var body: some View {
 		NavigationStack {
 			VStack {
-				Text("Edit \(getChapterName()) \(getChapterNumber()), \(getNumItems()) VerseItems")
+				Text("Edit \(getChapterName()) \(getChapterNumber()), \(getNumVerses()) Verses, \(getNumExtras()) Extras")
+					.font(.system(size: 15))
 				ScrollViewReader { proxy in
 					List {
 						ForEach(getChapInst().BibItems, id: \.self) { vItem in
@@ -63,10 +64,18 @@ struct EditChapterView: View {
 			return 999
 		}
 	}
-	
-	func getNumItems() -> Int {
+
+	func getNumVerses() -> Int {
 		if let chInst = bibMod.getCurBibInst().bookInst?.chapInst {
-			return chInst.BibItems.count
+			return chInst.numVs
+		} else {
+			return 999
+		}
+	}
+
+	func getNumExtras() -> Int {
+		if let chInst = bibMod.getCurBibInst().bookInst?.chapInst {
+			return (chInst.numIt - chInst.numVs)
 		} else {
 			return 999
 		}

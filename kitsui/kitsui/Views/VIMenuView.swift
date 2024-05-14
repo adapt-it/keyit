@@ -11,17 +11,17 @@ struct VIMenuView: View {
 	@EnvironmentObject var bibMod: BibleModel
 	@State private var settingsDetent = PresentationDetent.medium
 
-	var selectedCommand: VIMenuItem?
-	
-	init(selectedCommand: VIMenuItem) {
-		self.selectedCommand = selectedCommand
-	}
+	@Binding var isVIMenuShowing: Bool
+
+//	init(isVIMenu: Bool) {
+//		self.isVIMenu = isVIMenu
+//	}
 	var body: some View {
 		List {
 			Section(calcMenuTitle().capitalized,
 				content: {
 				ForEach(getChapInst().curPoMenu!.VIMenuItems) { VIMItem in
-					VIMenuItemView(VIMItem: VIMItem).environmentObject(bibMod)
+					VIMenuItemView(VIMItem: VIMItem, isVIMenuShowing: $isVIMenuShowing).environmentObject(bibMod)
 						.presentationDetents(
 							[.medium, .large],
 							selection: $settingsDetent
@@ -43,5 +43,5 @@ struct VIMenuView: View {
 }
 
 #Preview {
-	VIMenuView(selectedCommand : VIMenuItem("Heading Before", "crHdBef", "C"))
+	VIMenuView(isVIMenuShowing: .constant(true))
 }

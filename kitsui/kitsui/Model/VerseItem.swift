@@ -36,7 +36,9 @@ public class VItem: ObservableObject, Identifiable, Hashable {
 	var lvBrg: Int			// last verse of bridge
 	var isCurVsItem: Bool	// true if the instance is the one currently selected in the UI
 	public var id = UUID()
-	
+// Beginnings of making VerseItem own its VIMenu
+//	var curPoMenu: VIMenu?	// instance in memory of the popover menu for this VerseItem
+
 	init(itID: Int, chID: Int, vsNum: Int, itTyp: String, itOrd: Int, itTxt: String, intSeq: Int, isBrg: Bool, lvBrg: Int, isCurVsItem: Bool = false) {
 		self.itID = itID
 		self.chID = chID
@@ -70,5 +72,29 @@ public class VItem: ObservableObject, Identifiable, Hashable {
 		}
 		return typeText
 	}
+
+/*	// Function to create a VIMenu when the user taps the Button in VerseItemView
+	func createVIMenu() {
+//		let newOfst = offsetToBibItem(withID: vItem.itID)
+//		if (curPoMenu == nil) {
+//			// Now set the new current VItem and create the first VIMenu
+//			currItOfst = newOfst
+//			currIt = vItem.itID
+//			currVN = vItem.vsNum
+//		} else if (newOfst != currItOfst) /*|| (BibItems[currItOfst].itID != currIt))*/ {
+		// Delete previous popover menu
+		curPoMenu = nil
+//			// The current VItem ceases to be the current one
+//			BibItems[currItOfst].isCurVsItem = false
+//			// Now set the new current VItem and create the menu
+//			currItOfst = newOfst
+//			currIt = vItem.itID
+//			currVN = vItem.vsNum
+//		}
+//		BibItems[currItOfst].isCurVsItem = true
+		curPoMenu = VIMenu(self, currItOfst)
+//		// Update the database Chapter record
+//		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
+	}*/
 
 }

@@ -41,35 +41,11 @@ public class Chapter: NSObject, ObservableObject {
 	var numIt: Int = 0		// numItems INTEGER
 	var currIt: Int = 0		// currItem INTEGER (the ID assigned by SQLite when the VerseItem was created)
 	var currVN: Int = 0		// currVsNum INTEGER (the Verse number associated with the current VerseItem)
+
 	var currItOfst: Int = -1
-	
-/*	Try creating the curPoMenu when the action button is tapped, instead of whenever the VerseItem is
-	selected as the current one; the logic in the following getter and setter will then be changed
-	so that it runs at that time and thus only when the user wants to see the pop over menu, instead
-	of every time any VerseItem is selected.
-	// currItOfst has custom getter and setter in order to ensure that a VIMenu is created for the
-	// current VerseItem whenever the VerseItem is selected. This avoids putting the logic in the
-	// setter in several places throughout the source code.
-	//
-	// The initial value of -1 means that there is not yet a current VerseItem
-	// (the offsets for all actual VerseItems are >= zero)
-	var field: Int = -1	// offset to current item in BibItems[] and row in the TableView
-	var currItOfst: Int {
-		get {
-			return field
-		}
-		set (ofst) {
-			if (curPoMenu == nil) {
-				curPoMenu = VIMenu(self, ofst)
-			} else if ((ofst != field) || (BibItems[ofst].itID != currIt)) {
-				// Delete previous popover menu
-				curPoMenu = nil
-				curPoMenu = VIMenu(self, ofst)
-			}
-			field = ofst
-		}
-	}
-*/
+// GDLC 20APR24 A curPoMenu is created only when the user taps a button in the EditChapterView that
+// needs a popover menu. This means that the setter function for currItOfst is no longer needed.
+// This makes currItOfst a simple property with default setter.
 	
 	weak var dao: KITDAO?		// access to the KITDAO instance for using kdb.sqlite
 	weak var bibInst: Bible? 	// access to the instance of Bible for updating BibBooks[]
@@ -269,6 +245,14 @@ public class Chapter: NSObject, ObservableObject {
 		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
 	}
 
+	// DESIGN FLAW ALERT!!!!
+	// This function as originally written for kitios and kitand does TWO jobs:-
+	// 1. It sets the current VerseItem in the Chapter
+	// 2. It creates the VIMenu for the VerseItem
+	// Combining these two jobs worked OK in kitio and kitand, but created major
+	// headaches with communication between Views in kitsui. A better design for kitsui
+	// is to separate these functions and have the VIMenu owned by the VerseItem, not
+	// the Chapter. TODO: see if this works out in practice!
 	// Function to create a VIMenu when the user taps the Button in VerseItemView
 	func createVIMenu(_ vItem: VItem) {
 		let newOfst = offsetToBibItem(withID: vItem.itID)
@@ -347,6 +331,9 @@ public class Chapter: NSObject, ObservableObject {
 			print("BUG! Unknown action code")
 		}
 
+		// GDLC 20APR24 The setter for currItOfst was removed in KITSUI because the necessary VIMenu is
+		// created when the user taps the button to get that VerseItem's actions, so the 5 lines of
+		// commentary below are obsolete.
 		// GDLC 12JAN21 BUG10 The logic in the setter for currItOfst works for moving from one VerseItem
 		// to another but it fails in some situations where a new VerseItem is created or deleted
 		// (on creation because the new VerseItem may have the same offset as the one whose menu action
@@ -354,7 +341,9 @@ public class Chapter: NSObject, ObservableObject {
 		// ensures that a new popover menu will be created.
 		//
 		// Delete the popover menu now that it has been used
-		curPoMenu = nil
+//		curPoMenu = nil		// causes a crash in VIMenuView
+		// Dismiss the popover menu that gave this command
+		// but how to set isVIMenuShowing to false in VerseItemView ???
 		// Clear the current BibItems[] array
 		BibItems.removeAll()
 		// Reload the BibItems[] array of VerseItems
