@@ -14,6 +14,8 @@ import SwiftUI
 
 struct EditChapterView: View {
 	@EnvironmentObject var bibMod: BibleModel
+
+	@ObservedObject var chInst: Chapter
 	
 	@State var currItOfst: Int
 	
@@ -24,7 +26,7 @@ struct EditChapterView: View {
 					.font(.system(size: 15))
 				ScrollViewReader { proxy in
 					List {
-						ForEach(getChapInst().BibItems, id: \.self) { vItem in
+						ForEach(chInst.BibItems, id: \.self) { vItem in
 							VerseItemView(vItem: vItem).environmentObject(bibMod)
 						}
 					}
@@ -81,7 +83,8 @@ struct EditChapterView: View {
 		}
 	}
 }
-
+/*
 #Preview {
 	EditChapterView(currItOfst: 0)
 }
+*/

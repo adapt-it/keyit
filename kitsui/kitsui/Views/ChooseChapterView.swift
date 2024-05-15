@@ -50,7 +50,7 @@ struct ChooseChapterView: View {
 			}
 		}
 		.navigationDestination(isPresented: $goEditChapter){
-			EditChapterView(currItOfst: 0).environmentObject(bibMod)
+			EditChapterView(chInst: (bibMod.getCurBibInst().bookInst?.chapInst)!, currItOfst: 0).environmentObject(bibMod)
 		}
 		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
 		.onAppear() {

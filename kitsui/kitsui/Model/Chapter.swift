@@ -55,7 +55,7 @@ public class Chapter: NSObject, ObservableObject {
 // BibItems is an array of instances of the class VItem that are used for letting
 // the user edit VerseItems in the current Chapter of the current Book.
 
-	@Published var BibItems: [VItem] = []
+	@Published var BibItems = [VItem]()
 
 	// Properties of the Chapter instance needed to create popover menus
 	var hasAscription = false	// true if the Psalm has an Ascription
