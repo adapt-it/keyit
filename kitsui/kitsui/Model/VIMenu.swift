@@ -1,7 +1,7 @@
 //
 //  VIMenu.swift
 //
-//	VIMenu gathers the data necessary for populating a popover TableView when the user
+//	VIMenu gathers the data necessary for populating a popover menu when the user
 //	taps the VerseItem label. The action of tapping a VerseItem label makes that VerseItem
 //	the current one even if it were not before the user tapped its label.
 //
@@ -48,18 +48,25 @@ class VIMenuItem : NSObject, ObservableObject, Identifiable {
 }
 
 class VIMenu : NSObject {
-	var chInst:Chapter		// Chapter instance that owns this VIMenu
+	var vItemInst: VItem		// VItem that owns this VIMenu
+	// Is chInst still needed?
+	var chInst: Chapter		// Chapter instance that owns the VItem that owns this VIMenu
 	// Properties of a VIMenu instance (dummy values to avoid having optional variables)
 	var VIType = "Verse"				// the type of the VerseItem this menu is for
 	var numRows: Int = 0				// number of rows needed for the popover menu
 	var VIMenuItems: [VIMenuItem] = []	// array of the menu items
-	var menuLabelLength: CGFloat = 50	// Minimum length of the menu label in points
+	var menuLabelLength: CGFloat = 100	// Minimum length of the menu label in points
 										// (for calculating popover menu width)
 	let font = UIFont.systemFont(ofSize: 14)
 
-	init(_ parent:Chapter, _ curItOfst: Int) {
-		self.chInst = parent
+	// IMPORTANT: VIMenu is created for the current VerseItem; if the user taps on the
+	// button of a VItem that is not the current VerseItem, the tapped VItem must be
+	// made the current VerseItem before initialising the VIMenu.
+	init(_ parent: VItem, _ chInst: Chapter) {
+		self.vItemInst = parent
+		self.chInst = chInst
 		super.init()
+		let curItOfst = chInst.currItOfst
 		let bibItem = chInst.BibItems[curItOfst]
 		// Get type of next VerseItem (used in deciding whether to allow ParaCont)
 		let isLastItem = (curItOfst + 1) == chInst.numIt

@@ -44,7 +44,8 @@ public class Chapter: NSObject, ObservableObject {
 
 	var currItOfst: Int = -1
 // GDLC 20APR24 A curPoMenu is created only when the user taps a button in the EditChapterView that
-// needs a popover menu. This means that the setter function for currItOfst is no longer needed.
+// needs a popover menu. This means that the setter function for currItOfst that is part of
+// kitios and kitand is no longer needed.
 // This makes currItOfst a simple property with default setter.
 	
 	weak var dao: KITDAO?		// access to the KITDAO instance for using kdb.sqlite
@@ -56,9 +57,7 @@ public class Chapter: NSObject, ObservableObject {
 
 	@Published var BibItems: [VItem] = []
 
-	// Properties of the Chapter instance related to popover menus
-	var curPoMenu: VIMenu?		// instance in memory of the current popover menu
-								// Strong ref; must be nulled in deinit()
+	// Properties of the Chapter instance needed to create popover menus
 	var hasAscription = false	// true if the Psalm has an Ascription
 	var hasTitle = false		// true if Chapter 1 has a Book Title
 	var hasInTitle = false		// true if Chapter 1 has an introductory matter Title
@@ -113,10 +112,6 @@ public class Chapter: NSObject, ObservableObject {
 		currItOfst = goCurrentItem()
 	}
 
-	deinit {
-		curPoMenu = nil			// Release memory in curPoMenu
-	}
-
 // Create a VerseItem record in kdb.sqlite for each VerseItem in this Chapter
 // If this is a Psalm and it has an ascription then numIt will be 1 greater than numVs.
 // For all other VerseItems numIt will equal numVs at this early stage of building the app's data
@@ -156,7 +151,7 @@ public class Chapter: NSObject, ObservableObject {
 	// and sets nextIntSeq to one more than the largest one found.
 
 	func appendItemToArray(_ itID:Int, _ chID:Int, _ vsNum:Int, _ itTyp:String, _ itOrd:Int, _ itTxt:String, _ intSeq:Int, _ isBrg:Bool, _ lvBrg:Int) {
-		let itRec = VItem(itID: itID, chID: chID, vsNum: vsNum, itTyp: itTyp, itOrd: itOrd, itTxt: itTxt, intSeq: intSeq, isBrg: isBrg, lvBrg: lvBrg)
+		let itRec = VItem(owner: self, itID: itID, chID: chID, vsNum: vsNum, itTyp: itTyp, itOrd: itOrd, itTxt: itTxt, intSeq: intSeq, isBrg: isBrg, lvBrg: lvBrg)
 		BibItems.append(itRec)
 		if itTyp == "Ascription" {hasAscription = true}
 		if itTyp == "Title" {hasTitle = true}
@@ -211,7 +206,6 @@ public class Chapter: NSObject, ObservableObject {
 			currItOfst = offsetToBibItem(withID: currIt)
 			//GDLC 31JUL21 Added setting of currVN
 			currVN = BibItems[currItOfst].vsNum	// Get its verse number
-			// Setting currItOfst ensures that there is a VIMenu for the current VerseItem
 		}
 		// Set the VItem so that it is displayed as the current item
 		BibItems[currItOfst].isCurVsItem = true
@@ -249,12 +243,12 @@ public class Chapter: NSObject, ObservableObject {
 	// This function as originally written for kitios and kitand does TWO jobs:-
 	// 1. It sets the current VerseItem in the Chapter
 	// 2. It creates the VIMenu for the VerseItem
-	// Combining these two jobs worked OK in kitio and kitand, but created major
+	// Combining these two jobs worked OK in kitios and kitand, but created major
 	// headaches with communication between Views in kitsui. A better design for kitsui
 	// is to separate these functions and have the VIMenu owned by the VerseItem, not
 	// the Chapter. TODO: see if this works out in practice!
 	// Function to create a VIMenu when the user taps the Button in VerseItemView
-	func createVIMenu(_ vItem: VItem) {
+/*	func createVIMenu(_ vItem: VItem) {
 		let newOfst = offsetToBibItem(withID: vItem.itID)
 		if (curPoMenu == nil) {
 			// Now set the new current VItem and create the first VIMenu
@@ -275,7 +269,7 @@ public class Chapter: NSObject, ObservableObject {
 		curPoMenu = VIMenu(self, currItOfst)
 		// Update the database Chapter record
 		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
-	}
+	}*/
 
 	// Function to carry out on the data model the actions required for the popover menu items
 	// All of the possible actions change the BibItems[] array so, after carrying out the
@@ -340,10 +334,8 @@ public class Chapter: NSObject, ObservableObject {
 		// was used). So destroying the current popover menu once an action from it has been used
 		// ensures that a new popover menu will be created.
 		//
-		// Delete the popover menu now that it has been used
-//		curPoMenu = nil		// causes a crash in VIMenuView
 		// Dismiss the popover menu that gave this command
-		// but how to set isVIMenuShowing to false in VerseItemView ???
+		// but how???
 		// Clear the current BibItems[] array
 		BibItems.removeAll()
 		// Reload the BibItems[] array of VerseItems

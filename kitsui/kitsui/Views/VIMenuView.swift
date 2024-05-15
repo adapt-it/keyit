@@ -12,15 +12,13 @@ struct VIMenuView: View {
 	@State private var settingsDetent = PresentationDetent.medium
 
 	@Binding var isVIMenuShowing: Bool
+	var vItem: VItem
 
-//	init(isVIMenu: Bool) {
-//		self.isVIMenu = isVIMenu
-//	}
 	var body: some View {
 		List {
 			Section(calcMenuTitle().capitalized,
 				content: {
-				ForEach(getChapInst().curPoMenu!.VIMenuItems) { VIMItem in
+				ForEach(vItem.curPoMenu!.VIMenuItems) { VIMItem in
 					VIMenuItemView(VIMItem: VIMItem, isVIMenuShowing: $isVIMenuShowing).environmentObject(bibMod)
 						.presentationDetents(
 							[.medium, .large],
@@ -41,7 +39,8 @@ struct VIMenuView: View {
 		return "Action for " + bibItem.getItemTypText() + "?"
 	}
 }
-
+/*
 #Preview {
 	VIMenuView(isVIMenuShowing: .constant(true))
 }
+*/

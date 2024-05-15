@@ -12,10 +12,6 @@ struct VIMenuItemView: View {
 	var VIMItem: VIMenuItem
 	@Binding var isVIMenuShowing: Bool
 
-//	init(VIMItem:VIMenuItem) {
-//		self.VIMItem = VIMItem
-//	}
-
 	var body: some View {
 		HStack {
 			Image(uiImage: getIcon())

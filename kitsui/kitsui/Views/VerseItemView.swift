@@ -43,7 +43,7 @@ struct VerseItemView: View {
 					attachmentAnchor: .point(.bottomTrailing),
 					arrowEdge: .trailing,
 					content: {
-					VIMenuView(isVIMenuShowing: $isVIMenuShowing)
+					VIMenuView(isVIMenuShowing: $isVIMenuShowing, vItem: vItem)
 						.frame(width: popoverWidth(), height: popoverHeight())
 				})
 				Spacer()
@@ -116,11 +116,11 @@ struct VerseItemView: View {
 	func popoverWidth() -> CGFloat {
 		var w: CGFloat	// width in points
 
-		if isVIMenuShowing && bibMod.getCurBibInst().bookInst!.chapInst!.curPoMenu != nil {
+		if isVIMenuShowing && vItem.curPoMenu != nil {
 			if horizontalSizeClass == .compact {
-				w = (getChapInst().curPoMenu?.menuLabelLength)!
+				w = (vItem.curPoMenu?.menuLabelLength)!
 			} else {
-				w = getChapInst().curPoMenu!.menuLabelLength + 20	// Assume 20 points for the menu icon
+				w = vItem.curPoMenu!.menuLabelLength + 20	// Assume 20 points for the menu icon
 			}
 			// Return width in pixels
 			return w * displayScale
@@ -132,11 +132,11 @@ struct VerseItemView: View {
 	func popoverHeight() -> CGFloat {
 		var h: CGFloat	// Height in points
 
-		if isVIMenuShowing && bibMod.getCurBibInst().bookInst!.chapInst!.curPoMenu != nil {
+		if isVIMenuShowing && vItem.curPoMenu != nil {
 			if horizontalSizeClass == .compact {
-				h = CGFloat((getChapInst().curPoMenu?.numRows)! + 1) * 17
+				h = CGFloat((vItem.curPoMenu?.numRows)! + 1) * 17
 			} else {
-				h = CGFloat((getChapInst().curPoMenu?.numRows)! + 2) * 20
+				h = CGFloat((vItem.curPoMenu?.numRows)! + 2) * 20
 			}
 			// Return height in pixels
 			return h * displayScale
@@ -146,20 +146,22 @@ struct VerseItemView: View {
 	}
 
 	func showPopoverMenu() {
-		// Build the popover menu for this VerseItem
-		bibMod.getCurBibInst().bookInst!.chapInst!.createVIMenu(vItem)
+// TODO: check that this does make the tapped VItem the current VerseItem before creating the VIMenu.
+		// Mark this VItem as the current one
+		bibMod.getCurBibInst().bookInst!.chapInst!.makeVItemCurrent(vItem)
 		vItem.isCurVsItem = true
 		isFocused = true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
+		// Build the popover menu for this VerseItem
+		vItem.createVIMenu()
 		// Display the popover menu
 		isVIMenuShowing = true
 	}
 
-/*	// TODO: From where could this be called?
+// TODO: From where could this be called?
 	func dismissPopoverMenu() {
-		isVIMenuPresented = false
+		isVIMenuShowing = false
 	}
-*/
 
 	// MARKER: Text colour
 	func selectTextColour() -> Color {
@@ -184,10 +186,10 @@ struct VerseItemView: View {
 		}
 	}
 }
-
+/*
 #Preview {
 	Group {
-		VerseItemView(vItem: VItem(itID: 32, chID: 2, vsNum: 1, itTyp: "Heading", itOrd: 100, itTxt: "Heading before verse 1",
+		VerseItemView(vItem: VItem(owner: <#Chapter#>, itID: 32, chID: 2, vsNum: 1, itTyp: "Heading", itOrd: 100, itTxt: "Heading before verse 1",
 								   intSeq: 0, isBrg: false, lvBrg: 0, isCurVsItem: false))
 		VerseItemView(vItem: VItem(itID: 31, chID: 2, vsNum: 1, itTyp: "Verse", itOrd: 100, itTxt: "Text of verse 1 of Galatians chapter 1; and here it goes on and on for quite a while. I wonder how many lines we can fill? Let's keep going on and on ... The quick brown fox jumped over the lazy dog.",
 								   intSeq: 0, isBrg: false, lvBrg: 0, isCurVsItem: true))
@@ -196,4 +198,4 @@ struct VerseItemView: View {
 		VerseItemView(vItem: VItem(itID: 30, chID: 2, vsNum: 2, itTyp: "Verse", itOrd: 100, itTxt: "Text of verse 2 of Galatians chapter 1; and here it goes on and on for quite a while. I wonder how many lines we can fill? At least one more than this I am sure!",
 								   intSeq: 0, isBrg: false, lvBrg: 0, isCurVsItem: false))
 	}
-}
+}*/
