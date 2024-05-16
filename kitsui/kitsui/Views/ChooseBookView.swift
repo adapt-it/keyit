@@ -18,10 +18,10 @@ struct ChooseBookView: View {
 	@EnvironmentObject var bibMod: BibleModel
 	var needChooseBook: Bool
 
-	@State private var goChooseChapter = false
-	@State private var selectedBook: Bible.bookLst?
-	@State private var showOT = false
-	@State private var showNT = true
+	@State var goChooseChapter = false
+	@State var selectedBook: Bible.bookLst?
+	@State var showOT = false
+	@State var showNT = true
 
 	init(needChooseBook:Bool) {
 		self.needChooseBook = needChooseBook
@@ -73,10 +73,14 @@ struct ChooseBookView: View {
 			})
 		}
 		.navigationDestination(isPresented: $goChooseChapter){
-			ChooseChapterView(needChooseChapter: getNeedChooseChapter()).environmentObject(bibMod)
+			ChooseChapterView(
+				bkInst: (bibMod.getCurBibInst().bookInst)!,
+				needChooseChapter: getNeedChooseChapter()
+			).environmentObject(bibMod)
 		}
 		.navigationTitle(bibMod.getCurBibName() + " - Choose Book")
 		.onAppear() {
+			// If a Book has been chosen, go straight to Choose Chapter
 			if !needChooseBook {
 				goChooseChapter = true
 			}

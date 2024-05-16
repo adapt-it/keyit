@@ -16,7 +16,6 @@ struct EditChapterView: View {
 	@EnvironmentObject var bibMod: BibleModel
 
 	@ObservedObject var chInst: Chapter
-	
 	@State var currItOfst: Int
 	
 	var body: some View {

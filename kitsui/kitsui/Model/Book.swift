@@ -25,7 +25,7 @@
 import Foundation
 import SwiftUI
 
-public class Book:NSObject, ObservableObject {
+public class Book: NSObject, ObservableObject {
 
 	weak var bibmod: BibleModel?
 	weak var dao: KITDAO?		// access to the KITDAO instance for using kdb.sqlite
@@ -80,8 +80,8 @@ public class Book:NSObject, ObservableObject {
 
 	@Published var BibChaps: [BibChap] = []
  
-// When the instance of Bible creates the instance for the current Book it supplies the values for the
-// currently selected book from the BibBooks array
+	// When the instance of Bible creates the instance for the current Book it supplies the
+	// values for the currently selected book from the BibBooks array.
 	// Initialisation of an instance of class Book with an array of Chapters to select from
 	// But the array of Chapters cannot be produced until a current Book is chosen, so this
 	// action needs to be avoided until after there is a current Book. Thus Book.init() must

@@ -14,17 +14,21 @@ import SwiftUI
 
 struct ChooseChapterView: View {
 	@EnvironmentObject var bibMod: BibleModel
+
+	@ObservedObject var bkInst: Book
 	var needChooseChapter: Bool
+	
 	@State var goEditChapter = false
-	@State private var selectedChapter: Book.BibChap?
+	@State var selectedChapter: Book.BibChap?
 
-	init(needChooseChapter: Bool) {
+	init(bkInst: Book, needChooseChapter: Bool) {
 		self.needChooseChapter = needChooseChapter
-
+		self.bkInst = bkInst
+	}
 // GDLC 6FEB24 Removed this setting of goEditChapter so that it is not set true until
 // onAppear(), by which time all initialisations will have been done.
 //		self._goEditChapter = State(wrappedValue: !needChooseChapter)
-	}
+//	}
 
 	private var gridItemLayout = Array(repeating: GridItem(.flexible(), spacing: 1), count: 5)
 	
@@ -35,7 +39,7 @@ struct ChooseChapterView: View {
 				// 5 column flexible horizontal grid layout
 				ScrollView(.vertical) {
 					LazyVGrid(columns: gridItemLayout, spacing: 10) {
-						ForEach(bibMod.getCurBibInst().bookInst!.BibChaps, id: \.self) { chap in
+						ForEach(bkInst.BibChaps, id: \.self) { chap in
 							ChapterNumberView(chp: chap).environmentObject(bibMod)
 							.onTapGesture {
 								selectedChapter = chap
@@ -80,7 +84,8 @@ struct ChooseChapterView: View {
 	}
 	
 }
-
+/*
 #Preview {
 	ChooseChapterView(needChooseChapter: true)
 }
+*/
