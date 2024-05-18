@@ -35,6 +35,15 @@ class BibleModel: ObservableObject {
 	// Offset to the current Bible. Views and functions mostly deal with the current Bible
     @Published var curBibOfst = 0
 	@Published var needSetup = false	// Assume no need for SetupView
+
+	// Because SwiftUI runtime scans through possible future Views before the Views are actually created,
+	// and because ChooseChapterView needs its parent Book instance (as part of facilitiating View updates),
+	// and because EditChapterView needs it parent Chapter instance (as part of facilitating updates),
+	// we need a way of providing default values for Book instance and Chapter instance to SwiftUI runtime
+	// a Book or a Chapter has been chosen.
+	// defBkInst and defChInst are created at the end of the init() of BibleModel.
+	var defBkInst: Book? = nil
+	var defChInst: Chapter? = nil
 	
     init () {
 		// Populate bibArray[] from any Bible records in the database
@@ -61,6 +70,8 @@ class BibleModel: ObservableObject {
 		}
 		numBibles = nBib
 		setCurBibOfst(0)
+		defBkInst = Book(getCurBibInst(), 41, getCurBibInst().bibleID, "MAT", "Matthew", false, 28, 0, -1, self)
+		defChInst = Chapter(defBkInst!, 169, 1, 41, 1, false, 22, 22, 0, 1)
     }
 
 // Functions for current Bible - called by SwiftUI Views and other parts of the data model
@@ -79,6 +90,18 @@ class BibleModel: ObservableObject {
 	
 	func getCurBibInst() -> Bible {
 		return bibArray[curBibOfst]
+	}
+
+	// Need to provide a default Book instance when no Book has been selected because
+	// ChooseBookView passes bkInst to ChooseChapterView
+	func getDefaultBookInst() -> Book {
+		return defBkInst!
+	}
+
+	// Need to provide a default Chapter instance when no Chapter has been selected because
+	// ChooseChapterView passes chInst to EditChapterView
+	func getDefaultChapterInst() -> Chapter {
+		return defChInst!
 	}
 
 	func getCurBibName() -> String {

@@ -74,7 +74,7 @@ struct ChooseBookView: View {
 		}
 		.navigationDestination(isPresented: $goChooseChapter){
 			ChooseChapterView(
-				bkInst: (bibMod.getCurBibInst().bookInst)!,
+				bkInst: (bibMod.getCurBibInst().bookInst ?? bibMod.getDefaultBookInst()),
 				needChooseChapter: getNeedChooseChapter()
 			).environmentObject(bibMod)
 		}

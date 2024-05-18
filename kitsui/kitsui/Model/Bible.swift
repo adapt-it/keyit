@@ -251,8 +251,11 @@ class Bible: ObservableObject {
  // but a parameter is needed for the number of Chapters in the Book.
 
 	 func setBibBooksNumChap(_ numChap: Int) {
-		 BibBooks[currBookOfst].chapRecsCreated = true
-		 BibBooks[currBookOfst].numChaps = numChap
+		 // During launch this can be called prior to the user choosing a Book
+		 if currBookOfst != -1 {
+			 BibBooks[currBookOfst].chapRecsCreated = true
+			 BibBooks[currBookOfst].numChaps = numChap
+		 }
 	 }
 
 	 func getCurrBookOfst() -> Int {

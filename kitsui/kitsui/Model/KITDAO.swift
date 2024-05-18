@@ -62,7 +62,7 @@ enum SQLiteError: Error {
 	case cannotDeleteRecord
 }
 
-public class KITDAO:/*NSObject, */ObservableObject {
+public class KITDAO: ObservableObject {
 //    var bibInst: Bible? // During the launch of KIT an instance of the class Bible will be created REALLY???
                         // This is the strong ref to bibInst which lasts for the entire run of the app
 
