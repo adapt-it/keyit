@@ -4,14 +4,14 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.ccs.kitand"
         minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 5
-        versionName "1.1.1"
+        targetSdkVersion 34
+        versionCode 6
+        versionName "1.1.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

@@ -17,6 +17,8 @@ struct EditChapterView: View {
 
 	@ObservedObject var chInst: Chapter
 	@State var currItOfst: Int
+	@State var showUSFM = false
+	@State var USFMtext = ""
 	
 	var body: some View {
 		NavigationStack {
@@ -39,6 +41,14 @@ struct EditChapterView: View {
 			}
 		}
 		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
+		.navigationBarItems(trailing: Button("USFM") {
+			print("USFM Button tapped")
+			calcAndSaveUSFMText()
+			showUSFM = true
+		})
+		.navigationDestination(isPresented: $showUSFM){
+			ShowUSFMView().environmentObject(bibMod)
+		}
 	}
 
 	func getChapInst() -> Chapter {
@@ -79,6 +89,14 @@ struct EditChapterView: View {
 			return (chInst.numIt - chInst.numVs)
 		} else {
 			return 999
+		}
+	}
+
+	func calcAndSaveUSFMText() {
+		if let chInst = bibMod.getCurBibInst().bookInst?.chapInst {
+			chInst.saveUSFMText (chInst.chID, chInst.calcUSFMExportText())
+		} else {
+			print("ERR: Chapter not yet chosen")
 		}
 	}
 }

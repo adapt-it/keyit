@@ -52,6 +52,8 @@ public class Chapter: NSObject, ObservableObject {
 	weak var bibInst: Bible? 	// access to the instance of Bible for updating BibBooks[]
 	weak var bkInst: Book?		// access to the instance for the current Book
 
+	var USFMText:String = ""	// Property to hold the USFM text exported
+
 // BibItems is an array of instances of the class VItem that are used for letting
 // the user edit VerseItems in the current Chapter of the current Book.
 
@@ -741,7 +743,9 @@ public class Chapter: NSObject, ObservableObject {
 		return USFM
 	}
 
+	// Save the USFM text to the Chapter instance and to the database
 	func saveUSFMText (_ chID:Int, _ text:String) {
+		USFMText = text
 		dao!.updateUSFMText (chID, text)
 	}
 }

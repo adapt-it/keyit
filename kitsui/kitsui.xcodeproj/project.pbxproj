@@ -15,6 +15,7 @@
 		C81FF4D82B648EFF00508F98 /* VerseItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81FF4D72B648EFF00508F98 /* VerseItemView.swift */; };
 		C8260F292BB522CA008750BF /* VIMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8260F282BB522CA008750BF /* VIMenuView.swift */; };
 		C8260F2B2BB52A03008750BF /* VIMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8260F2A2BB52A03008750BF /* VIMenuItemView.swift */; };
+		C86210262C00B82F00982485 /* ShowUSFMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86210252C00B82F00982485 /* ShowUSFMView.swift */; };
 		C879FCBF2B0889BD0074E6CF /* KITDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C879FCBE2B0889BD0074E6CF /* KITDAO.swift */; };
 		C87FABE92B4186D200B15BAE /* EditChapterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87FABE82B4186D200B15BAE /* EditChapterView.swift */; };
 		C88777862B04D7E1001E84D4 /* BibleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88777852B04D7E1001E84D4 /* BibleModel.swift */; };
@@ -42,6 +43,7 @@
 		C81FF4D72B648EFF00508F98 /* VerseItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerseItemView.swift; sourceTree = "<group>"; };
 		C8260F282BB522CA008750BF /* VIMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIMenuView.swift; sourceTree = "<group>"; };
 		C8260F2A2BB52A03008750BF /* VIMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIMenuItemView.swift; sourceTree = "<group>"; };
+		C86210252C00B82F00982485 /* ShowUSFMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowUSFMView.swift; sourceTree = "<group>"; };
 		C879FCBE2B0889BD0074E6CF /* KITDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KITDAO.swift; sourceTree = "<group>"; };
 		C87FABE82B4186D200B15BAE /* EditChapterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditChapterView.swift; sourceTree = "<group>"; };
 		C88777852B04D7E1001E84D4 /* BibleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleModel.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				C8D183C72B357127002A44D1 /* ChooseChapterView.swift */,
 				C8DA63732B4CEB6F0088BF86 /* ChapterNumberView.swift */,
 				C87FABE82B4186D200B15BAE /* EditChapterView.swift */,
+				C86210252C00B82F00982485 /* ShowUSFMView.swift */,
 				C81FF4D72B648EFF00508F98 /* VerseItemView.swift */,
 				C8260F282BB522CA008750BF /* VIMenuView.swift */,
 				C8260F2A2BB52A03008750BF /* VIMenuItemView.swift */,
@@ -234,6 +237,7 @@
 				C8EDDB322B11AB3E003525E9 /* Bible.swift in Sources */,
 				C8260F2B2BB52A03008750BF /* VIMenuItemView.swift in Sources */,
 				C8D183C82B357127002A44D1 /* ChooseChapterView.swift in Sources */,
+				C86210262C00B82F00982485 /* ShowUSFMView.swift in Sources */,
 				C8EC69D72B11DE0700BF73F3 /* Chapter.swift in Sources */,
 				C80672FE2B04AC3D007FA4DE /* SetupView.swift in Sources */,
 				C893D2772B7F49F500F9B4AF /* VerseItem.swift in Sources */,
@@ -382,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"kitsui/Preview Content\"";
 				DEVELOPMENT_TEAM = YMY6HM7S6S;
 				ENABLE_PREVIEWS = YES;
@@ -413,7 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"kitsui/Preview Content\"";
 				DEVELOPMENT_TEAM = YMY6HM7S6S;
 				ENABLE_PREVIEWS = YES;
