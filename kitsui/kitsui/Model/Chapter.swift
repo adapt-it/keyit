@@ -52,8 +52,6 @@ public class Chapter: NSObject, ObservableObject {
 	weak var bibInst: Bible? 	// access to the instance of Bible for updating BibBooks[]
 	weak var bkInst: Book?		// access to the instance for the current Book
 
-	var USFMText:String = ""	// Property to hold the USFM text exported
-
 // BibItems is an array of instances of the class VItem that are used for letting
 // the user edit VerseItems in the current Chapter of the current Book.
 
@@ -65,6 +63,26 @@ public class Chapter: NSObject, ObservableObject {
 	var hasInTitle = false		// true if Chapter 1 has an introductory matter Title
 	var nextIntSeq = 1			// next value to be used for an IntSeq field. Starts at 1 because
 								// InTitle is in effect IntSeq = 0
+
+    var USFMText:String = ""    // Property to hold the USFM text exported
+
+	// Initialise a default Chapter instance for use in creating ChooseChapterView before
+	// the user has selected any Chapter
+
+	init(_ parent: Book) {
+		super.init()
+		
+		self.bkInst = parent	// access to current Book
+		self.chID = 1		// chapterID INTEGER PRIMARY KEY
+		self.bibID = parent.bibID		// bibleID INTEGER
+		self.bkID = parent.bkID		// bookID INTEGER,
+		self.chNum = 1		// chapterNumber INTEGER
+		self.itRCr = false		// itemRecsCreated INTEGER
+		self.numVs = 10		// numVerses INTEGER
+		self.numIt = 10		// numItems INTEGER
+		self.currIt = 0	// currItem INTEGER (ID of the current VerseItem)
+		self.currVN = -1	// currVsNum INTEGER (Verse number for the current VerseItem)
+	}
 
 // When the instance of current Book creates the instance for the current Chapter it supplies the values
 // for the currently selected Chapter from the BibChaps array
@@ -248,7 +266,7 @@ public class Chapter: NSObject, ObservableObject {
 	// Combining these two jobs worked OK in kitios and kitand, but created major
 	// headaches with communication between Views in kitsui. A better design for kitsui
 	// is to separate these functions and have the VIMenu owned by the VerseItem, not
-	// the Chapter. TODO: see if this works out in practice!
+	// the Chapter.
 	// Function to create a VIMenu when the user taps the Button in VerseItemView
 /*	func createVIMenu(_ vItem: VItem) {
 		let newOfst = offsetToBibItem(withID: vItem.itID)
@@ -336,8 +354,6 @@ public class Chapter: NSObject, ObservableObject {
 		// was used). So destroying the current popover menu once an action from it has been used
 		// ensures that a new popover menu will be created.
 		//
-		// Dismiss the popover menu that gave this command
-		// but how???
 		// Clear the current BibItems[] array
 		BibItems.removeAll()
 		// Reload the BibItems[] array of VerseItems
@@ -743,9 +759,7 @@ public class Chapter: NSObject, ObservableObject {
 		return USFM
 	}
 
-	// Save the USFM text to the Chapter instance and to the database
 	func saveUSFMText (_ chID:Int, _ text:String) {
-		USFMText = text
 		dao!.updateUSFMText (chID, text)
 	}
 }

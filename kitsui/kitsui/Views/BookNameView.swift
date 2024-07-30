@@ -29,7 +29,7 @@ struct BookNameView: View {
 					Text(bookLst.bookCode)
 					Text(bookLst.bookName)
 					Spacer()
-					Text(bookLst.bookInNT ? "NT" : "OT")
+					Text(description(bookLst))
 				}
 				.foregroundColor(selectTextColour(bookLst))
 			}
@@ -37,6 +37,19 @@ struct BookNameView: View {
 //			.listRowBackground(bookLst.selected ? Color.accentColor : Color(.clear))
 		}
     }
+}
+
+func description (_ bookLst:Bible.bookLst) -> String {
+    var descrTxt = ""
+    if bookLst.numChaps > 0 {
+        descrTxt = "\(bookLst.numChaps) "
+        if bookLst.bookCode == "PSA" {
+            descrTxt = descrTxt + "Ps"
+        } else {
+            descrTxt = descrTxt + "Ch"
+        }
+    }
+    return descrTxt
 }
 
 func selectTextColour(_ bookLst:Bible.bookLst) -> Color {
@@ -57,9 +70,9 @@ func selectBorderColour(_ bookLst:Bible.bookLst) -> Color {
 
 #Preview {
 	Group {
-		BookNameView(bookLst: Bible.bookLst(bookID: 41, bookCode: "MAT", bookName: "Matthew", bookInNT: true, selected: false))
-		BookNameView(bookLst: Bible.bookLst(bookID: 42, bookCode: "MAR", bookName: "Mark", bookInNT: true, selected: false))
-		BookNameView(bookLst: Bible.bookLst(bookID: 43, bookCode: "LUK", bookName: "Luke", bookInNT: true, selected: true))
-		BookNameView(bookLst: Bible.bookLst(bookID: 44, bookCode: "JHN", bookName: "John", bookInNT: true, selected: false))
+		BookNameView(bookLst: Bible.bookLst(bookID: 41, bookCode: "MAT", bookName: "Matthew", numChaps: 28, bookInNT: true, selected: false))
+		BookNameView(bookLst: Bible.bookLst(bookID: 42, bookCode: "MAR", bookName: "Mark", numChaps: 16, bookInNT: true, selected: false))
+		BookNameView(bookLst: Bible.bookLst(bookID: 43, bookCode: "LUK", bookName: "Luke", numChaps: 24, bookInNT: true, selected: true))
+		BookNameView(bookLst: Bible.bookLst(bookID: 19, bookCode: "PSA", bookName: "Psalms", numChaps: 150, bookInNT: false, selected: false))
 	}
 }

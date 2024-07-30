@@ -26,6 +26,7 @@ struct VerseItemView: View {
 	init(vItem: VItem) {
 		self.vItem = vItem
 		self._editedTxt = State(wrappedValue: vItem.itTxt)
+// TODO: Apparently not needed?
 //		self._isVIMenuPresented = State(isVIMenuPresented)
 	}
 
@@ -146,12 +147,12 @@ struct VerseItemView: View {
 	}
 
 	func showPopoverMenu() {
-// TODO: check that this does make the tapped VItem the current VerseItem before creating the VIMenu.
 		// Mark this VItem as the current one
 		bibMod.getCurBibInst().bookInst!.chapInst!.makeVItemCurrent(vItem)
 		vItem.isCurVsItem = true
 		isFocused = true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
+
 		// Build the popover menu for this VerseItem
 		vItem.createVIMenu()
 		// Display the popover menu
@@ -172,6 +173,7 @@ struct VerseItemView: View {
 		}
 	}
 
+	// TODO: From where could this be called?
 	 private func hideKeyboard() {
 		 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 	 }

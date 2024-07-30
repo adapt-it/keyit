@@ -79,8 +79,27 @@ public class Book: NSObject, ObservableObject {
 	}
 
 	@Published var BibChaps: [BibChap] = []
- 
-	// When the instance of Bible creates the instance for the current Book it supplies the
+
+	// Initialise a default Book instance for use in creating ChooseBookView before
+	// the user has selected any Book
+
+	init(_ bInst: Bible, _ bibmod: BibleModel) {
+        super.init()
+        
+        self.bibInst = bInst
+        self.bkID = 41				// bookID INTEGER
+        self.bibID = bInst.bibleID	// bibleID INTEGER
+        self.bkCode = "MAT"			// bookCode TEXT
+        self.bkName = "Matthew"		// bookName TEXT
+        self.chapRCr = false        // chapRecsCreated INTEGER
+        self.numChap = 28			// numChaps INTEGER
+		self.curChID = 0			// currChID INTEGER
+		self.curChNum = -1			// currChNum INTEGER
+		self.bibmod = bibmod        // BibleModel
+        self.chapName = "chapter"
+    }
+
+    // When the instance of Bible creates the instance for the current Book it supplies the
 	// values for the currently selected book from the BibBooks array.
 	// Initialisation of an instance of class Book with an array of Chapters to select from
 	// But the array of Chapters cannot be produced until a current Book is chosen, so this

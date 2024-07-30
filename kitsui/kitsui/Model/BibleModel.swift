@@ -39,12 +39,11 @@ class BibleModel: ObservableObject {
 	// Because SwiftUI runtime scans through possible future Views before the Views are actually created,
 	// and because ChooseChapterView needs its parent Book instance (as part of facilitiating View updates),
 	// and because EditChapterView needs it parent Chapter instance (as part of facilitating updates),
-	// we need a way of providing default values for Book instance and Chapter instance to SwiftUI runtime
+	// we need a way of providing default values for Book instance and Chapter instance to SwiftUI before
 	// a Book or a Chapter has been chosen.
-// This "fix" resulted in duplicate VerseItems for Matthew Chapter 1!!!
-//	// defBkInst and defChInst are created at the end of the init() of BibleModel.
-//	var defBkInst: Book? = nil
-//	var defChInst: Chapter? = nil
+	// defBkInst and defChInst are created at the end of the init() of BibleModel.
+	var defBkInst: Book? = nil
+	var defChInst: Chapter? = nil
 	
     init () {
 		// Populate bibArray[] from any Bible records in the database
@@ -63,17 +62,19 @@ class BibleModel: ObservableObject {
 			}
 		}
 		if nBib == 0 {
-			// Create a Bible database record with Matthew as the initial default Book
-			dao.bibleInsertRec (1, "Bible", false, 41)
-			bibArray.append( Bible(bibleID: 1, bibleName: "Bible", bkRecsCr: false, currBk: 41, bibMod: self) )
+			// Create a Bible database record
+			dao.bibleInsertRec (1, "Bible", false, 0)
+			bibArray.append( Bible(bibleID: 1, bibleName: "Bible", bkRecsCr: false, currBk: 0, bibMod: self) )
 			nBib = 1
 			needSetup = true	// Need SetupView because default Bible created
 		}
 		numBibles = nBib
 		setCurBibOfst(0)
-// This "fix" resulted in duplicated VerseItems for Matthew Chapter 1!!!
-//		defBkInst = Book(getCurBibInst(), 41, getCurBibInst().bibleID, "MAT", "Matthew", false, 28, 0, -1, self)
-//		defChInst = Chapter(defBkInst!, 169, 1, 41, 1, false, 22, 22, 0, 1)
+        defBkInst = Book(getCurBibInst(), self)
+		defChInst = Chapter(defBkInst!)
+        // This "fix" resulted in duplicated VerseItems for Matthew Chapter 1!!!
+        //        defBkInst = Book(getCurBibInst(), 41, getCurBibInst().bibleID, "MAT", "Matthew", false, 28, 0, -1, self)
+        //        defChInst = Chapter(defBkInst!, 169, 1, 41, 1, false, 22, 22, 0, 1)
     }
 
 // Functions for current Bible - called by SwiftUI Views and other parts of the data model
@@ -96,15 +97,15 @@ class BibleModel: ObservableObject {
 
 	// Need to provide a default Book instance when no Book has been selected because
 	// ChooseBookView passes bkInst to ChooseChapterView
-//	func getDefaultBookInst() -> Book {
-//		return defBkInst!
-//	}
+	func getDefaultBookInst() -> Book {
+		return defBkInst!
+	}
 
 	// Need to provide a default Chapter instance when no Chapter has been selected because
 	// ChooseChapterView passes chInst to EditChapterView
-//	func getDefaultChapterInst() -> Chapter {
-//		return defChInst!
-//	}
+	func getDefaultChapterInst() -> Chapter {
+		return defChInst!
+	}
 
 	func getCurBibName() -> String {
 		return bibArray[curBibOfst].bibleName
