@@ -36,6 +36,7 @@ public class VItem: ObservableObject, Identifiable, Hashable {
 	var isCurVsItem: Bool	// true if the instance is the one currently selected in the UI
 	public var id = UUID()
 	weak var chInst: Chapter?	// Chapter instance that owns this VerseItem
+	var dirty: Bool = false		// True if the itTxt has been edited
 
 	var curPoMenu: VIMenu?	// instance in memory of the popover menu for this VerseItem
 

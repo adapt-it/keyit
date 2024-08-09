@@ -656,8 +656,9 @@ public class KITDAO: ObservableObject {
 		sqlite3_finalize(sqlite3_stmt)
 	}
 
+	// NOT YET USERD - Delete?
 	// Reads the single VerseItem record with the specified ItemID
-	// Used in itemsDeleteRec()	???
+	// Needed for itemsDeleteRec()	???
 	
 	func readVerseItemRecord (_ itID:Int) {
 		

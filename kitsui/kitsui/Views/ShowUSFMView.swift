@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShowUSFMView: View {
 	@EnvironmentObject var bibMod: BibleModel
+	@ObservedObject var chInst: Chapter
 
 	var body: some View {
 		NavigationStack {
@@ -17,19 +18,18 @@ struct ShowUSFMView: View {
 					.font(.system(size: 13))
 					.fixedSize(horizontal: false, vertical: true)
 			}
+			.onAppear(perform: {
+				generateUSFMText()
+			})
 		}
 		.navigationTitle("USFM for \(bibMod.getCurBookName()) \(getChapterName()) \(getChapterNumber())")
 	}
-/*
- ScrollView {
-	 VStack {
-		 Text(someString)
-			 .fixedSize(horizontal: false, vertical: true)
-		 Text(anotherLongString)
-			 .fixedSize(horizontal: false, vertical: true)
-	 }
- }
- */
+
+	// THIS DOES NOT GET CALLED???
+	func onAppear() {
+		generateUSFMText()
+	}
+
 	func getChapterName() -> String {
 		if let bkInst = bibMod.getCurBibInst().bookInst {
 			return bkInst.chapName!
@@ -45,8 +45,12 @@ struct ShowUSFMView: View {
 			return 999
 		}
 	}
+
+	func generateUSFMText() {
+		bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
+	}
 }
 
-#Preview {
-    ShowUSFMView()
-}
+//#Preview {
+//	ShowUSFMView(chInst: bibMod.defChInst)
+//}

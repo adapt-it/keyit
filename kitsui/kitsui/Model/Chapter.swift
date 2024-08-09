@@ -64,7 +64,7 @@ public class Chapter: NSObject, ObservableObject {
 	var nextIntSeq = 1			// next value to be used for an IntSeq field. Starts at 1 because
 								// InTitle is in effect IntSeq = 0
 
-    var USFMText:String = ""    // Property to hold the USFM text exported
+    @Published var USFMText:String = ""    // Property to hold the USFM text exported
 
 	// Initialise a default Chapter instance for use in creating ChooseChapterView before
 	// the user has selected any Chapter
@@ -234,6 +234,7 @@ public class Chapter: NSObject, ObservableObject {
 		return currItOfst
 	}
 
+	// NOT YET USED - Delete it?
 	// Copy the current VerseItem's text BibItems[]
 	func copyCurrentVItemText(_ text: String) {
 		BibItems[currItOfst].itTxt = text
@@ -250,6 +251,8 @@ public class Chapter: NSObject, ObservableObject {
 	func makeVItemCurrent(_ vItem: VItem) {
 		// The current VItem ceases to be the current one
 		BibItems[currItOfst].isCurVsItem = false
+		// Ensure that the text of the VItem is saved to SQLite
+		dao!.itemsUpdateRecText (BibItems[currItOfst].itID, BibItems[currItOfst].itTxt)
 		// Now set the new current VItem
 		currItOfst = offsetToBibItem(withID: vItem.itID)
 		BibItems[currItOfst].isCurVsItem = true
@@ -719,8 +722,9 @@ public class Chapter: NSObject, ObservableObject {
 	}
 	
 	// Generate USFM export string for this Chapter
-	func calcUSFMExportText() -> String {
-		var USFM = "\\id " + bkInst!.bkCode + " " + bibInst!.bibleName + "\n\\c " + String(chNum)
+	func calcUSFMExportText() {
+		var USFM = "\\id " + bkInst!.bkCode + " " + bibInst!.bibleName + "\n"
+		USFM = USFM + "\\h " + bkInst!.bkName + "\n\\c " + String(chNum)
 			for item in BibItems {
 			var s: String
 			var vn: String
@@ -756,10 +760,12 @@ public class Chapter: NSObject, ObservableObject {
 			}
 			USFM = USFM + s
 		}
-		return USFM
+		saveUSFMText(chID, USFM)
 	}
 
+	// Save the USFM text to the Chapter instance and to SQLite
 	func saveUSFMText (_ chID:Int, _ text:String) {
+		USFMText = text
 		dao!.updateUSFMText (chID, text)
 	}
 }

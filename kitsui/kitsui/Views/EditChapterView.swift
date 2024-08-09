@@ -15,8 +15,10 @@ import SwiftUI
 struct EditChapterView: View {
 	@EnvironmentObject var bibMod: BibleModel
 
+//	@State var saveCurrTxt = false
 	@ObservedObject var chInst: Chapter
 	@State var currItOfst: Int
+	@State var showUSFM = false
 	
 	var body: some View {
 		NavigationStack {
@@ -30,15 +32,29 @@ struct EditChapterView: View {
 						}
 					}
 					.onAppear {
-						print("view appeared")
-//						withAnimation {
+						print("EditChapterView appeared")
+						withAnimation {
 							proxy.scrollTo(getChapInst().BibItems[currItOfst], anchor: .topLeading)
-//						}
+						}
 					}
 				}
 			}
 		}
 		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
+		.toolbar {
+			ToolbarItem() {
+				Button ("USFM") {
+					print("USFM tapped")
+//					saveCurrTxt = true
+// This is called before the latest edited text has been saved to its VItem
+//					bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
+					showUSFM = true
+				}
+			}
+		}
+		.navigationDestination(isPresented: $showUSFM){
+			ShowUSFMView(chInst: getChapInst()).environmentObject(bibMod)
+		}
 	}
 
 	func getChapInst() -> Chapter {
@@ -48,6 +64,10 @@ struct EditChapterView: View {
 	func onAppear() {
 		// Get the offset of the current VerseItem
 		currItOfst = bibMod.getCurBibInst().bookInst!.chapInst!.goCurrentItem()
+	}
+
+	func onDisappear() {
+		print("EditView is disappearing")
 	}
 
 	func getChapterName() -> String {

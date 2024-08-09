@@ -19,6 +19,7 @@ struct VerseItemView: View {
 
 
 	@ObservedObject var vItem: VItem
+	
 	@State var editedTxt: String
 	@FocusState var isFocused: Bool
 	@State var isVIMenuShowing: Bool = false
@@ -26,8 +27,6 @@ struct VerseItemView: View {
 	init(vItem: VItem) {
 		self.vItem = vItem
 		self._editedTxt = State(wrappedValue: vItem.itTxt)
-// TODO: Apparently not needed?
-//		self._isVIMenuPresented = State(isVIMenuPresented)
 	}
 
 	var body: some View {
@@ -72,7 +71,7 @@ struct VerseItemView: View {
 			if vItem.isCurVsItem {
 				beginEditing()
 			}
-			print("Verse \(vItem.vsNum) now shown")
+			print("\(vItem.itTyp) vs \(vItem.vsNum) now shown")
 		})
 		.onDisappear(perform: {
 			saveEditedTxt()
@@ -109,6 +108,7 @@ struct VerseItemView: View {
 	func beginEditing() {
 		bibMod.getCurBibInst().bookInst!.chapInst!.makeVItemCurrent(vItem)
 		vItem.isCurVsItem = true
+		vItem.dirty = true
 		isFocused = true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
 	}
@@ -159,6 +159,7 @@ struct VerseItemView: View {
 		isVIMenuShowing = true
 	}
 
+// NOT YET USED - Delete?
 // TODO: From where could this be called?
 	func dismissPopoverMenu() {
 		isVIMenuShowing = false
@@ -173,6 +174,7 @@ struct VerseItemView: View {
 		}
 	}
 
+	// NOT YET USED - Delete?
 	// TODO: From where could this be called?
 	 private func hideKeyboard() {
 		 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -181,10 +183,13 @@ struct VerseItemView: View {
 // MARKER: Save changes
 	func saveEditedTxt() {
 		// If the text has been changed then save it to vItem, BibItems and SQLite
-		let newText = editedTxt
-		if newText != vItem.itTxt {
-			vItem.itTxt = editedTxt
-			bibMod.getCurBibInst().bookInst!.chapInst!.copyAndSaveVItem(vItem.itID, editedTxt)
+		if vItem.dirty {
+			let newText = editedTxt
+			if newText != vItem.itTxt {
+				vItem.itTxt = editedTxt
+				bibMod.getCurBibInst().bookInst!.chapInst!.copyAndSaveVItem(vItem.itID, editedTxt)
+				vItem.dirty = false
+			}
 		}
 	}
 }
