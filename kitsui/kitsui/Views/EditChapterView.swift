@@ -15,10 +15,10 @@ import SwiftUI
 struct EditChapterView: View {
 	@EnvironmentObject var bibMod: BibleModel
 
-//	@State var saveCurrTxt = false
 	@ObservedObject var chInst: Chapter
 	@State var currItOfst: Int
 	@State var showUSFM = false
+//	@State var doSaveVItem = false	// This is set true when VerseItem saving is required.
 	
 	var body: some View {
 		NavigationStack {
@@ -28,7 +28,7 @@ struct EditChapterView: View {
 				ScrollViewReader { proxy in
 					List {
 						ForEach(chInst.BibItems, id: \.self) { vItem in
-							VerseItemView(vItem: vItem).environmentObject(bibMod)
+							VerseItemView(vItem: vItem/*, doSaveVItem: $doSaveVItem*/).environmentObject(bibMod)
 						}
 					}
 					.onAppear {
@@ -48,6 +48,7 @@ struct EditChapterView: View {
 //					saveCurrTxt = true
 // This is called before the latest edited text has been saved to its VItem
 //					bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
+//					doSaveVItem = true
 					showUSFM = true
 				}
 			}

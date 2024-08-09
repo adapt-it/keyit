@@ -17,6 +17,7 @@ struct ShowUSFMView: View {
 				Text("\(bibMod.getCurBibInst().bookInst!.chapInst!.USFMText)")
 					.font(.system(size: 13))
 					.fixedSize(horizontal: false, vertical: true)
+					.multilineTextAlignment(.leading)
 			}
 			.onAppear(perform: {
 				generateUSFMText()

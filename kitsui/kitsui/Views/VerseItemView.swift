@@ -17,16 +17,17 @@ struct VerseItemView: View {
 	@Environment(\.horizontalSizeClass) private var horizontalSizeClass
 	@Environment(\.displayScale) var displayScale
 
-
 	@ObservedObject var vItem: VItem
-	
 	@State var editedTxt: String
+//	@Binding var doSaveVItem: Bool
+
 	@FocusState var isFocused: Bool
 	@State var isVIMenuShowing: Bool = false
 
 	init(vItem: VItem) {
 		self.vItem = vItem
 		self._editedTxt = State(wrappedValue: vItem.itTxt)
+//		self._doSaveVItem = Binding(wrappedValue: doSaveVItem)
 	}
 
 	var body: some View {
@@ -186,8 +187,9 @@ struct VerseItemView: View {
 		if vItem.dirty {
 			let newText = editedTxt
 			if newText != vItem.itTxt {
-				vItem.itTxt = editedTxt
-				bibMod.getCurBibInst().bookInst!.chapInst!.copyAndSaveVItem(vItem.itID, editedTxt)
+				vItem.itTxt = newText
+				bibMod.getCurBibInst().bookInst!.chapInst!.copyAndSaveVItem(vItem.itID, newText)
+				bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
 				vItem.dirty = false
 			}
 		}
