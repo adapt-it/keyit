@@ -36,6 +36,9 @@ struct EditChapterView: View {
 						withAnimation {
 							proxy.scrollTo(getChapInst().BibItems[currItOfst], anchor: .topLeading)
 						}
+						// When the user goes back to Choose Chapter, the ChooseChapterView
+						// needs to stay in view while the user chooses a Chapter
+						bibMod.getCurBibInst().bookInst!.needChooseChapter = true
 					}
 				}
 			}

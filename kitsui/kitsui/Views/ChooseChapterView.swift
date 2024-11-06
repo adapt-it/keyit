@@ -54,7 +54,9 @@ struct ChooseChapterView: View {
 			}
 		}
 		.navigationDestination(isPresented: $goEditChapter){
-            EditChapterView(chInst: (bibMod.getCurBibInst().bookInst?.chapInst ?? bibMod.getDefaultChapterInst())!, currItOfst: 0).environmentObject(bibMod)
+			// On coming back to this ChooseChapterView we want it to stay there
+			// so that the user can choose a chapter
+			EditChapterView(chInst: (bibMod.getCurBibInst().bookInst?.chapInst ?? bibMod.getDefaultChapterInst())!, currItOfst: 0).environmentObject(bibMod)
 		}
 		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
 		.onAppear() {

@@ -72,6 +72,19 @@ class Bible: ObservableObject {
 		var bookInNT: Bool
 		var selected: Bool = false	// true if this is the current Book (user tap, or SQLite currBook)
 		var id = UUID()
+	// for selected we need mutating function with private setter
+		/*
+		 struct Account {
+			private(set) var balance: Int
+			 
+			 mutating func deposit(amount: Int) {
+				 self.balance = balance + amount
+			 }
+		 }
+
+		 var account = Account(balance: 100)
+		 account.deposit(amount: 100)
+		 */
 	}
 
 	var booksOT: [bookLst] = []

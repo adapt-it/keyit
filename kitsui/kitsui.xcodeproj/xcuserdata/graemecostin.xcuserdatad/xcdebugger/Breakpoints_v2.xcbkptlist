@@ -68,7 +68,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2B812A34-D4AD-4D2D-B5E1-F348DA394348"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kitsui/Model/BibleModel.swift"
@@ -224,8 +224,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "238"
-            endingLineNumber = "238"
+            startingLineNumber = "251"
+            endingLineNumber = "251"
             landmarkName = "setupChosenBook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -390,12 +390,12 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "90AF4E15-6F31-4F6F-87B1-A04C18D6B003 - 57311a2aad153484"
+                  uuid = "90AF4E15-6F31-4F6F-87B1-A04C18D6B003 - c0840e0d0068d3f9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "kitsui.VIMenuView.body.getter : some"
-                  moduleName = "kitsui"
+                  moduleName = "kitsui.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
                   startingColumnNumber = "9223372036854775807"
@@ -404,12 +404,12 @@
                   endingLineNumber = "18">
                </Location>
                <Location
-                  uuid = "90AF4E15-6F31-4F6F-87B1-A04C18D6B003 - c704d68bcb35ad2"
+                  uuid = "90AF4E15-6F31-4F6F-87B1-A04C18D6B003 - 9bc5594f11cebdaf"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; SwiftUI.Section&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.VIMenuItem&gt;, Swift.ObjectIdentifier, &lt;&lt;opaque return type of SwiftUI.View.presentationDetents(_: Swift.Set&lt;SwiftUI.PresentationDetent&gt;, selection: SwiftUI.Binding&lt;SwiftUI.PresentationDetent&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.EmptyView&gt; in kitsui.VIMenuView.body.getter : some"
-                  moduleName = "kitsui"
+                  moduleName = "kitsui.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
                   startingColumnNumber = "9223372036854775807"
@@ -452,68 +452,68 @@
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - 8f51ef22ada77bf9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.VIMenuView.isVIMenuShowing.getter : Swift.Bool"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0">
-               </Location>
-               <Location
-                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - b3e96224660b91a3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.VIMenuView.isVIMenuShowing.setter : Swift.Bool"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14">
-               </Location>
-               <Location
-                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - f312c2d60da69f92"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "kitsui.VIMenuView.isVIMenuShowing.modify : Swift.Bool"
-                  moduleName = "kitsui"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14">
-               </Location>
-               <Location
-                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - f1277124562a4a8a"
+                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - ef78664043103b20"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "kitsui.VIMenuView.isVIMenuShowing.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "kitsui"
+                  moduleName = "kitsui.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/%3Ccompiler-generated%3E"
+                  urlString = "file:///%3Ccompiler-generated%3E"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
                   endingLineNumber = "0">
                </Location>
                <Location
-                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - f402b7b401eaa13d"
-                  shouldBeEnabled = "No"
+                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - 18e4fb0500da9c84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.VIMenuView.isVIMenuShowing.getter : Swift.Bool"
+                  moduleName = "kitsui.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - 245c7603cb7676de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.VIMenuView.isVIMenuShowing.setter : Swift.Bool"
+                  moduleName = "kitsui.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14">
+               </Location>
+               <Location
+                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - 64a7d6f1a0db78ef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "kitsui.VIMenuView.isVIMenuShowing.modify : Swift.Bool"
+                  moduleName = "kitsui.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14">
+               </Location>
+               <Location
+                  uuid = "57A6DB1F-8963-4721-A0ED-F577FE23B1B4 - 63b7a393ac974640"
+                  shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "kitsui.VIMenuView.$isVIMenuShowing.getter : SwiftUI.Binding&lt;Swift.Bool&gt;"
-                  moduleName = "kitsui"
+                  moduleName = "kitsui.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/VIMenuView.swift"
                   startingColumnNumber = "9223372036854775807"
@@ -598,26 +598,10 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
             landmarkName = "Bible"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F7382F76-19E0-4EE9-BE22-27CC8D64442C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "kitsui/Views/EditChapterView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "EditChapterView"
-            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -630,8 +614,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "loadBibBooks(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -710,8 +694,8 @@
             filePath = "kitsui/Model/Bible.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "setupChosenBook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -774,8 +758,8 @@
             filePath = "kitsui/Views/EditChapterView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "onAppear()"
             landmarkType = "7">
          </BreakpointContent>
@@ -806,8 +790,8 @@
             filePath = "kitsui/Views/EditChapterView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "onDisappear()"
             landmarkType = "7">
          </BreakpointContent>
@@ -842,6 +826,212 @@
             endingLineNumber = "67"
             landmarkName = "body"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D973E3B1-1B58-4C4F-985B-8B01F72A9595"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/VerseItemView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "saveEditedTxt()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D2E7336-538C-48E4-BD92-CFAB99D50169"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/VerseItemView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "beginEditing()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC14B4DB-0DAB-4B73-8D41-C5AEF24DCC2C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/VerseItemView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A162678B-23FD-44AF-9972-F677D5F6652B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/ChooseChapterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4FFAF64-7231-4F06-A0BD-411BA2E594A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/EditChapterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B72A2814-8CD0-4A2F-9AE5-988902950540"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/ChooseChapterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init(bkInst:needChooseChapter:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D76A5A43-9967-4F80-9C67-16E895BF0C61"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/ChooseChapterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D7C9D72D-08A5-429D-A7A7-B13C045C333F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/SetupView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F447173B-3CBC-425F-839A-365E70186F90"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/ChooseBookView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F447173B-3CBC-425F-839A-365E70186F90 - c0ffe2dd2239039f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.List&lt;kitsui.Bible.bookLst, SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, kitsui.BookNameView&gt;&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, kitsui.BookNameView&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0 in kitsui.ChooseBookView.body.getter : some"
+                  moduleName = "kitsui.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/ChooseBookView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37">
+               </Location>
+               <Location
+                  uuid = "F447173B-3CBC-425F-839A-365E70186F90 - bce3c7507927b8bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, kitsui.BookNameView&gt;&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, kitsui.BookNameView&gt;&gt;, SwiftUI.EmptyView&gt;)&gt; in closure #1 () -&gt; SwiftUI.List&lt;kitsui.Bible.bookLst, SwiftUI.TupleView&lt;(SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, kitsui.BookNameView&gt;&gt;, SwiftUI.EmptyView&gt;, SwiftUI.Section&lt;SwiftUI.EmptyView, SwiftUI.DisclosureGroup&lt;SwiftUI.Text, SwiftUI.ForEach&lt;Swift.Array&lt;kitsui.Bible.bookLst&gt;, kitsui.Bible.bookLst, kitsui.BookNameView&gt;&gt;, SwiftUI.EmptyView&gt;)&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.onChange&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Equatable&gt;(of: &#x3c4;_1_0, perform: (&#x3c4;_1_0) -&gt; ()) -&gt; some&gt;&gt;.0 in kitsui.ChooseBookView.body.getter : some"
+                  moduleName = "kitsui.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/graemecostin/keyit/kitsui/kitsui/Views/ChooseBookView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F32EFFB0-7017-48B1-9021-64C7E83C1A35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Views/EditChapterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2322192-B215-4F5C-9F36-63EFEE5357A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kitsui/Model/Bible.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "setupChosenBook(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
