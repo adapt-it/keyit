@@ -11,6 +11,7 @@
 // Data changes made by the user are always saved directly to the database as well as
 // held in the instance of this class for further use during the current launch of KIT.
 //
+//	GDLC 20FEB25 Added launching Boolean
 //	GDLC 23NOV23 Started adjusting to suit kitsui
 //	GDLC 23JUL21 Cleaned out print commands (were used in early stages of development)
 //	GDLC 12MAR20 Updated for KIT05
@@ -27,11 +28,14 @@ import Foundation
 import SwiftUI
 
 class Bible: ObservableObject {
+	// Properties from database
 	var bibleID: Int
 	var bibleName: String
 	var bkRecsCr: Bool
 	var currBk: Int		// 0 means that a Book has not yet been chosen
+	// Properties used during running of app
 	var bibMod: BibleModel
+	var launching: Bool
 	var currBookOfst = -1	// Offset in BibBooks[] to the current book 0 to 38 (OT) 39 to 65 (NT)
 							// -1 means that a current Book has not yet been selected
 	var bookInst: Book?		// Instance in memory of the current Book - this is the strong ref that owns it
@@ -43,6 +47,7 @@ class Bible: ObservableObject {
 		self.bkRecsCr = bkRCr
 		self.currBk = curBk
 		self.bibMod = bibMod
+		self.launching = true // Set true when app launches (i.e. inits) this Bible
 	}
 
 // The struct BibBook of which one instance will be created for each Book of the current Bible.

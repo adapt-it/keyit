@@ -34,7 +34,8 @@ class BibleModel: ObservableObject {
 	@Published var bibArray = [Bible]()
 	// Offset to the current Bible. Views and functions mostly deal with the current Bible
     @Published var curBibOfst = 0
-	@Published var needSetup = false	// Assume no need for SetupView
+	@Published var needSetup = false	// If a default Bible is created SetupView must be used
+										// Assume no need for SetupView
 
 	// Because SwiftUI runtime scans through possible future Views before the Views are actually created,
 	// and because ChooseChapterView needs its parent Book instance (as part of facilitiating View updates),
@@ -50,15 +51,15 @@ class BibleModel: ObservableObject {
 		// If there are no Bible records in the database, create the default one
 		var nBib = 0
 		var bID = 1
-		var finished = false
-		while (finished == false) {
+		var lastBib = false
+		while (lastBib == false) {
 			let BR = dao.bibleGetRec (bID)
 			if BR.bibID > 0 {
 				bibArray.append( Bible(bibleID: BR.bibID, bibleName: BR.bibName, bkRecsCr: BR.bkRCr, currBk: BR.currBk, bibMod: self) )
 				nBib = nBib + 1
 				bID = bID + 1
 			} else {
-				finished = true
+				lastBib = true
 			}
 		}
 		if nBib == 0 {
@@ -70,11 +71,13 @@ class BibleModel: ObservableObject {
 		}
 		numBibles = nBib
 		setCurBibOfst(0)
-        defBkInst = Book(getCurBibInst(), self)
+		// 20FEB25 decided this setting of needSetup is not needed
+//		// 19FEB25 If currBk is zero, ensure SetupView is shown
+//		if bibArray[curBibOfst].currBk == 0 {
+//			needSetup = true
+//		}
+		defBkInst = Book(getCurBibInst(), self)
 		defChInst = Chapter(defBkInst!)
-        // This "fix" resulted in duplicated VerseItems for Matthew Chapter 1!!!
-        //        defBkInst = Book(getCurBibInst(), 41, getCurBibInst().bibleID, "MAT", "Matthew", false, 28, 0, -1, self)
-        //        defChInst = Chapter(defBkInst!, 169, 1, 41, 1, false, 22, 22, 0, 1)
     }
 
 // Functions for current Bible - called by SwiftUI Views and other parts of the data model

@@ -2,6 +2,8 @@
 //  SetupView.swift
 //  kitsui
 //
+//	GDLC 20FEB25 Added use of Bible.launching
+//
 //  Created by Graeme Costin on 15/11/2023.
 //
 //	In place of a legal notice, here is a blessing:
@@ -35,14 +37,7 @@ struct SetupView: View {
                 RoundedRectImage(roundRect: Image("KITLogoD"))
                 Form {
                     Section {
-                        TextField("Bible Name", text: $editedName, onEditingChanged: {
-                            (changed) in
-                              if changed {
-                                print("Bible Name edit has begun")
-                            } else {
-                                print("Editing Bible Name")
-                            }
-                        })
+                        TextField("Bible Name", text: $editedName)
                         .textFieldStyle(.roundedBorder)
                         .font(.title)
                     } header: {
@@ -52,6 +47,7 @@ struct SetupView: View {
                 Spacer()
                 Button("Go to Choose Book") {
 					bibMod.bibleUpdateName(editedName)
+					bibMod.needSetup = false
                     goChooseBook = true
                 }
                 Spacer()
@@ -64,7 +60,7 @@ struct SetupView: View {
 		}
 		.padding()
 		.onAppear() {
-			if !needSetup {
+			if !needSetup && bibMod.getCurBibInst().launching {
 				goChooseBook = true
 			}
 		}

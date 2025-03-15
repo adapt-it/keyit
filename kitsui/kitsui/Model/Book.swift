@@ -43,7 +43,7 @@ public class Book: NSObject, ObservableObject {
 	var curChNum: Int = 0		// currChNum INTEGER
 	var currChapOfst: Int = -1	// offset to the current Chapter in BibChaps[] array (-1 means not yet set)
 	
-	@Published var needChooseChapter = false	// Assume no need for ChooseChapterView
+	/*@Published */var needChooseChapter = false	// Assume no need for ChooseChapterView
 	
 	var chapInst: Chapter?	// instance in memory of the current Chapter
 	var chapName: String?	// Name used for chapters (most books have "chapter", Psalms have "psalm")
@@ -127,7 +127,7 @@ public class Book: NSObject, ObservableObject {
 		// Access to the KITDAO instance for dealing with kdb.sqlite
 		dao = bibmod.dao
 		// Access to the instance of Bible for dealing with BibInst[]
-		bibInst = bibmod.getCurBibInst()
+//		bibInst = bibmod.getCurBibInst()	// <- not needed? because bibInst already set
 
 		// First time this Book has been selected the Chapter records must be created
 		if !chapRCr {
@@ -230,12 +230,20 @@ public class Book: NSObject, ObservableObject {
 // If, from kdb.sqlite, there is already a current Chapter for the current Book then go to it
 	func goCurrentChapter() {
 		currChapOfst = offsetToBibChap(withID: curChID)
-		
+		let chap = BibChaps[currChapOfst]
+		curChNum = chap.chNum
+		BibChaps[currChapOfst].selected = true
+
+		// update Book record in kdb.sqlite to show this current Chapter
+		dao!.booksUpdateRec(bibID, bkID, chapRCr, numChap, curChID, curChNum)
+		// Update the curChID and curChNum for this book in BibBooks[] in bibInst
+		bibInst!.setBibBooksCurChap(curChID, curChNum)
+
 		// delete any previous in-memory instance of Chapter
+		// usually there won't be one during launching
 		chapInst = nil
 
 		// create a Chapter instance for the current Chapter of the current Book
-		let chap = BibChaps[currChapOfst]
 		chapInst = Chapter(self, chap.chID, chap.bibID, chap.bkID, chap.chNum, chap.itRCr, chap.numVs, chap.numIt, chap.curIt, chap.curVN)
 	}
 	

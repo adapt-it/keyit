@@ -67,7 +67,8 @@ struct ChooseBookView: View {
 				if selectedBook != nil {
 					print("selectedBook changed to \(selectedBook!.bookName)")
 					bibMod.getCurBibInst().setupChosenBook(selectedBook!)
-					selectedBook!.selected = true
+// GDLC 1MAR25 We are now finished with selectedBook, so no need for this update.
+//					selectedBook!.selected = true
 					goChooseChapter = true
 				}
 			})
@@ -80,8 +81,9 @@ struct ChooseBookView: View {
 		}
         .navigationTitle(bibMod.getCurBibName() + " - Choose Book")
 		.onAppear() {
-			// If a Book has been chosen, go straight to Choose Chapter
-			if !needChooseBook {
+			// If a Book has been chosen and Bible is being launched, go straight to Choose Chapter
+			if !needChooseBook && bibMod.getCurBibInst().launching {
+				bibMod.getCurBibInst().goCurrentBook()
 				goChooseChapter = true
 			}
 		}
@@ -94,6 +96,7 @@ struct ChooseBookView: View {
 		if let bkInst = bibMod.getCurBibInst().bookInst {
 			return bkInst.needChooseChapter
 		} else {
+			// By the time ChooseBookView is shown ???
 			return true
 		}
 	}

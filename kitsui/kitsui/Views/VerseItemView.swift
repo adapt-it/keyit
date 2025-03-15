@@ -19,7 +19,6 @@ struct VerseItemView: View {
 
 	@ObservedObject var vItem: VItem
 	@State var editedTxt: String
-//	@Binding var doSaveVItem: Bool
 
 	@FocusState var isFocused: Bool
 	@State var isVIMenuShowing: Bool = false
@@ -27,14 +26,13 @@ struct VerseItemView: View {
 	init(vItem: VItem) {
 		self.vItem = vItem
 		self._editedTxt = State(wrappedValue: vItem.itTxt)
-//		self._doSaveVItem = Binding(wrappedValue: doSaveVItem)
 	}
 
 	var body: some View {
 		VStack {
 			HStack {
 				Button(getItemTypText(vItem)) {
-					print("User tapped button for Verse \(vItem.vsNum)")
+					print("User tapped button for VerseItem \(vItem.vsNum):\(vItem.itTyp)")
 					showPopoverMenu()
 				}
 				.font(.system(size: 10, weight: (isFocused || vItem.isCurVsItem ? .bold : .regular)))
@@ -58,13 +56,19 @@ struct VerseItemView: View {
 					.autocapitalization(.none)
 					.frame(minHeight: 13, maxHeight: .infinity)
 					.padding(.vertical, 0)
-					.onTapGesture {
-						beginEditing()
-					}
+//					.onTapGesture {
+//						beginEditing()
+//					}
 					.focused($isFocused)
 					.foregroundColor(selectTextColour())
 					.onChange(of: isFocused) { isFocused in
-						saveEditedTxt()
+						if !isFocused {
+							// vItem has lost focus so ensure text is saved
+							saveEditedTxt()
+						} else {
+							// vItem has gained focus so set this vItem as the currently editing one
+							beginEditing()
+						}
 					}
 			}
 		}
@@ -107,11 +111,13 @@ struct VerseItemView: View {
 	}
 
 	func beginEditing() {
+		// GDLC 6MAR25 This function was being called on a tap on a vItem, but it is now
+		// called in response to the vItem gaining focus; calling it on the tap that changes
+		// focus resulted in the current vItem being changed too early.
 		bibMod.getCurBibInst().bookInst!.chapInst!.makeVItemCurrent(vItem)
 		vItem.isCurVsItem = true
 		vItem.dirty = true
-		isFocused = true
-		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
+		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now the current item")
 	}
 
 // MARKER: Popover menu functions
@@ -148,10 +154,12 @@ struct VerseItemView: View {
 	}
 
 	func showPopoverMenu() {
+		// Ensure that current VItem is saved
+		saveEditedTxt()
 		// Mark this VItem as the current one
 		bibMod.getCurBibInst().bookInst!.chapInst!.makeVItemCurrent(vItem)
 		vItem.isCurVsItem = true
-		isFocused = true
+		isFocused = true	// <- not needed because it is already true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
 
 		// Build the popover menu for this VerseItem
@@ -182,6 +190,8 @@ struct VerseItemView: View {
 	 }
 
 // MARKER: Save changes
+	// this function is called on loss of focus in the vItem in VerseItemView
+	// or when the button on the vItem is tappedsaveEditedTxt()
 	func saveEditedTxt() {
 		// If the text has been changed then save it to vItem, BibItems and SQLite
 		if vItem.dirty {

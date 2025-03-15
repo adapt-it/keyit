@@ -71,7 +71,7 @@ public class Chapter: NSObject {
 	weak var bibInst: Bible? 	// access to the instance of Bible for updating BibBooks[]
 	weak var bkInst: Book?		// access to the instance for the current Book
 
-// This struct and the BibItems array are used for letting the user select the
+// In KITIOS this struct and the BibItems array are used for letting the user select the
 // VerseItem to edit in the current Chapter of the current Book.
 
 	struct BibItem {

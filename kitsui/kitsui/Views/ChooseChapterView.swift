@@ -43,7 +43,7 @@ struct ChooseChapterView: View {
 							ChapterNumberView(chp: chap).environmentObject(bibMod)
 							.onTapGesture {
 								selectedChapter = chap
-								print("Tapped \(chap.chNum) _ \(chap.selected)")
+								print("Tapped \(chap.chNum) _ Selected? \(chap.selected)")
 								setupChosenChapter(selectedChapter!)
 								print("selectedChapter changed to \(String(describing: selectedChapter?.chNum))")
 								goEditChapter = true
@@ -54,13 +54,11 @@ struct ChooseChapterView: View {
 			}
 		}
 		.navigationDestination(isPresented: $goEditChapter){
-			// On coming back to this ChooseChapterView we want it to stay there
-			// so that the user can choose a chapter
 			EditChapterView(chInst: (bibMod.getCurBibInst().bookInst?.chapInst ?? bibMod.getDefaultChapterInst())!, currItOfst: 0).environmentObject(bibMod)
 		}
 		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
 		.onAppear() {
-			if !needChooseChapter {
+			if !needChooseChapter && bibMod.getCurBibInst().launching {
 				goEditChapter = true
 			}
 		}

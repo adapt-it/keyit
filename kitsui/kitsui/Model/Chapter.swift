@@ -38,7 +38,8 @@ public class Chapter: NSObject, ObservableObject {
 	var chNum: Int = 0		// chapterNumber INTEGER
 	var itRCr: Bool = false	// itemRecsCreated INTEGER
 	var numVs: Int = 0		// numVerses INTEGER
-	var numIt: Int = 0		// numItems INTEGER
+	// GDLC 15MAR25 Test to see whether EditChapterView responds to change in Chapter instance -- it DOESN'T!
+	@Published var numIt: Int = 0		// numItems INTEGER
 	var currIt: Int = 0		// currItem INTEGER (the ID assigned by SQLite when the VerseItem was created)
 	var currVN: Int = 0		// currVsNum INTEGER (the Verse number associated with the current VerseItem)
 
@@ -52,7 +53,7 @@ public class Chapter: NSObject, ObservableObject {
 	weak var bibInst: Bible? 	// access to the instance of Bible for updating BibBooks[]
 	weak var bkInst: Book?		// access to the instance for the current Book
 
-// BibItems is an array of instances of the class VItem that are used for letting
+// In KITSUI BibItems is an array of instances of the class VItem that are used for letting
 // the user edit VerseItems in the current Chapter of the current Book.
 
 	@Published var BibItems = [VItem]()
@@ -111,7 +112,7 @@ public class Chapter: NSObject, ObservableObject {
 
 		// Every time this Chapter is selected: The VerseItems records in kdb.sqlite will have been
 		// created at this point (either during this occasion or on a previous occasion),
-		// so we set up the array BibItems of VerseItems by reading the records from kdb.sqlite.
+		// so we set up the array BibItems of instances of VItem by reading the VerseItem records from kdb.sqlite.
 		//
 		// This array will last while this Chapter is the currently selected Chapter and will
 		// be used whenever the user is allowed to select a VerseItem for editing;
@@ -166,7 +167,7 @@ public class Chapter: NSObject, ObservableObject {
 	}
 	
 	// dao.readVerseItemRecs() calls appendItemToArray() for each row it reads from the kdb.sqlite database
-	// in order to append the records read to the array BibItems[]
+	// in order to append instances of VItem to the array BibItems[] for the records read.
 	// appendItemToArray() also finds the largest value of intSeq in the VerseItem records read
 	// and sets nextIntSeq to one more than the largest one found.
 
@@ -225,12 +226,12 @@ public class Chapter: NSObject, ObservableObject {
 			// the offset into the BibItems[] array
 			currItOfst = offsetToBibItem(withID: currIt)
 			//GDLC 31JUL21 Added setting of currVN
-			currVN = BibItems[currItOfst].vsNum	// Get its verse number
+			currVN = BibItems[currItOfst].vsNum	// Get its verse number	<- not needed? already set
 		}
 		// Set the VItem so that it is displayed as the current item
 		BibItems[currItOfst].isCurVsItem = true
 		// Update the database Chapter record
-		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
+		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)	// <- not needed? database already has this info?
 		return currItOfst
 	}
 
@@ -243,16 +244,31 @@ public class Chapter: NSObject, ObservableObject {
 	// Copy and save the text of the VerseItem whose ID is itID
 	func copyAndSaveVItem(_ itID: Int, _ text: String) {
 		let itOfst = offsetToBibItem(withID: itID)
-		BibItems[itOfst].itTxt = text
+		BibItems[itOfst].itTxt = text	// <- not needed?? already done?
 		dao!.itemsUpdateRecText (BibItems[itOfst].itID, BibItems[itOfst].itTxt)
 	}
 
-	// Function to make the VItem the current VItem
+	// Function to make the tapped VItem the current VItem
 	func makeVItemCurrent(_ vItem: VItem) {
-		// The current VItem ceases to be the current one
-		BibItems[currItOfst].isCurVsItem = false
-		// Ensure that the text of the VItem is saved to SQLite
-		dao!.itemsUpdateRecText (BibItems[currItOfst].itID, BibItems[currItOfst].itTxt)
+		// GDLC 11MAR25 If VItem is the current vItem then the following actions are not needed
+		if BibItems[currItOfst].itID != vItem.itID {
+			// The current VItem ceases to be the current one
+			BibItems[currItOfst].isCurVsItem = false
+// GDLC 15MAR25 The saving of the edited text is done in saveEditedTxt() of VerseItemView
+// in response to that VerseItem losing focus or an action within VerseItemView; it is
+// only within VerseItemView that the edited text is accessible and so can be saved!
+//			// Ensure that the text of the current VItem is saved to SQLite
+//			if BibItems[currItOfst].dirty {	// not needed unless this VItem is marked dirty
+//				// Update BibItems[] array
+//				// GDLC Can't do that from here! text is a local variable in VerseItemView!
+//				// So saving the text should be done from inside VerseItemView.
+//				//			BibItems[currItOfst].itTxt = text
+//				// Save to database
+//				dao!.itemsUpdateRecText (BibItems[currItOfst].itID, BibItems[currItOfst].itTxt)
+//				// GDLC 11MAR25 The only place that dirty should be set false is in the function
+//				// that saves the edited text!
+//				BibItems[currItOfst].dirty = false
+		}
 		// Now set the new current VItem
 		currItOfst = offsetToBibItem(withID: vItem.itID)
 		BibItems[currItOfst].isCurVsItem = true

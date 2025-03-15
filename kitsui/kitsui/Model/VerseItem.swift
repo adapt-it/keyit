@@ -2,6 +2,9 @@
 //  VerseItem.swift
 //  kitsui
 //
+//	During editing of a Chapter, KITSUI has an array of instances of the VItem class formed
+//	from the VerseItem database records for the Chapter.
+
 //  Created by Graeme Costin on 16/2/2024.
 //
 // In place of a legal notice, here is a blessing:

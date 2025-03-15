@@ -2,6 +2,8 @@
 //  EditChapterView.swift
 //  kitsui
 //
+//	GDLC 20FEB25 onAppear() sets Bible.launching to false
+//
 //  Created by Graeme Costin on 31/12/2023.
 //
 //	In place of a legal notice, here is a blessing:
@@ -18,17 +20,19 @@ struct EditChapterView: View {
 	@ObservedObject var chInst: Chapter
 	@State var currItOfst: Int
 	@State var showUSFM = false
-//	@State var doSaveVItem = false	// This is set true when VerseItem saving is required.
 	
 	var body: some View {
 		NavigationStack {
 			VStack {
 				Text("Edit \(getChapterName()) \(getChapterNumber()), \(getNumVerses()) Verses, \(getNumExtras()) Extras")
 					.font(.system(size: 15))
+// GDLC 15MAR25 Test to see whether EditChapterView responds to change in Chapter instance -- it DOESN'T!
+//				Text("numIt = \(chInst.numIt)")
+//					.font(.system(size: 15))
 				ScrollViewReader { proxy in
 					List {
 						ForEach(chInst.BibItems, id: \.self) { vItem in
-							VerseItemView(vItem: vItem/*, doSaveVItem: $doSaveVItem*/).environmentObject(bibMod)
+							VerseItemView(vItem: vItem).environmentObject(bibMod)
 						}
 					}
 					.onAppear {
@@ -36,9 +40,11 @@ struct EditChapterView: View {
 						withAnimation {
 							proxy.scrollTo(getChapInst().BibItems[currItOfst], anchor: .topLeading)
 						}
-						// When the user goes back to Choose Chapter, the ChooseChapterView
-						// needs to stay in view while the user chooses a Chapter
-						bibMod.getCurBibInst().bookInst!.needChooseChapter = true
+						// Once the EditChapterView has been reached, the app is no longer in launch mode
+						// and there is no need for ChooseBookView or ChooseChapterView to automatically
+						// step on to the next Navigation stage if a Book or Chapter has already been chosen
+						// as recorded in the database.
+						bibMod.getCurBibInst().launching = false
 					}
 				}
 			}
@@ -48,10 +54,6 @@ struct EditChapterView: View {
 			ToolbarItem() {
 				Button ("USFM") {
 					print("USFM tapped")
-//					saveCurrTxt = true
-// This is called before the latest edited text has been saved to its VItem
-//					bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
-//					doSaveVItem = true
 					showUSFM = true
 				}
 			}
@@ -66,6 +68,8 @@ struct EditChapterView: View {
 	}
 
 	func onAppear() {
+		// Launching this Bible has been done
+		bibMod.getCurBibInst().launching = false
 		// Get the offset of the current VerseItem
 		currItOfst = bibMod.getCurBibInst().bookInst!.chapInst!.goCurrentItem()
 	}
