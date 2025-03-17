@@ -26,9 +26,6 @@ struct EditChapterView: View {
 			VStack {
 				Text("Edit \(getChapterName()) \(getChapterNumber()), \(getNumVerses()) Verses, \(getNumExtras()) Extras")
 					.font(.system(size: 15))
-// GDLC 15MAR25 Test to see whether EditChapterView responds to change in Chapter instance -- it DOESN'T!
-//				Text("numIt = \(chInst.numIt)")
-//					.font(.system(size: 15))
 				ScrollViewReader { proxy in
 					List {
 						ForEach(chInst.BibItems, id: \.self) { vItem in
@@ -50,6 +47,7 @@ struct EditChapterView: View {
 			}
 		}
 		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
+		.toolbarRole(.editor)
 		.toolbar {
 			ToolbarItem() {
 				Button ("USFM") {

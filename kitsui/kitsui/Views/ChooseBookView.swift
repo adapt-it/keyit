@@ -21,7 +21,7 @@ struct ChooseBookView: View {
 	@State var goChooseChapter = false
 	@State var selectedBook: Bible.bookLst?
 	@State var showOT = false
-	@State var showNT = true
+	@State var showNT = false
 
 	init(needChooseBook:Bool) {
 		self.needChooseBook = needChooseBook
@@ -79,7 +79,8 @@ struct ChooseBookView: View {
 				needChooseChapter: getNeedChooseChapter()
 			).environmentObject(bibMod)
 		}
-        .navigationTitle(bibMod.getCurBibName() + " - Choose Book")
+        .navigationTitle(bibMod.getCurBibName() + ": Choose Book")
+		.toolbarRole(.editor)
 		.onAppear() {
 			// If a Book has been chosen and Bible is being launched, go straight to Choose Chapter
 			if !needChooseBook && bibMod.getCurBibInst().launching {

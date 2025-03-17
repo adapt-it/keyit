@@ -39,7 +39,7 @@ class Bible: ObservableObject {
 	var currBookOfst = -1	// Offset in BibBooks[] to the current book 0 to 38 (OT) 39 to 65 (NT)
 							// -1 means that a current Book has not yet been selected
 	var bookInst: Book?		// Instance in memory of the current Book - this is the strong ref that owns it
-	@Published var needChooseBook = false	// Assume no need for ChooseBookView
+	/*@Published */var needChooseBook = false	// Assume no need for ChooseBookView
 
 	init (bibleID bibID: Int, bibleName bibName: String, bkRecsCr bkRCr: Bool, currBk curBk: Int, bibMod: BibleModel) {
 		self.bibleID = bibID
@@ -66,7 +66,7 @@ class Bible: ObservableObject {
 		var USFMText: String
 	}
 
-	var BibBooks: [BibBook] = []
+	@Published var BibBooks: [BibBook] = []
 
 	// The struct bookLst is used in SwiftUI List Views for choosing a Book
 	struct bookLst: Identifiable, Hashable {
@@ -92,8 +92,8 @@ class Bible: ObservableObject {
 		 */
 	}
 
-	var booksOT: [bookLst] = []
-	var booksNT: [bookLst] = []
+	@Published var booksOT: [bookLst] = []
+	@Published var booksNT: [bookLst] = []
 
 	// Initialisation of an instance of class Bible with an array of Books to select from
 	//	init()
@@ -211,7 +211,25 @@ class Bible: ObservableObject {
 		 currBookOfst = (currBk > 39 ? currBk - 2 : currBk - 1 )
 		 let cBook = BibBooks[currBookOfst]
 
+		 // Update booksOT or booksNT - turn on selection for cBook
+		 if currBookOfst > 40 {
+			 for i in 0..<booksNT.count {
+				 if booksNT[i].bookID == cBook.bookID {
+					 booksNT[i].selected = true
+					 break
+				 }
+			 }
+		 } else {
+			 for i in 0..<booksOT.count {
+				 if booksOT[i].bookID == cBook.bookID {
+					 booksOT[i].selected = true
+					 break
+				 }
+			 }
+		 }
+
 		 // delete any previous in-memory instance of Book
+		 // usually there won't be one during launching
 		 bookInst = nil
 
 		 // Create a Book instance for the currently selected book

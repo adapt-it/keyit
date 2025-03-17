@@ -35,6 +35,9 @@ struct SetupView: View {
         NavigationStack {
             VStack {
                 RoundedRectImage(roundRect: Image("KITLogoD"))
+				Text(bibMod.getCurBibName() + " Set Up")
+					.font(.system(size: 20.0))
+				Spacer()
                 Form {
                     Section {
                         TextField("Bible Name", text: $editedName)

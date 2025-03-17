@@ -55,10 +55,9 @@ struct VerseItemView: View {
 					.autocorrectionDisabled(true)
 					.autocapitalization(.none)
 					.frame(minHeight: 13, maxHeight: .infinity)
+					.border(Color.secondary, width: 1)	// GDLC test
+					.clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))	// GDLC test
 					.padding(.vertical, 0)
-//					.onTapGesture {
-//						beginEditing()
-//					}
 					.focused($isFocused)
 					.foregroundColor(selectTextColour())
 					.onChange(of: isFocused) { isFocused in
