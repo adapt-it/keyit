@@ -49,13 +49,14 @@ class VIMenuItem : NSObject, ObservableObject, Identifiable {
 
 class VIMenu : NSObject {
 	var vItemInst: VItem		// VItem that owns this VIMenu
-	// Is chInst still needed?
-	var chInst: Chapter		// Chapter instance that owns the VItem that owns this VIMenu
+	var chInst: Chapter			// Chapter instance that owns the VItem that owns this VIMenu
 	// Properties of a VIMenu instance (dummy values to avoid having optional variables)
-	var VIType = "Verse"				// the type of the VerseItem this menu is for
 	var numRows: Int = 0				// number of rows needed for the popover menu
 	var VIMenuItems: [VIMenuItem] = []	// array of the menu items
-	var menuLabelLength: CGFloat = 100	// Minimum length of the menu label in points
+	var menuTitle = ""					// Title to be shown on menu
+	var menuLabelWidth: CGFloat = 100		// Default width of the menu label in points
+	private var VIType = "Verse"		// the type of the VerseItem this menu is for
+	private var menuTitleLength: CGFloat = 100	// Default length of the menu title in points
 										// (for calculating popover menu width)
 	let font = UIFont.systemFont(ofSize: 14)
 
@@ -189,7 +190,10 @@ class VIMenu : NSObject {
 		// Calculate max popover menu label width in points
 		for v in VIMenuItems {
 			let width = v.VIMenuLabel.size(OfFont: font).width
-			if width > menuLabelLength {menuLabelLength = width}
+			menuLabelWidth = max(menuLabelWidth, width)
 		}
+		menuTitle = "Actions for " + vItemInst.itTyp
+		let width = menuTitle.size(OfFont: font).width
+		menuLabelWidth = max(menuLabelWidth, width)
 	}
 }

@@ -16,7 +16,7 @@ struct VIMenuView: View {
 
 	var body: some View {
 		List {
-			Section(calcMenuTitle().capitalized,
+			Section(vItem.curPoMenu!.menuTitle,
 				content: {
 				ForEach(vItem.curPoMenu!.VIMenuItems) { VIMItem in
 					VIMenuItemView(VIMItem: VIMItem, isVIMenuShowing: $isVIMenuShowing).environmentObject(bibMod)
@@ -34,10 +34,11 @@ struct VIMenuView: View {
 		return bibMod.getCurBibInst().bookInst!.chapInst!
 	}
 
-	func calcMenuTitle() -> String {
-		let bibItem = getChapInst().BibItems[getChapInst().currItOfst]
-		return "Action for " + bibItem.getItemTypText() + "?"
-	}
+// The menuTitle is calculated in VIMenu.swift where it is included in calculation of menu width
+//	func calcMenuTitle() -> String {
+//		let bibItem = getChapInst().BibItems[getChapInst().currItOfst]
+//		return "Action for " + bibItem.getItemTypText() + "?"
+//	}
 }
 /*
 #Preview {

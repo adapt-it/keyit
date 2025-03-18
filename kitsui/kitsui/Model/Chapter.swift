@@ -244,7 +244,7 @@ public class Chapter: NSObject, ObservableObject {
 	// Copy and save the text of the VerseItem whose ID is itID
 	func copyAndSaveVItem(_ itID: Int, _ text: String) {
 		let itOfst = offsetToBibItem(withID: itID)
-		BibItems[itOfst].itTxt = text	// <- not needed?? already done?
+		BibItems[itOfst].itTxt = text	// <- GDLC not needed?? already done?
 		dao!.itemsUpdateRecText (BibItems[itOfst].itID, BibItems[itOfst].itTxt)
 	}
 

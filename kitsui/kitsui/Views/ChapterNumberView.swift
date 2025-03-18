@@ -19,9 +19,9 @@ struct ChapterNumberView: View {
 
     var body: some View {
 		ZStack {
-			RoundedRectangle(cornerRadius: 3, style: .continuous)
+			RoundedRectangle(cornerRadius: 10, style: .continuous)
 				.stroke(getTextColour(), lineWidth: CGFloat(getLineWidth()))
-				.frame(width: 60, height: 60, alignment: Alignment.top)
+				.frame(width: 50, height: 50, alignment: Alignment.top)
 			Text("\(chp.chNum)")
 				.font(.system(size: 30))
 		}

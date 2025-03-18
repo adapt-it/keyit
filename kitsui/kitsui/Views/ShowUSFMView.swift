@@ -24,6 +24,7 @@ struct ShowUSFMView: View {
 			})
 		}
 		.navigationTitle("USFM for \(bibMod.getCurBookName()) \(getChapterName()) \(getChapterNumber())")
+		.toolbarRole(.editor)
 	}
 
 	// This gets called, but before the currently edited vItem has had its new text saved!!!

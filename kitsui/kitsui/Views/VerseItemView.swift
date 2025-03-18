@@ -44,7 +44,10 @@ struct VerseItemView: View {
 					content: {
 					VIMenuView(isVIMenuShowing: $isVIMenuShowing, vItem: vItem)
 						.frame(width: popoverWidth(), height: popoverHeight())
-				})
+					}
+				)
+// GDLC 18MAR25 This modifier requires iOS 16.4 or higher.
+//				.presentationCompactAdaptation(.popover)
 				Spacer()
 			}
 			if vItem.itTyp != "Para" && vItem.itTyp != "ParaCont"{
@@ -123,27 +126,27 @@ struct VerseItemView: View {
 	func popoverWidth() -> CGFloat {
 		var w: CGFloat	// width in points
 
-		if isVIMenuShowing && vItem.curPoMenu != nil {
+		if vItem.curPoMenu != nil {
 			if horizontalSizeClass == .compact {
-				w = (vItem.curPoMenu?.menuLabelLength)!
+				w = vItem.curPoMenu!.menuLabelWidth + 15
 			} else {
-				w = vItem.curPoMenu!.menuLabelLength + 20	// Assume 20 points for the menu icon
+				w = vItem.curPoMenu!.menuLabelWidth + 25	// Assume 25 points for the menu icon
 			}
 			// Return width in pixels
 			return w * displayScale
 		} else {
-			return displayScale * 130	// Most popover menus will not need more than 130pixels width
+			return 130 * displayScale	// Most popover menus will not need more than 130 pixels width
 		}
 	}
 
 	func popoverHeight() -> CGFloat {
 		var h: CGFloat	// Height in points
 
-		if isVIMenuShowing && vItem.curPoMenu != nil {
+		if vItem.curPoMenu != nil {
 			if horizontalSizeClass == .compact {
-				h = CGFloat((vItem.curPoMenu?.numRows)! + 1) * 17
+				h = CGFloat(vItem.curPoMenu!.numRows + 1) * 20
 			} else {
-				h = CGFloat((vItem.curPoMenu?.numRows)! + 2) * 20
+				h = CGFloat(vItem.curPoMenu!.numRows + 1) * 25
 			}
 			// Return height in pixels
 			return h * displayScale
@@ -158,7 +161,6 @@ struct VerseItemView: View {
 		// Mark this VItem as the current one
 		bibMod.getCurBibInst().bookInst!.chapInst!.makeVItemCurrent(vItem)
 		vItem.isCurVsItem = true
-		isFocused = true	// <- not needed because it is already true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now current item")
 
 		// Build the popover menu for this VerseItem
