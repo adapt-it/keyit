@@ -1,20 +1,10 @@
 ### What is this repository for? ###
 
 * Development of Key It as
-* 
-  an iOS Storyboard app (referred to in this documentation as kitios) and as
   
   an Android app (referred to in this documentation as kitand) and as
   
   an iOS SwiftUI app (referred to in this documentation as kitsui)
-
-### How do I get set up for iOS Storyboard? ###
-
-* Get Xcode 12 or later
-* Use Xcode's Source Control to clone the repo from Github, and open the Xcode project
-* The SQLite database that is included in recent iOS systems is used. The Xcode project
-  includes settings to use the bridge from Swift to C for source code that calls the
-  C API of SQLite.
 
 ### How do I get set up for Android? ###
 
@@ -25,7 +15,7 @@
 
 ### How do I get set up for iOS SwiftUI? ###
 
-* Get Xcode 15.1 or later
+* Get Xcode 16.3 or later
 * Use Xcode's Source Control to clone the repo from Github, and open the Xcode project
 * The SQLite database that is included in recent iOS systems is used. The Xcode project
   includes settings to use the bridge from Swift to C for source code that calls the
@@ -34,7 +24,7 @@
 ### Contribution guidelines ###
 
 * On iOS all interaction with SQLite is kept inside the file KITDAO.swift - the rest of the
-  code is straight Swift code or, in the case of kitsui, Swift and SwiftUI code.
+  code is straight Swift and SwiftUI code.
   On Android all interaction with SQLite is kept inside the file KITDAO.kt - the rest of the
   code is straight Kotlin code.
 
