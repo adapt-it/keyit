@@ -1,6 +1,6 @@
 //
 //  ChooseChapterView.swift
-//  kitsui
+//  kitios
 //
 //  Created by Graeme Costin on 22/12/2023.
 //
@@ -35,7 +35,7 @@ struct ChooseChapterView: View {
 	var body: some View {
 		NavigationStack {
 			VStack {
-//				Text("Choose \(getChapterName())")
+				Text("Choose \(getChapterName())")
 				// 5 column flexible horizontal grid layout
 				ScrollView(.vertical) {
 					LazyVGrid(columns: gridItemLayout, spacing: 10) {
@@ -56,11 +56,11 @@ struct ChooseChapterView: View {
 		.navigationDestination(isPresented: $goEditChapter){
 			EditChapterView(chInst: (bibMod.getCurBibInst().bookInst?.chapInst ?? bibMod.getDefaultChapterInst())!, currItOfst: 0).environmentObject(bibMod)
 		}
-//		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
-		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName() + " - Choose Chapter")
+		.navigationTitle(bibMod.getCurBibName() + ": " + bibMod.getCurBookName())
 		.toolbarRole(.editor)
 		.onAppear() {
 			if !needChooseChapter && bibMod.getCurBibInst().launching {
+				bkInst.goCurrentChapter()	// <- not necessary???
 				goEditChapter = true
 			}
 		}

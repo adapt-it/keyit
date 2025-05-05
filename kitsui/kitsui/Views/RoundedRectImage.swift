@@ -1,6 +1,6 @@
 //
 //	RoundedRectImage.swift
-//	kitsui
+//	kitios
 //
 //	Created by Graeme Costin on 16/11/2023.
 //

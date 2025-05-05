@@ -1,6 +1,6 @@
 //
 //  EditChapterView.swift
-//  kitsui
+//  kitios
 //
 //	GDLC 20FEB25 onAppear() sets Bible.launching to false
 //
@@ -27,11 +27,14 @@ struct EditChapterView: View {
 				Text("Edit \(getChapterName()) \(getChapterNumber()), \(getNumVerses()) Verses, \(getNumExtras()) Extras")
 					.font(.system(size: 15))
 				ScrollViewReader { proxy in
-					List {
-						ForEach(chInst.BibItems, id: \.self) { vItem in
-							VerseItemView(vItem: vItem).environmentObject(bibMod)
-						}
+					List(chInst.BibItems, id: \.self) { vItem in
+						VerseItemView(vItem: vItem).environmentObject(bibMod)
 					}
+//					List {
+//						ForEach(chInst.BibItems, id: \.self) { vItem in
+//							VerseItemView(vItem: vItem).environmentObject(bibMod)
+//						}
+//					}
 					.onAppear {
 						print("EditChapterView appeared")
 						withAnimation {
@@ -52,6 +55,7 @@ struct EditChapterView: View {
 			ToolbarItem() {
 				Button ("USFM") {
 					print("USFM tapped")
+					bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
 					showUSFM = true
 				}
 			}

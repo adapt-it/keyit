@@ -1,6 +1,6 @@
 //
 //  Bible.swift
-//  kitsui
+//  kitios
 //
 // The class Bible of which one instance will be created in the first version of kitsui.
 // A later version may create two instances to display two Bibles side by side.
@@ -39,9 +39,10 @@ class Bible: ObservableObject {
 	var currBookOfst = -1	// Offset in BibBooks[] to the current book 0 to 38 (OT) 39 to 65 (NT)
 							// -1 means that a current Book has not yet been selected
 	var bookInst: Book?		// Instance in memory of the current Book - this is the strong ref that owns it
-	/*@Published */var needChooseBook = false	// Assume no need for ChooseBookView
+	var needChooseBook = false	// Assume no need for ChooseBookView
 
 	init (bibleID bibID: Int, bibleName bibName: String, bkRecsCr bkRCr: Bool, currBk curBk: Int, bibMod: BibleModel) {
+		print("Bible.init()")
 		self.bibleID = bibID
 		self.bibleName = bibName
 		self.bkRecsCr = bkRCr
@@ -77,19 +78,6 @@ class Bible: ObservableObject {
 		var bookInNT: Bool
 		var selected: Bool = false	// true if this is the current Book (user tap, or SQLite currBook)
 		var id = UUID()
-	// for selected we need mutating function with private setter
-		/*
-		 struct Account {
-			private(set) var balance: Int
-			 
-			 mutating func deposit(amount: Int) {
-				 self.balance = balance + amount
-			 }
-		 }
-
-		 var account = Account(balance: 100)
-		 account.deposit(amount: 100)
-		 */
 	}
 
 	@Published var booksOT: [bookLst] = []
@@ -206,12 +194,13 @@ class Bible: ObservableObject {
 		 BibBooks.append(bkRec)
 	 }
 
- // If there is a current Book (as read from kdb.sqlite) then instantiate that Book.
+ // If a current Book is recorded in kdb.sqlite then instantiate that Book.
 	 func goCurrentBook () {
+		 print("Bible.goCurrentBook()")
 		 currBookOfst = (currBk > 39 ? currBk - 2 : currBk - 1 )
 		 let cBook = BibBooks[currBookOfst]
 
-		 // Update booksOT or booksNT - turn on selection for cBook
+		 // Update booksOT or booksNT - turn on selected for cBook
 		 if currBookOfst > 40 {
 			 for i in 0..<booksNT.count {
 				 if booksNT[i].bookID == cBook.bookID {
@@ -240,6 +229,7 @@ class Bible: ObservableObject {
  // When the user selects a book from the ChooseBookView it needs to be recorded as the
  // current book and initialisation of data structures in a new Book instance must happen.
 	func setupChosenBook(_ bookChosen: bookLst) {
+		print("Bible.setupChosenBook()")
 		// Update booksOT or booksNT to turn off selection for currBk
 		for i in 0..<booksNT.count {
 			if booksNT[i].bookID == currBk {
@@ -305,6 +295,7 @@ class Bible: ObservableObject {
  // for the current Book in the Bible's BibBooks[] array must be updated.
 
 	 func setBibBooksCurChap(_ curChID: Int, _ curChNum: Int) {
+		 print("Bible.setBibBooksCurChap()")
 		 BibBooks[currBookOfst].currChID = curChID
 		 BibBooks[currBookOfst].currChNum = curChNum
 	  }

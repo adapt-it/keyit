@@ -1,6 +1,6 @@
 //
 //  BookNameView.swift
-//  kitsui
+//  kitios
 //
 //  Created by Graeme Costin on 12/2/2024.
 //	02NOV24 Removed attempts at drawing a border around the Book name

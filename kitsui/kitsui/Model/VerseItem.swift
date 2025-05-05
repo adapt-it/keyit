@@ -1,6 +1,6 @@
 //
 //  VerseItem.swift
-//  kitsui
+//  kitios
 //
 //	During editing of a Chapter, KITSUI has an array of instances of the VItem class formed
 //	from the VerseItem database records for the Chapter.

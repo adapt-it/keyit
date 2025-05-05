@@ -1,6 +1,6 @@
 //
 //  ShowUSFMView.swift
-//  kitsui
+//  kitios
 //
 //  Created by Graeme Costin on 24/5/2024.
 //

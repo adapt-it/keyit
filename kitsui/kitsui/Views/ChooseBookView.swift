@@ -1,6 +1,6 @@
 //
 //  ChooseBookView.swift
-//  kitsui
+//  kitios
 //
 //	ChooseBookView lets the user choose a Book of the current Bible instance.
 //
@@ -25,7 +25,6 @@ struct ChooseBookView: View {
 
 	init(needChooseBook:Bool) {
 		self.needChooseBook = needChooseBook
-
 // GDLC 6FEB24 Removed this setting of goChooseChapter so that it is not set true until
 // onAppear(), by which time all initialisations will have been done.
 //		self._goChooseChapter = State(wrappedValue: !needChooseBook)
@@ -63,15 +62,9 @@ struct ChooseBookView: View {
 					}
 				}
 			}
-			.onChange(of: self.selectedBook, perform: {_ in
-				if selectedBook != nil {
-					print("selectedBook changed to \(selectedBook!.bookName)")
-					bibMod.getCurBibInst().setupChosenBook(selectedBook!)
-// GDLC 1MAR25 We are now finished with selectedBook, so no need for this update.
-//					selectedBook!.selected = true
-					goChooseChapter = true
-				}
-			})
+			.onChange(of: selectedBook) {
+				onSelectBook()
+			}
 		}
 		.navigationDestination(isPresented: $goChooseChapter){
 			ChooseChapterView(
@@ -84,12 +77,22 @@ struct ChooseBookView: View {
 		.onAppear() {
 			// If a Book has been chosen and Bible is being launched, go straight to Choose Chapter
 			if !needChooseBook && bibMod.getCurBibInst().launching {
-				bibMod.getCurBibInst().goCurrentBook()
+				bibMod.getCurBibInst().goCurrentBook()	// <- not needed? goCurretnBook() was called earlier
 				goChooseChapter = true
 			}
 		}
 		.onDisappear() {
 			selectedBook = nil
+		}
+	}
+
+	func onSelectBook () {
+		if selectedBook != nil {
+			print("selectedBook changed to \(selectedBook!.bookName)")
+			bibMod.getCurBibInst().setupChosenBook(selectedBook!)
+// GDLC 1MAR25 We are now finished with selectedBook, so no need for this update.
+//					selectedBook!.selected = true
+			goChooseChapter = true
 		}
 	}
 

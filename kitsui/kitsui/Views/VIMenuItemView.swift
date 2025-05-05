@@ -1,6 +1,6 @@
 //
 //  VIMenuItemView.swift
-//  kitsui
+//  kitios
 //
 //  Created by Graeme Costin on 28/3/2024.
 //

@@ -1,6 +1,6 @@
 //
 //  ChapterNumberView.swift
-//  kitsui
+//  kitios
 //
 //  Created by Graeme Costin on 9/1/2024.
 //

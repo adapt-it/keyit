@@ -1,6 +1,6 @@
 //
 //  BibleModel.swift
-//  kitsui
+//  kitios
 //
 //	The BibleModel class handles the data model for KIT.
 //	Other classes involved are Bible, Book, and Chapter.
@@ -34,8 +34,8 @@ class BibleModel: ObservableObject {
 	@Published var bibArray = [Bible]()
 	// Offset to the current Bible. Views and functions mostly deal with the current Bible
     @Published var curBibOfst = 0
-	@Published var needSetup = false	// If a default Bible is created SetupView must be used
-										// Assume no need for SetupView
+	@Published var needSetup = false	// If a default Bible is created SetupView must be used,
+										// otherwise assume no need for SetupView
 
 	// Because SwiftUI runtime scans through possible future Views before the Views are actually created,
 	// and because ChooseChapterView needs its parent Book instance (as part of facilitiating View updates),
@@ -49,6 +49,7 @@ class BibleModel: ObservableObject {
     init () {
 		// Populate bibArray[] from any Bible records in the database
 		// If there are no Bible records in the database, create the default one
+		print("BibleModel.init()")
 		var nBib = 0
 		var bID = 1
 		var lastBib = false
@@ -124,6 +125,7 @@ class BibleModel: ObservableObject {
 	
 	// Updates the name of the current Bible in both the bibArray[] and the database
 	func bibleUpdateName(_ editedName: String) {
+		print("BibleModel.bibleUpdateName()")
 		let curBibOff = getCurBibOfst()
 		// Update in-memory array
 		bibArray[curBibOff].bibleName = editedName

@@ -1,6 +1,6 @@
 //
 //  KITDAO.swift
-//  kitsui
+//  kitios
 //
 //	All interaction between the running app and the SQLite database is handled by this class.
 //	The data model of the app (an instance of the Bibles class) treats the SQLite database as

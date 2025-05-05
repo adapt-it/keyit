@@ -1,6 +1,6 @@
 //
 //  SetupView.swift
-//  kitsui
+//  kitios
 //
 //	GDLC 20FEB25 Added use of Bible.launching
 //

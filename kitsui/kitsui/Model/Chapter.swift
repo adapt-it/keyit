@@ -1,5 +1,6 @@
 //
 //  Chapter.swift
+//  kitios
 //
 //	There will be one instance of the class Chapter and it will be for the current Chapter
 //	that the user has selected for keyboarding. When the user switches to keyboarding
@@ -72,7 +73,7 @@ public class Chapter: NSObject, ObservableObject {
 
 	init(_ parent: Book) {
 		super.init()
-		
+		print("Chapter.init(_ parent: Book) to get default Chapter instance")
 		self.bkInst = parent	// access to current Book
 		self.chID = 1		// chapterID INTEGER PRIMARY KEY
 		self.bibID = parent.bibID		// bibleID INTEGER
@@ -90,7 +91,7 @@ public class Chapter: NSObject, ObservableObject {
 		
 	init(_ parent: Book, _ chID: Int, _ bibID: Int, _ bkID: Int, _ chNum: Int, _ itRCr: Bool, _ numVs:Int, _ numIt: Int, _ currIt: Int, _ currVN: Int) {
 		super.init()
-
+		print("Chapter.init()")
 		self.bkInst = parent	// access to current Book
 		self.chID = chID		// chapterID INTEGER PRIMARY KEY
 		self.bibID = bibID		// bibleID INTEGER
@@ -214,6 +215,7 @@ public class Chapter: NSObject, ObservableObject {
 // because this equals the row number in the TableView.
 
 	func goCurrentItem() -> Int {
+		print("Chapter.goCurrentItem()")
 		if currIt == 0 {
 			// If SQLite does not have a current VerseItem,
 			// make the first VerseItem the current one
@@ -278,7 +280,6 @@ public class Chapter: NSObject, ObservableObject {
 		dao!.chaptersUpdateRec (chID, itRCr, currIt, currVN)
 	}
 
-	// DESIGN FLAW ALERT!!!!
 	// This function as originally written for kitios and kitand does TWO jobs:-
 	// 1. It sets the current VerseItem in the Chapter
 	// 2. It creates the VIMenu for the VerseItem

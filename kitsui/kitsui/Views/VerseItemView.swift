@@ -1,6 +1,6 @@
 //
 //  VerseItemView.swift
-//  kitsui
+//  kitios
 //
 //  Created by Graeme Costin on 27/1/2024.
 //
@@ -57,20 +57,17 @@ struct VerseItemView: View {
 					.lineSpacing(2)
 					.autocorrectionDisabled(true)
 					.autocapitalization(.none)
-					.frame(minHeight: 13, maxHeight: .infinity)
+					.frame(minHeight: 12, maxHeight: .infinity)
 					.border(Color.secondary, width: 1)	// GDLC test
 					.clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))	// GDLC test
 					.padding(.vertical, 0)
 					.focused($isFocused)
 					.foregroundColor(selectTextColour())
-					.onChange(of: isFocused) { isFocused in
-						if !isFocused {
-							// vItem has lost focus so ensure text is saved
-							saveEditedTxt()
-						} else {
-							// vItem has gained focus so set this vItem as the currently editing one
-							beginEditing()
-						}
+					.onChange(of: $editedTxt.wrappedValue) {
+						saveEditedTxtIgnoreDirty()
+					}
+					.onChange(of: isFocused) {
+						focusChange()
 					}
 			}
 		}
@@ -112,6 +109,18 @@ struct VerseItemView: View {
 		return typeText
 	}
 
+	// GDLC 20MAR25 Moved the perform: content lines out of .onChange(of: $editedTxt.wrappedValue)
+	// because the perform: part, has been deprecated since iOS 17.6
+	func focusChange() {
+		if !isFocused {
+			// vItem has lost focus so ensure text is saved
+			saveEditedTxt()
+		} else {
+			// vItem has gained focus so set this vItem as the currently editing one
+			beginEditing()
+		}
+	}
+
 	func beginEditing() {
 		// GDLC 6MAR25 This function was being called on a tap on a vItem, but it is now
 		// called in response to the vItem gaining focus; calling it on the tap that changes
@@ -120,6 +129,35 @@ struct VerseItemView: View {
 		vItem.isCurVsItem = true
 		vItem.dirty = true
 		print("vs \(vItem.vsNum), itID \(vItem.itID), itTyp \(vItem.itTyp) is now the current item")
+	}
+
+	// MARKER: Save changes
+	 // this function is called on loss of focus on the vItem in VerseItemView
+	 // or when the button on the vItem is tapped
+	 func saveEditedTxt() {
+		 // If the text is marked dirty then save it to vItem, BibItems and SQLite
+ 		if vItem.dirty {
+			 let newText = editedTxt
+			 if newText != vItem.itTxt {
+				 vItem.itTxt = newText
+				 bibMod.getCurBibInst().bookInst!.chapInst!.copyAndSaveVItem(vItem.itID, newText)
+				 bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
+ 				vItem.dirty = false
+			 }
+ 		}
+	 }
+
+	// GDLC 20MAR25 Added to handle saving from onChange(of: $editedTxt.wrappedValue)
+	func saveEditedTxtIgnoreDirty() {
+		// As the text is changed, save it to vItem, BibItems and SQLite
+			let newText = editedTxt
+			if newText != vItem.itTxt {
+				vItem.itTxt = newText
+				bibMod.getCurBibInst().bookInst!.chapInst!.copyAndSaveVItem(vItem.itID, newText)
+				// GDLC 20MAR25 When responding to keystrokes in vItem.itTxt don't also
+				// calculate USFM text for the Chapter
+				// bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
+			}
 	}
 
 // MARKER: Popover menu functions
@@ -176,6 +214,7 @@ struct VerseItemView: View {
 	}
 
 	// MARKER: Text colour
+	// TODO: Needs better choice of colours to cater for dark mode
 	func selectTextColour() -> Color {
 		if isFocused || vItem.isCurVsItem {
 			return Color.black
@@ -189,22 +228,6 @@ struct VerseItemView: View {
 	 private func hideKeyboard() {
 		 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 	 }
-
-// MARKER: Save changes
-	// this function is called on loss of focus in the vItem in VerseItemView
-	// or when the button on the vItem is tappedsaveEditedTxt()
-	func saveEditedTxt() {
-		// If the text has been changed then save it to vItem, BibItems and SQLite
-		if vItem.dirty {
-			let newText = editedTxt
-			if newText != vItem.itTxt {
-				vItem.itTxt = newText
-				bibMod.getCurBibInst().bookInst!.chapInst!.copyAndSaveVItem(vItem.itID, newText)
-				bibMod.getCurBibInst().bookInst!.chapInst!.calcUSFMExportText()
-				vItem.dirty = false
-			}
-		}
-	}
 }
 /*
 #Preview {

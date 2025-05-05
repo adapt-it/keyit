@@ -1,13 +1,14 @@
 //
 //  Book.swift
+//  kitios
 //
-// There will be one instance of this class for the currently selected Book.
-// This instance will have a lifetime of the current book selection; its life
-// will be terminated when the user selects a different Book to keyboard, at
-// which time a new Book instance will be created for the newly selected Book.
-// Data changes made by the user are always saved directly to the database as
-// well as held in this instance for further use while the user continues to
-// work on this Book.
+//  There will be one instance of this class for the currently selected Book.
+//  This instance will have a lifetime of the current book selection; its life
+//  will be terminated when the user selects a different Book to keyboard, at
+//  which time a new Book instance will be created for the newly selected Book.
+//  Data changes made by the user are always saved directly to the database as
+//  well as held in this instance for further use while the user continues to
+//  work on this Book.
 
 //	GDLC 25NOV23 Starting to adjust to suit kitsui
 //	GDLC 23JUL21 Cleaned out print commands (were used in early stages of development)
@@ -78,14 +79,14 @@ public class Book: NSObject, ObservableObject {
 		}
 	}
 
-	@Published var BibChaps: [BibChap] = []
+	@Published var BibChaps = [BibChap]()
 
 	// Initialise a default Book instance for use in creating ChooseBookView before
 	// the user has selected any Book
 
 	init(_ bInst: Bible, _ bibmod: BibleModel) {
         super.init()
-        
+        print("Book.init(_ bInst: Bible, _ bibmod: BibleModel to get default Book instance)")
         self.bibInst = bInst
         self.bkID = 41				// bookID INTEGER
         self.bibID = bInst.bibleID	// bibleID INTEGER
@@ -108,7 +109,7 @@ public class Book: NSObject, ObservableObject {
 
 	init(_ bInst: Bible, _ bkID: Int, _ bibID: Int, _ bkCode: String, _ bkName: String, _ chapRCr: Bool, _ numChaps: Int, _ curChID: Int, _ curChNum:Int, _ bibmod: BibleModel) {
 		super.init()
-		
+		print("Book.init()")
 		self.bibInst = bInst
 		self.bkID = bkID			// bookID INTEGER
 		self.bibID = bibID			// bibleID INTEGER
@@ -229,6 +230,7 @@ public class Book: NSObject, ObservableObject {
 
 // If, from kdb.sqlite, there is already a current Chapter for the current Book then go to it
 	func goCurrentChapter() {
+		print("Book.goCurrentChapter()")
 		currChapOfst = offsetToBibChap(withID: curChID)
 		let chap = BibChaps[currChapOfst]
 		curChNum = chap.chNum
@@ -251,13 +253,15 @@ public class Book: NSObject, ObservableObject {
 // current Chapter and initialisation of data structures in a new Chapter instance must happen.
 	
 	func setupChosenChapter(_ chapChosen: BibChap) {
+		print("Book.setupChosenChapter()")
 		let newChID = chapChosen.chID			// update to new ChapterID
 		let newChOfst = offsetToBibChap(withID: newChID)
 		
-		// Set newChap true if the user is changing to a different Chapter
+		// Set isNewChap true if the user is changing to a different Chapter
 		// or if there was not yet a chosen Chapter
-		let newChap = (newChOfst != currChapOfst) || (currChapOfst == -1)
-		
+		let isNewChap = (newChOfst != currChapOfst) || (currChapOfst == -1)
+		print("Book.isNewChap = \(isNewChap)")
+
 		// If there is a current chapter, make it not selected
 		if currChapOfst >= 0 {
 			BibChaps[currChapOfst].selected = false
@@ -277,7 +281,7 @@ public class Book: NSObject, ObservableObject {
 
 		// If the user has changed to a different Chapter then
 		// delete any previous in-memory instance of Chapter and create a new one
-		if newChap {
+		if isNewChap {
 			chapInst = nil
 
 			// create a Chapter instance for the current Chapter of the current Book

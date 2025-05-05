@@ -1,5 +1,6 @@
 //
 //  VIMenu.swift
+//  kitios
 //
 //	VIMenu gathers the data necessary for populating a popover menu when the user
 //	taps the VerseItem label. The action of tapping a VerseItem label makes that VerseItem
