@@ -135,14 +135,10 @@ class ChooseBookActivity : AppCompatActivity()  {
 	}
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {
 		when (item.getItemId()) {
-			android.R.id.home -> onBackPressed()
+//			android.R.id.home -> onBackPressed()	GDLC 7JUN25 onBackPressed() deprecated
+			android.R.id.home -> goToSetup()
 		}
 		return true
-	}
-
-	@Deprecated("Deprecated in Java")
-	override fun onBackPressed() {
-		goToSetup()
 	}
 
 	private fun goToSetup() {
@@ -151,7 +147,7 @@ class ChooseBookActivity : AppCompatActivity()  {
 		// Go to the ChooseBookActivity
 		val i = Intent(this, SetupActivity::class.java)
 		startActivity(i)
-		// Dispose of ChooseChapterActivity to reduce memory usage
+		// Dispose of ChooseBookActivity to reduce memory usage
 		finish()
 	}
 

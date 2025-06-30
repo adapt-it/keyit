@@ -43,11 +43,14 @@ struct BookNameView: View {
 	func description (_ bookLst:Bible.bookLst) -> String {
 		var descrTxt = ""
 		if bookLst.numChaps > 0 {
-			descrTxt = "\(bookLst.numChaps) "
-			if bookLst.bookCode == "PSA" {
-				descrTxt = descrTxt + "Ps"
+			if bookLst.selected {
+				descrTxt = (bookLst.bookID == 19 ? "Ps " : "Ch ") + "\(bookLst.currChNum) "
+			}
+			descrTxt = "(\(bookLst.numChaps) "
+			if bookLst.bookID == 19 {
+				descrTxt = descrTxt + "ps)"
 			} else {
-				descrTxt = descrTxt + "Ch"
+				descrTxt = descrTxt + "ch)"
 			}
 		}
 		return descrTxt
@@ -72,9 +75,9 @@ struct BookNameView: View {
 
 #Preview {
 	Group {
-		BookNameView(bookLst: Bible.bookLst(bookID: 41, bookCode: "MAT", bookName: "Matthew", numChaps: 28, bookInNT: true, selected: false))
-		BookNameView(bookLst: Bible.bookLst(bookID: 42, bookCode: "MAR", bookName: "Mark", numChaps: 16, bookInNT: true, selected: false))
-		BookNameView(bookLst: Bible.bookLst(bookID: 43, bookCode: "LUK", bookName: "Luke", numChaps: 24, bookInNT: true, selected: true))
-		BookNameView(bookLst: Bible.bookLst(bookID: 19, bookCode: "PSA", bookName: "Psalms", numChaps: 150, bookInNT: false, selected: false))
+		BookNameView(bookLst: Bible.bookLst(bookID: 41, bookCode: "MAT", bookName: "Matthew", currChNum: 1, numChaps: 28, bookInNT: true, selected: false))
+		BookNameView(bookLst: Bible.bookLst(bookID: 42, bookCode: "MAR", bookName: "Mark", currChNum: 1, numChaps: 16, bookInNT: true, selected: false))
+		BookNameView(bookLst: Bible.bookLst(bookID: 43, bookCode: "LUK", bookName: "Luke", currChNum: 1, numChaps: 24, bookInNT: true, selected: true))
+		BookNameView(bookLst: Bible.bookLst(bookID: 19, bookCode: "PSA", bookName: "Psalms", currChNum: 1, numChaps: 150, bookInNT: false, selected: false))
 	}
 }

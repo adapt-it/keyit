@@ -48,12 +48,12 @@ class ChapterAdapter (
 		// Listeners for Chapter selected
 		holder.chapNum.setOnClickListener(View.OnClickListener {
 			// A BookCell icon has been tapped
-			val chapOfst = holder.getAdapterPosition()
+			val chapOfst = holder.getBindingAdapterPosition()
 			chChAct.chooseChapterAction(chapOfst)
 		})
 		holder.chapInfo.setOnClickListener(View.OnClickListener {
 			// A PopupCell menu command has been tapped
-			val chapOfst = holder.getAdapterPosition()
+			val chapOfst = holder.getBindingAdapterPosition()
 			chChAct.chooseChapterAction(chapOfst)
 		})
 	}

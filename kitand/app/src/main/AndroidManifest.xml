@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:name=".KITApp">
 
     <application
@@ -25,12 +24,10 @@
         <activity
             android:name=".EditChapterActivity"
             android:parentActivityName=".ChooseChapterActivity"
-            android:windowSoftInputMode="stateAlwaysVisible"
-            android:screenOrientation="sensor" />
+            android:windowSoftInputMode="stateAlwaysVisible"/>
         <activity
             android:name=".ExportChapterActivity"
-            android:parentActivityName=".EditChapterActivity"
-            android:screenOrientation="sensor" />
+            android:parentActivityName=".EditChapterActivity"/>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.ccs.kitand.fileprovider"

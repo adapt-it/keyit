@@ -51,12 +51,12 @@ class PopupAdapter(
 		// Listeners for PopMenuItem selected
 		holder.popup_icon.setOnClickListener(View.OnClickListener {
 			// A PopupCell icon has been tapped
-			val menuPos = holder.getAdapterPosition()
+			val menuPos = holder.getBindingAdapterPosition()
 			edChAct.popMenuAction(menuPos)
 		})
 		holder.menu_cmd.setOnClickListener(View.OnClickListener {
 			// A PopupCell menu command has been tapped
-			val menuPos = holder.getAdapterPosition()
+			val menuPos = holder.getBindingAdapterPosition()
 			edChAct.popMenuAction(menuPos)
 		})
 	}

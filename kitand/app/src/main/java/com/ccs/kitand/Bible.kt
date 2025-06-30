@@ -41,7 +41,7 @@ class Bible (
 	private val dao = KITApp.dao
 
 	var currBookOfst = - 1 			// Offset in BibBooks[] to the current book 0 to 38 (OT) 39 to 65 (NT)
-	var bookInst: Book?	= null		// Instance in memory of the current Book - this is the strong ref that owns it
+	private var bookInst: Book?	= null		// Instance in memory of the current Book - this is the strong ref that owns it
 
 	// BibBooks array (for listing the Books so the user can choose one)
 	data class BibBook (
@@ -136,12 +136,12 @@ class Bible (
 		// Open kit_booknames and read its data
 		val namesStr = res.openRawResource(R.raw.kit_booknames)
         val nameRdr = BufferedReader(namesStr.reader())
-        val nameTxt: String
-        try {
-			nameTxt = nameRdr.readText()
-        } finally {
-			nameRdr.close()
-        }
+		val nameTxt: String
+			try {
+				nameTxt = nameRdr.readText()
+			} finally {
+				nameRdr.close()
+			}
 
 		val specLines = specTxt.split("\n").toTypedArray()
 		val nameLines = nameTxt.split("\n").toTypedArray()

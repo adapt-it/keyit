@@ -63,9 +63,21 @@ struct VerseItemView: View {
 					.padding(.vertical, 0)
 					.focused($isFocused)
 					.foregroundColor(selectTextColour())
-					.onChange(of: $editedTxt.wrappedValue) {
-						saveEditedTxtIgnoreDirty()
-					}
+//					.onChange(of: $editedTxt.wrappedValue) {
+//						saveEditedTxtIgnoreDirty()
+//					}
+//					.onChange(of: $editedTxt.wrappedValue) {oldText, newText in
+//						print("Length of newText = \(newText.count), Length of oldText = \(oldText.count)")
+//						if newText.count % 10 == 0 {
+//							saveEditedTxtIgnoreDirty()
+//						}
+//					}
+//					.onChange(of: $editedTxt.wrappedValue) {
+//						print("Length of newText = \($editedTxt.wrappedValue.count)")
+//						if $editedTxt.wrappedValue.count % 10 == 0 {
+//							saveEditedTxtIgnoreDirty()
+//						}
+//					}
 					.onChange(of: isFocused) {
 						focusChange()
 					}

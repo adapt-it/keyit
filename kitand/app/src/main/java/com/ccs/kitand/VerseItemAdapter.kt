@@ -3,6 +3,7 @@ package com.ccs.kitand
 import android.content.ContentValues
 import android.graphics.Color
 import android.text.Editable
+import android.text.InputType.TYPE_NULL
 import android.text.TextWatcher
 import android.view.*
 import android.widget.Button
@@ -64,6 +65,8 @@ class VerseItemAdapter(
 			"ChapDesc" -> buttonText = "Chapter Description"
 			"Para", "ParaCont" -> {
 				buttonText = "Paragraph"
+				//GDLC 18JUN25 Added to enable prevention of text into Paragraph VerseItems
+				holder.para = true
 			}
 			"ParlRef" -> buttonText = "Parallel Ref"
 			"VerseCont" -> buttonText = "Verse " + verseNo.toString() + " (cont)"
@@ -94,7 +97,7 @@ class VerseItemAdapter(
 		// Listener for VerseItem text editing started
 		holder.verseItemTxt.setOnClickListener(View.OnClickListener {
 			// A VerseItem EditText has been tapped
-			val newPos = holder.getAdapterPosition()
+			val newPos = holder.getBindingAdapterPosition()
 			moveCurrCellToClickedCell(newPos)
 		})
 		// Listener for VerseItem text is changing
@@ -120,7 +123,7 @@ class VerseItemAdapter(
 				cursPos = curCell.verseItemTxt.getSelectionStart()
 			}
 			// If the button is not on the current VerseItem then change the current VerseItem to this one
-			val newPos = holder.getAdapterPosition()
+			val newPos = holder.getBindingAdapterPosition()
 			if (newPos != currCellOfst) {
 				moveCurrCellToClickedCell(newPos)
 			}
@@ -148,7 +151,7 @@ class VerseItemAdapter(
 	// such as when the recyclerView is scrolled and some cells go out of view.
 	override fun onViewRecycled(holder: ListCell): Unit {
 		if (!isRefreshingRecyclerView) {
-			val pos = holder.getAdapterPosition()
+			val pos = holder.getBindingAdapterPosition()
 			// Save VerseItem text from cell at pos
 			val textSrc = holder.verseItemTxt.getText().toString()
 			KITApp.chInst!!.copyAndSaveVItem(pos, textSrc)
@@ -293,6 +296,8 @@ class VerseItemAdapter(
 	inner class ListCell(itemView: View) : RecyclerView.ViewHolder(itemView) {
 		var popoverButton: Button = itemView.findViewById(R.id.btn_popover)
 		var verseItemTxt: EditText = itemView.findViewById(R.id.txt_verseitem)
+		//GDLC 18JUN25 Added to enable prevention of text into Paragraph VerseItems
+		var para: Boolean = false
 
 		// No editing has been done yet, so dirty = false
 		var dirty = false
@@ -308,7 +313,14 @@ class VerseItemAdapter(
 			} else {
 				itemView.setSelected(false)
 				itemView.setBackgroundColor(Color.parseColor("#FFFFFF"))
+				verseItemTxt.setEnabled(true)
+				verseItemTxt.isFocusable = true
 				verseItemTxt.setFocusableInTouchMode(false)
+				//GDLC 18JUN25 This prevents text entry onto Paragraph VerseItem so that
+				// anything typed does not go into the SQLite database and does not go into
+				// the generated USFM, but the characters typed are echoed on the screen.
+				// There may be a better way to do this?
+				if (para) verseItemTxt.inputType = TYPE_NULL
 			}
 		}
 	}

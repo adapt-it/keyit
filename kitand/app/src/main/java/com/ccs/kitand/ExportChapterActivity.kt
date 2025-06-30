@@ -10,7 +10,7 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.core.content.FileProvider.getUriForFile
-import kotlinx.android.synthetic.main.activity_exportchapter.*
+//import kotlinx.android.synthetic.main.activity_exportchapter.*
 import java.io.File
 import java.io.FileWriter
 
@@ -26,6 +26,7 @@ class ExportChapterActivity : AppCompatActivity() {
 	private lateinit var ch_name:String
 	private lateinit var ps_name:String
 	lateinit var txt_USFM: TextView
+	lateinit var txt_chex_prompt: TextView
 	var bInst: Bible? = null
 	var bkInst: Book? = null
 
@@ -46,6 +47,7 @@ class ExportChapterActivity : AppCompatActivity() {
 
 		// Get references to layout widgets
 		txt_USFM = findViewById(R.id.txt_usfm)
+		txt_chex_prompt = findViewById(R.id.txt_chex_prompt)
 		bInst = KITApp.bibInst
 		bkInst = KITApp.bkInst
 

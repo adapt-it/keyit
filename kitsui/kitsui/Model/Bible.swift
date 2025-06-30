@@ -74,6 +74,7 @@ class Bible: ObservableObject {
 		var bookID: Int
 		var bookCode: String
 		var bookName: String
+		var currChNum: Int
         var numChaps: Int
 		var bookInNT: Bool
 		var selected: Bool = false	// true if this is the current Book (user tap, or SQLite currBook)
@@ -109,11 +110,11 @@ class Bible: ObservableObject {
 		for BibBook in BibBooks {
 			if BibBook.bookID < 40 {
 				booksOT.append(bookLst(bookID: BibBook.bookID, bookCode: BibBook.bookCode,
-                                       bookName: BibBook.bookName, numChaps: BibBook.numChaps, bookInNT: false,
+									   bookName: BibBook.bookName, currChNum: BibBook.currChNum, numChaps: BibBook.numChaps, bookInNT: false,
                                        selected: (BibBook.bookID == currBk ? true : false)))
 			} else {
 				booksNT.append(bookLst(bookID: BibBook.bookID, bookCode: BibBook.bookCode,
-									   bookName: BibBook.bookName, numChaps: BibBook.numChaps, bookInNT: true,
+									   bookName: BibBook.bookName, currChNum: BibBook.currChNum, numChaps: BibBook.numChaps, bookInNT: true,
                                        selected: (BibBook.bookID == currBk ? true : false)))
 			}
 		}

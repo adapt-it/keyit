@@ -1,5 +1,6 @@
 package com.ccs.kitand
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -111,7 +112,12 @@ class KITDAO(
 				COL_TextCurrBridge + " TEXT, " +
 				COL_TextExtraVerse + " TEXT)"
         db.execSQL(sqlBridgT)
-        // Create the single Bibles record
+        // Create the single Bibles record directly - do not use bibleInsertRec()
+		// NOTE: There were problems throwing an exception from this because the onCreate()
+		// override is called on the first use of the database, and throwing an error back through
+		// Android's GetWriteableDatabase just didn't work as expected. So onCreate calls directly
+		// to Android's SQLite facilities; bibleInsertRec() may be used in future if a later version
+		// of KIT allows more than one Bible at a time.
 		val cv = ContentValues()
 		cv.put(COL_BibleID, 1)
 		cv.put(COL_BibleName, "Bible")
@@ -130,11 +136,8 @@ class KITDAO(
 	// The single record in the Bibles table needs to be inserted when the app first launches.
 	// A future extension of KIT may allow more than one Bible, so this function
 	// may be called more than once.
-	// NOTE: There were problems throwing an exception from this because the onCreate()
-	// override is called on the first use of the database, and throwing an error back through
-	// Android's GetWriteableDatabase just didn't work as expected. So onCreate calls directly
-	// to Android's SQLite facilities; bibleInsertRec() may be used in future if a later version
-	// of KIT allows more than one Bible at a time.
+	// NOTE: The initial single Bible record is created directly by onCreate(); bibleInsertRec()
+	// may be used in future if a later version of KIT allows more than one Bible at a time.
 
 	fun bibleInsertRec (bibID:Int, bibName:String, bkRCr:Boolean, currBook:Int) {
 	    val cv = ContentValues()
