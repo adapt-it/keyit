@@ -110,8 +110,8 @@
             filePath = "kitsui/Views/VerseItemView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
             landmarkName = "saveEditedTxt()"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "kitsui/Views/VerseItemView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "popoverWidth()"
             landmarkType = "7">
          </BreakpointContent>
@@ -488,7 +488,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
             endingLineNumber = "37"
-            landmarkName = "getChapterName()"
+            landmarkName = "onAppear()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -676,8 +676,8 @@
             filePath = "kitsui/Views/VerseItemView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "saveEditedTxtIgnoreDirty()"
             landmarkType = "7">
          </BreakpointContent>
@@ -725,8 +725,8 @@
             filePath = "kitsui/Views/VerseItemView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "focusChange()"
             landmarkType = "7">
          </BreakpointContent>
@@ -917,8 +917,8 @@
             filePath = "kitsui/Views/VerseItemView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -933,8 +933,8 @@
             filePath = "kitsui/Views/VerseItemView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -1045,8 +1045,8 @@
             filePath = "kitsui/Views/VerseItemView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
             landmarkName = "beginEditing()"
             landmarkType = "7">
          </BreakpointContent>

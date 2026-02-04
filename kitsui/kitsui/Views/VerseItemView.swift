@@ -63,7 +63,8 @@ struct VerseItemView: View {
 						.background(
 							GeometryReader { proxy in
 								Color.clear
-									.onChange(of: editedTxt) { _ in
+								//	GDLC 4FEB26 .onChange(of:perfom:) is deprecated in iOS 17.0
+									.onChange(of: editedTxt) { _, _ in
 										measuredHeight = max(12, proxy.size.height)
 									}
 									.onAppear {
@@ -276,3 +277,4 @@ struct VerseItemView: View {
 								   intSeq: 0, isBrg: false, lvBrg: 0, isCurVsItem: false))
 	}
 }*/
+
