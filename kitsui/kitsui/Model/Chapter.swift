@@ -206,7 +206,7 @@ public class Chapter: NSObject, ObservableObject {
 		return BibItems[index]
 	}
 	
-// Go to the current BibItem
+// Go to the current BibItem	// Commentary needs updating SwiftUI implementation
 // This function is called by the VersesTableViewController to find out which VerseItem
 // in the current Chapter is the current VerseItem, and to make the Chapter record
 // remember that selection.
@@ -254,7 +254,10 @@ public class Chapter: NSObject, ObservableObject {
 	func makeVItemCurrent(_ vItem: VItem) {
 		// GDLC 11MAR25 If VItem is the current vItem then the following actions are not needed
 		if BibItems[currItOfst].itID != vItem.itID {
+			// But the vItem param is from the previously selected Chapter!!!
+			// This is a  bug in the app's logic!!!
 			// The current VItem ceases to be the current one
+			// Is this setting of isCurVsItem to false actually needed? Should it be done in the vItem's View?
 			BibItems[currItOfst].isCurVsItem = false
 // GDLC 15MAR25 The saving of the edited text is done in saveEditedTxt() of VerseItemView
 // in response to that VerseItem losing focus or an action within VerseItemView; it is
@@ -272,7 +275,7 @@ public class Chapter: NSObject, ObservableObject {
 //				BibItems[currItOfst].dirty = false
 		}
 		// Now set the new current VItem
-		currItOfst = offsetToBibItem(withID: vItem.itID)
+		currItOfst = offsetToBibItem(withID: vItem.itID)	// Wrong vItem passed as param!!!
 		BibItems[currItOfst].isCurVsItem = true
 		currIt = vItem.itID
 		currVN = vItem.vsNum

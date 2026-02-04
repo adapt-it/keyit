@@ -9,8 +9,8 @@ android {
         applicationId "com.ccs.kitand"
         minSdkVersion 29
         targetSdkVersion 36
-        versionCode 8
-        versionName "1.1.4"
+        versionCode 9
+        versionName "1.1.5"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -24,7 +24,7 @@ android {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
 
-    buildFeatures {
+    buildFeatures {3
         viewBinding = true
         buildConfig = true
     }

@@ -92,6 +92,7 @@ class BibleModel: ObservableObject {
 	func setCurBibOfst(_ ofst:Int) {
 		curBibOfst = ofst
 		// Load the 66 Bible books, creating the database records if they have not yet been created
+		// 19NOV25 But all 66 Books have already been loaded!! Is this call really needed? <--27NOV25 !!!
 		bibArray[ofst].loadBibBooks(bibArray[ofst].bibleID)
 	}
 	

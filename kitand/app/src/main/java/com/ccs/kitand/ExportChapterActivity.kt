@@ -129,6 +129,9 @@ class ExportChapterActivity : AppCompatActivity() {
 			exportIntent.setDataAndType(contentUri, contentResolver.getType(contentUri))
 			startActivity(exportIntent)
 		} catch (e: Exception) {
+			// GDLC 4JUL25 Started handling case of Adapt It Mobile not installed
+			// If Adapt It Mobile is not present or cannot be launched, the exception
+			// ActivityNotFoundException will be raised.
 			e.printStackTrace()
 		}
 	}

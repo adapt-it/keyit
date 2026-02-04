@@ -1,11 +1,19 @@
 ----------------------------------------------
-Key It Android bug fixes and changes
+Key It SwiftUI bug fixes and changes
 ----------------------------------------------
 
 ----------------------------------------------
-Version 2.0 (10) ???2024
+Version 2.1 (13) 3FEB2026
 ----------------------------------------------
 
+* 
+
+* Fixed height of TextEditor in VerseItemView for
+Latest versions of iOS and SwiftUI
+
+----------------------------------------------
+Version 2.0 (12) 4JAN2024
+----------------------------------------------
 
 * Display of versionName and versionCode added
 to the Setup screen

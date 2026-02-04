@@ -4,9 +4,11 @@ package com.ccs.kitand
 //  Chapter.kt
 //
 // There will be one instance of this class for the currently selected Book.
-// This instance will have a lifetime of the current book selection; its life
-// will be terminated when the user selects a different Book to keyboard, at
-// which time a new Book instance will be created for the newly selected Book.
+// This instance will have a lifetime of the current chapter selection; its life
+// will be terminated when the user selects a different chapter to keyboard, at
+// which time a new Chapter instance will be created for the newly selected chapter.
+// The Chapter instance will also be terminated if the user selects a different
+// Book to keyboard.
 
 // The Chapter records in the database store the ID of the current VerseItem for each Chapter
 // because there are over 31,000 VerseItems and so verse numbers are not enough, and updating

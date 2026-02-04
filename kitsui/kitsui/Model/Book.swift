@@ -264,7 +264,7 @@ public class Book: NSObject, ObservableObject {
 
 		// If there is a current chapter, make it not selected
 		if currChapOfst >= 0 {
-			BibChaps[currChapOfst].selected = false
+			BibChaps[currChapOfst].selected = false	// change ch1 to ch2 selected not set false!?!? OK, Xcode slow to update debug display!
 		}
 
 		// update to new Chapter number, offset, selected

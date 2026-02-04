@@ -223,7 +223,7 @@ class Bible: ObservableObject {
 		 bookInst = nil
 
 		 // Create a Book instance for the currently selected book
-		 bookInst = Book(self, cBook.bookID, cBook.bibleID, cBook.bookCode, cBook.bookName,
+		 bookInst = Book(self, cBook.bookID, cBook.bibleID, cBook.bookCode, cBook.bookName,	// Why re-create the Book instance???
 						 cBook.chapRecsCreated, cBook.numChaps, cBook.currChID, cBook.currChNum, bibMod)
 	 }
 
@@ -299,5 +299,11 @@ class Bible: ObservableObject {
 		 print("Bible.setBibBooksCurChap()")
 		 BibBooks[currBookOfst].currChID = curChID
 		 BibBooks[currBookOfst].currChNum = curChNum
+		 // GDLC 27NOV25 The currChNum in booksNT or booksOT should also be updated?
+		 if currBookOfst > 38 {
+			 booksNT[currBookOfst - 39].currChNum = curChNum
+		 } else {
+			 booksOT[currBookOfst].currChNum = curChNum
+		 }
 	  }
 }

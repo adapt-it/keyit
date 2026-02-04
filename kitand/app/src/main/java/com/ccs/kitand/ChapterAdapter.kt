@@ -35,7 +35,8 @@ class ChapterAdapter (
 			// Set colour of chapter number text
 			holder.chapNum.setTextColor(Color.parseColor("#0000CD"))
 			if (curVsNum > 0) {
-				numVsItText = "Vs " + curVsNum.toString() + " "
+				numVsItText = "Current verse " + curVsNum.toString()
+			//	numVsItText.set
 			}
 			numVsItText += "(" + bibChap.numVs.toString() + " vs) >"
 			// Set colour of text

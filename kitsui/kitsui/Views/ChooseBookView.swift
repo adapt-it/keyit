@@ -77,7 +77,7 @@ struct ChooseBookView: View {
 		.onAppear() {
 			// If a Book has been chosen and Bible is being launched, go straight to Choose Chapter
 			if !needChooseBook && bibMod.getCurBibInst().launching {
-				bibMod.getCurBibInst().goCurrentBook()	// <- not needed? goCurrentBook() was called earlier
+				bibMod.getCurBibInst().goCurrentBook()	// <- not needed? goCurrentBook() was called earlier???
 				goChooseChapter = true
 			}
 		}

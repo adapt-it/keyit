@@ -60,9 +60,12 @@ struct ChooseChapterView: View {
 		.toolbarRole(.editor)
 		.onAppear() {
 			if !needChooseChapter && bibMod.getCurBibInst().launching {
-				bkInst.goCurrentChapter()	// <- not necessary???
+				bkInst.goCurrentChapter()	// <- not necessary??? Already been called!
 				goEditChapter = true
 			}
+//			if !bibMod.getCurBibInst().launching {
+//				setupChosenChapter(selectedChapter!)	// OOPS! onAppear() is called before selecteChapter has a value
+//			}
 		}
 		.onDisappear() {
 			selectedChapter = nil

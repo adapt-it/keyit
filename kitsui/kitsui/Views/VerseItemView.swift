@@ -22,6 +22,7 @@ struct VerseItemView: View {
 
 	@FocusState var isFocused: Bool
 	@State var isVIMenuShowing: Bool = false
+	@State private var measuredHeight: CGFloat = 40
 
 	init(vItem: VItem) {
 		self.vItem = vItem
@@ -51,36 +52,57 @@ struct VerseItemView: View {
 				Spacer()
 			}
 			if vItem.itTyp != "Para" && vItem.itTyp != "ParaCont"{
-				TextEditor(text: $editedTxt)
-					.font(.system(size: 13))
-					.multilineTextAlignment(.leading)
-					.lineSpacing(2)
-					.autocorrectionDisabled(true)
-					.autocapitalization(.none)
-					.frame(minHeight: 12, maxHeight: .infinity)
-					.border(Color.secondary, width: 1)	// GDLC test
-					.clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))	// GDLC test
-					.padding(.vertical, 0)
-					.focused($isFocused)
-					.foregroundColor(selectTextColour())
-//					.onChange(of: $editedTxt.wrappedValue) {
-//						saveEditedTxtIgnoreDirty()
-//					}
-//					.onChange(of: $editedTxt.wrappedValue) {oldText, newText in
-//						print("Length of newText = \(newText.count), Length of oldText = \(oldText.count)")
-//						if newText.count % 10 == 0 {
-//							saveEditedTxtIgnoreDirty()
-//						}
-//					}
-//					.onChange(of: $editedTxt.wrappedValue) {
-//						print("Length of newText = \($editedTxt.wrappedValue.count)")
-//						if $editedTxt.wrappedValue.count % 10 == 0 {
-//							saveEditedTxtIgnoreDirty()
-//						}
-//					}
-					.onChange(of: isFocused) {
-						focusChange()
-					}
+				ZStack(alignment: .topLeading) {
+					// Hidden sizing text
+					Text(editedTxt.isEmpty ? " " : editedTxt)
+						.font(.system(size: 13))
+						.lineSpacing(2)
+						.multilineTextAlignment(.leading)
+						.foregroundColor(.clear) // hide it
+						.padding(.vertical, 10)  // match editor’s padding if any
+						.background(
+							GeometryReader { proxy in
+								Color.clear
+									.onChange(of: editedTxt) { _ in
+										measuredHeight = max(12, proxy.size.height)
+									}
+									.onAppear {
+										measuredHeight = max(12, proxy.size.height)
+									}
+							}
+						)
+					
+					TextEditor(text: $editedTxt)
+						.font(.system(size: 13))
+						.multilineTextAlignment(.leading)
+						.lineSpacing(2)
+						.autocorrectionDisabled(true)
+						.autocapitalization(.none)
+						.frame(height: measuredHeight)
+						.border(Color.secondary, width: 1)	// GDLC test
+						.clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))	// GDLC test
+						.padding(.vertical, 0)
+						.focused($isFocused)
+						.foregroundColor(selectTextColour())
+					//					.onChange(of: $editedTxt.wrappedValue) {
+					//						saveEditedTxtIgnoreDirty()
+					//					}
+					//					.onChange(of: $editedTxt.wrappedValue) {oldText, newText in
+					//						print("Length of newText = \(newText.count), Length of oldText = \(oldText.count)")
+					//						if newText.count % 10 == 0 {
+					//							saveEditedTxtIgnoreDirty()
+					//						}
+					//					}
+					//					.onChange(of: $editedTxt.wrappedValue) {
+					//						print("Length of newText = \($editedTxt.wrappedValue.count)")
+					//						if $editedTxt.wrappedValue.count % 10 == 0 {
+					//							saveEditedTxtIgnoreDirty()
+					//						}
+					//					}
+						.onChange(of: isFocused) {
+							focusChange()
+						}
+				}
 			}
 		}
 		.onAppear(perform: {
