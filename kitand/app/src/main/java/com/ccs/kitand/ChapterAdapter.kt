@@ -1,10 +1,15 @@
 package com.ccs.kitand
 
+import android.content.Context
 import android.graphics.Color
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 class ChapterAdapter (
@@ -31,16 +36,18 @@ class ChapterAdapter (
 		holder.chapNum.setText(chapNumText)
 		var numVsItText = ""
 		val curVsNum = bibChap.curVN
+		val colorHighlight = chChAct.resolveColorAttr(android.R.attr.colorPressedHighlight)
+
 		if (bibChap.itRCr) {
 			// Set colour of chapter number text
-			holder.chapNum.setTextColor(Color.parseColor("#0000CD"))
+			holder.chapNum.setTextColor(colorHighlight)
 			if (curVsNum > 0) {
-				numVsItText = "Current verse " + curVsNum.toString()
+				numVsItText = "Verse " + curVsNum.toString()
 			//	numVsItText.set
 			}
-			numVsItText += "(" + bibChap.numVs.toString() + " vs) >"
+			numVsItText += " (" + bibChap.numVs.toString() + " vs) >"
 			// Set colour of text
-			holder.chapInfo.setTextColor(Color.parseColor("#0000CD"))
+			holder.chapInfo.setTextColor(colorHighlight)
 		} else {
 			numVsItText = numVsItText + " >"
 		}
@@ -62,6 +69,19 @@ class ChapterAdapter (
 	override fun getItemCount(): Int {
 		val numItems = BibChaps.size
 		return numItems
+	}
+
+	fun Context.resolveThemeAttr(@AttrRes attrRes: Int): TypedValue {
+		val typedValue = TypedValue()
+		theme.resolveAttribute(attrRes, typedValue, true)
+		return typedValue
+	}
+
+	@ColorInt
+	fun Context.resolveColorAttr(@AttrRes colorAttr: Int): Int {
+		val resolvedAttr = resolveThemeAttr(colorAttr)
+		val colorRes = if (resolvedAttr.resourceId != 0) resolvedAttr.resourceId else resolvedAttr.data
+		return ContextCompat.getColor(this, colorRes)
 	}
 
 	inner class ChapterCell(itemView: View) : RecyclerView.ViewHolder(itemView) {

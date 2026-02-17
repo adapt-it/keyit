@@ -2,7 +2,10 @@
 //  VerseItemView.swift
 //  kitios
 //
-//  Created by Graeme Costin on 27/1/2024.
+//	GDLC 4FEB26 Used Color.primary and Color.secondary to suit both light mode
+//	and dark mode. Changed to an overlay border around the VerseItem text.
+//
+//  Created by Graeme Costin on 27JAN2024.
 //
 //	In place of a legal notice, here is a blessing:
 //
@@ -80,11 +83,15 @@ struct VerseItemView: View {
 						.autocorrectionDisabled(true)
 						.autocapitalization(.none)
 						.frame(height: measuredHeight)
-						.border(Color.secondary, width: 1)	// GDLC test
-						.clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))	// GDLC test
+						.overlay(
+						    RoundedRectangle(cornerRadius: 5, style: .continuous)
+						        .stroke(.separator, lineWidth: 1)
+						)
+						.clipShape(RoundedRectangle(cornerRadius: 5, style: .continuous))
 						.padding(.vertical, 0)
 						.focused($isFocused)
 						.foregroundColor(selectTextColour())
+					// Experimenting with various ways of saving VerseItem text...
 					//					.onChange(of: $editedTxt.wrappedValue) {
 					//						saveEditedTxtIgnoreDirty()
 					//					}
@@ -252,9 +259,9 @@ struct VerseItemView: View {
 	// TODO: Needs better choice of colours to cater for dark mode
 	func selectTextColour() -> Color {
 		if isFocused || vItem.isCurVsItem {
-			return Color.black
+			return Color.primary
 		} else {
-			return Color.gray
+			return Color.secondary
 		}
 	}
 
@@ -277,4 +284,5 @@ struct VerseItemView: View {
 								   intSeq: 0, isBrg: false, lvBrg: 0, isCurVsItem: false))
 	}
 }*/
+
 

@@ -100,6 +100,7 @@ class ChooseBookActivity : AppCompatActivity()  {
 			// On first launch, and when user wants to choose another book,
 			// set up the Books list and wait for the user to choose a Book.
 			txt_bk_prompt.setText(getString(R.string.choose_book))
+			txt_bk_prompt.paint.isUnderlineText = true
 			viewManager = LinearLayoutManager(this)
 			viewAdapter = BookAdapter(bInst!!.BibBooks, this)
 			recyclerView = findViewById<RecyclerView>(R.id.lst_books).apply {

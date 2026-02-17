@@ -1,19 +1,24 @@
 package com.ccs.kitand
 
-import android.content.ContentValues
-import android.graphics.Color
+import android.content.Context
+import android.graphics.Typeface
 import android.text.Editable
 import android.text.InputType.TYPE_NULL
 import android.text.TextWatcher
+import android.util.TypedValue
 import android.view.*
 import android.widget.Button
 import android.widget.EditText
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 //	The VerseItemAdapter populates the RecyclerView displaying the VerseItems.
 //	It provides much of the logic for editing VerseItems and saving them to
 //	the SQLite database kdb.sqlite.
 //
+//	16FEB26 Changed to indicating current VerseItem by boldfacing its text.
 //  Created by Graeme Costin on 2OCT20?.
 //
 // In place of a legal notice, here is a blessing:
@@ -38,6 +43,9 @@ class VerseItemAdapter(
 	// Cursor position in text of current VerseItem
 	// Set in moveCurrCellToClickedCell()
 	var cursPos = 0
+
+	val selBkgColor = edChAct.resolveColorAttr(android.R.attr.itemBackground)
+//	val unselBkgColor = edChAct.resolveColorAttr(android.R.attr.colorPressedHighlight)
 
 	// Create new view holders (invoked by the layout manager)
 	override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VerseItemAdapter.ListCell {
@@ -288,6 +296,20 @@ class VerseItemAdapter(
 		}
 	}
 
+	fun Context.resolveThemeAttr(@AttrRes attrRes: Int): TypedValue {
+		val typedValue = TypedValue()
+		theme.resolveAttribute(attrRes, typedValue, true)
+		return typedValue
+	}
+
+	@ColorInt
+	fun Context.resolveColorAttr(@AttrRes colorAttr: Int): Int {
+		val resolvedAttr = resolveThemeAttr(colorAttr)
+		val colorRes = if (resolvedAttr.resourceId != 0) resolvedAttr.resourceId else resolvedAttr.data
+		return ContextCompat.getColor(this, colorRes)
+	}
+
+
 	// RecyclerView.Adapter has a function notifyItemChanged(position) which can be used
 	// if a ListCell contents needs to be changed
 
@@ -305,15 +327,19 @@ class VerseItemAdapter(
 		fun setSelected(state: Boolean) {
 			if (state == true) {
 				itemView.setSelected(true)
-				itemView.setBackgroundColor(Color.parseColor("#777777"))
+//ToDo: GDLC 16FEB26 use Light/Dark colours
 				verseItemTxt.setEnabled(true)
+				// 16FEB26 GDLC Changed to indicating the current VerseItem by boldfacing its text
+				verseItemTxt.setTypeface(null, Typeface.BOLD)
 				verseItemTxt.setFocusable(true)
 				verseItemTxt.setFocusableInTouchMode(true)
 				verseItemTxt.requestFocus()
 			} else {
 				itemView.setSelected(false)
-				itemView.setBackgroundColor(Color.parseColor("#FFFFFF"))
+//ToDo: GDLC 16FEB26 use Light/Dark colours
 				verseItemTxt.setEnabled(true)
+				// 16FEB26 GDLC Changed to indicating the current VerseItem by boldfacing its text
+				verseItemTxt.setTypeface(null, Typeface.NORMAL)
 				verseItemTxt.isFocusable = true
 				verseItemTxt.setFocusableInTouchMode(false)
 				//GDLC 18JUN25 This prevents text entry onto Paragraph VerseItem so that

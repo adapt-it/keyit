@@ -193,14 +193,18 @@ class VIMenu(curItOfst: Int)
 					val viMI7 = VIMenuItem("Paragraph Before", "crParaBef", "C")
 					VIMenuItems.add(viMI7)
 				}
+				if (curItOfst == 0 || ( (curItOfst > 0) && (chInst.BibItems[curItOfst - 1].itTyp != "Heading") ) ) {
+					val viMI8 = VIMenuItem("Heading After", "crHdAft", "C")
+					VIMenuItems.add(viMI8)
+				}
 				if (curItOfst == 0 || (bibItem.itTyp != "VerseCont") ) {
 					if (!bibItem.isBrg && nextItTyp != "ParaCont") {
-						val viMI8 = VIMenuItem("Paragraph In", "crParaCont", "C")
-						VIMenuItems.add(viMI8)
+						val viMI9 = VIMenuItem("Paragraph In", "crParaCont", "C")
+						VIMenuItems.add(viMI9)
 					}
 				}
-				val viMI9 = VIMenuItem("Parallel Ref", "crPalRef", "C")
-				VIMenuItems.add(viMI9)
+				val viMI10 = VIMenuItem("Parallel Ref", "crPalRef", "C")
+				VIMenuItems.add(viMI10)
 				val brgPossible: Boolean
 				if (bibItem.isBrg) {
 					brgPossible = (bibItem.lvBrg < chInst.numVs)
@@ -211,18 +215,18 @@ class VIMenu(curItOfst: Int)
 					// GDLC 24AUG21 Don't allow verse to be bridged with a following bridge
 					val nextVI = chInst.BibItems[curItOfst + 1]
 					if (nextVI.itTyp == "Verse" && !nextVI.isBrg) {
-						val viMI10 = VIMenuItem("Bridge Next Verse", "brid", "B")
-						VIMenuItems.add(viMI10)
+						val viMI11 = VIMenuItem("Bridge Next Verse", "brid", "B")
+						VIMenuItems.add(viMI11)
 					}
 				}
 				if (bibItem.isBrg) {
-					val viMI11 = VIMenuItem("Unbridge Last Verse", "unBrid", "U")
-					VIMenuItems.add(viMI11)
+					val viMI12 = VIMenuItem("Unbridge Last Verse", "unBrid", "U")
+					VIMenuItems.add(viMI12)
 				}
 			}
 		else -> {
-				val viMI1 = VIMenuItem("***MENU ERROR***", "NOOP", "C")
-				VIMenuItems.add(viMI1)
+			val viMI1 = VIMenuItem("***MENU ERROR***", "NOOP", "C")
+			VIMenuItems.add(viMI1)
 			}
 		}
 		numRows = VIMenuItems.size

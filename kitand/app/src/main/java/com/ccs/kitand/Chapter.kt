@@ -348,6 +348,7 @@ class Chapter(
 				"delPCon" -> deleteParagraphCont()
 				"delVCon" -> deleteVerseCont()
 				"crHdBef" -> createSubjHeading()
+				"crHdAft" -> createSubjHdAftP()
 				"delHead" -> deleteSubjHeading()
 				"crPalRef" -> createParallelRef()
 				"delPalRef" -> deleteParallelRef()
@@ -722,6 +723,25 @@ class Chapter(
 	fun createSubjHeading() {
 		try {
 			val newitemID = dao.verseItemsInsertRec (chID, currVN, "Heading", currVN * 100 - 20, "", 0, false, 0)
+			// Increment number of items
+			numIt = numIt + 1
+			// Make the new Subject Heading the current VerseItem
+			currIt = newitemID.toInt()
+			// Update the database Chapter record so that the new Subject Heading item becomes the current item
+			try {
+				dao.chaptersUpdateRecPub (chID, numIt, newitemID.toInt(), currVN)
+			} catch (e:SQLiteUpdateRecExc) {
+				throw SQLiteUpdateRecExc(e.message + "\ncreateSubjHeading()")
+			}
+		} catch (e:SQLiteCreateRecExc) {
+			throw SQLiteCreateRecExc(e.message + "\ncreateSubjHeading()")
+		}
+	}
+
+	// Create subject heading after paragraph break
+	fun createSubjHdAftP() {
+		try {
+			val newitemID = dao.verseItemsInsertRec (chID, currVN, "Heading", currVN * 100 - 5, "", 0, false, 0)
 			// Increment number of items
 			numIt = numIt + 1
 			// Make the new Subject Heading the current VerseItem

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#9200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
-    <color name="offwhitebkg">#EEEEEE</color>
+    <color name="background">#FFFFFF</color>
+    <color name="colorBackground">#CCCCFF</color>
+    <color name="selectedBackground">#6666FF</color>
+    <color name="backgroundTint">#DDDDDD</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorSecondary">#666666</color>
+    <color name="colorAccent">#360CB5</color>
+    <color name="offwhitebkg">#AABBCC</color>
+    <color name="colorButtonNormal">#AAAAAA</color>
+    <color name="colorBackgroundFloating">#FFCCCC</color>
+    <color name="colorForeground">#000000</color>
+    <color name="popupBackground">#FFCCCC</color>
 </resources>

@@ -2,7 +2,6 @@ package com.ccs.kitand
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Html
 import android.view.*
 import android.view.ViewTreeObserver.OnPreDrawListener
 import android.widget.*
@@ -158,13 +157,13 @@ class EditChapterActivity : AppCompatActivity() {
 	// either the Back button or the USFM button
 	override fun onOptionsItemSelected(item: MenuItem): Boolean {
 		when (item.getItemId()) {
-			android.R.id.home -> onBackPressed()
+			android.R.id.home -> onBackPressed()	// Deprecated so call a save of VerseItem???
 			R.id.export -> goToExport()
 		}
 		return true
 	}
 
-	override fun onBackPressed() {
+	override fun onBackPressed() {	// <<-- Deprecated
 		goToChapters()
 	}
 
@@ -203,6 +202,7 @@ class EditChapterActivity : AppCompatActivity() {
 		val inflater = getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
 		val popupView = inflater.inflate(R.layout.activity_popup, null)
 		popupWin = PopupWindow(popupView, popupWidth, popupHeight, true)
+//GDLC 11FEB26		popupWin!!.setBackgroundDrawable(android.R.attr.drawable.popborder)
 		val layoutMgr = LinearLayoutManager(applicationContext)
 		val popupMenu = popupView.findViewById<RecyclerView>(R.id.popmenu)
 		popupMenu.apply  {
@@ -214,7 +214,6 @@ class EditChapterActivity : AppCompatActivity() {
 			// specify a viewAdapter
 			adapter = PopupAdapter(curPoMenu!!, edChAct)
 		}
-//		popupWin!!.setOutsideTouchable(true)
 
 		popupWin!!.showAtLocation(
 			recyclerView, // View for popup window to appear over

@@ -5,7 +5,7 @@
     android:id="@+id/layout_edit"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3D9FA"
+    android:background="?android:attr/colorBackground"
     android:fitsSystemWindows="true"
     tools:context=".EditChapterActivity">
 
@@ -16,7 +16,7 @@
         android:layout_marginTop="4dp"
         android:text="@string/txt_ed_prompt"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="?android:attr/textColorPrimary"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,7 +29,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
-        android:background="#FFFFFF"
+        android:background="?android:attr/colorBackground"
         android:clickable="true"
         android:clipToPadding="false"
         android:focusable="true"

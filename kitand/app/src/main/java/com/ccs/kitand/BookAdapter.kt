@@ -8,6 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+
+import android.content.Context
+import android.util.TypedValue
+import androidx.annotation.AttrRes
+import androidx.annotation.ColorInt
+import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColorInt
 
 class BookAdapter (
@@ -38,9 +44,12 @@ class BookAdapter (
 		val curChapID = BibBooks[position].curChID
 		val curChNum = BibBooks[position].curChNum
 		var bookInfo = ""
+
+		val colorHighlight = chBkAct.resolveColorAttr(android.R.attr.colorPressedHighlight)
+
 		if (book.chapRCr) {
 			// Set colour of text
-			holder.bookName.setTextColor("#0000CD".toColorInt())
+			holder.bookName.setTextColor(colorHighlight)
 			// GDLC 29MAY25 use Ps if Psalms
 			if (curChapID > 0) {
 					bookInfo = (if (book.bkID == 19) "Ps " else "Ch") + curChNum.toString() + " "
@@ -51,7 +60,7 @@ class BookAdapter (
 		// Set info text
 		bookInfo = bookInfo + " >"
 		holder.bookInfo.setText(bookInfo)
-		holder.bookInfo.setTextColor("#0000CD".toColorInt())
+		holder.bookInfo.setTextColor(colorHighlight)
 
 /*		// Listeners for Book selected or Book name edit
 		holder.bookName.setOnClickListener(View.OnClickListener {
@@ -84,6 +93,19 @@ class BookAdapter (
 	override fun getItemCount(): Int {
 		val numItems = BibBooks.size
 		return numItems
+	}
+
+	fun Context.resolveThemeAttr(@AttrRes attrRes: Int): TypedValue {
+		val typedValue = TypedValue()
+		theme.resolveAttribute(attrRes, typedValue, true)
+		return typedValue
+	}
+
+	@ColorInt
+	fun Context.resolveColorAttr(@AttrRes colorAttr: Int): Int {
+		val resolvedAttr = resolveThemeAttr(colorAttr)
+		val colorRes = if (resolvedAttr.resourceId != 0) resolvedAttr.resourceId else resolvedAttr.data
+		return ContextCompat.getColor(this, colorRes)
 	}
 
 	inner class BookCell(itemView: View) : RecyclerView.ViewHolder(itemView) {

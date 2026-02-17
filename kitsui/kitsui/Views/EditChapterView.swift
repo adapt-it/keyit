@@ -2,6 +2,7 @@
 //  EditChapterView.swift
 //  kitios
 //
+//	GDLC 4FEB26 Removed now redundant divider line after each VerseItemView
 //	GDLC 20FEB25 onAppear() sets Bible.launching to false
 //
 //  Created by Graeme Costin on 31/12/2023.
@@ -28,7 +29,9 @@ struct EditChapterView: View {
 					.font(.system(size: 15))
 				ScrollViewReader { proxy in
 					List(chInst.BibItems, id: \.self) { vItem in
-						VerseItemView(vItem: vItem).environmentObject(bibMod)
+						VerseItemView(vItem: vItem)
+							.environmentObject(bibMod)
+							.listRowSeparator(.hidden)
 					}
 //					List {
 //						ForEach(chInst.BibItems, id: \.self) { vItem in

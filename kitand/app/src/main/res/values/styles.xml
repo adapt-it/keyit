@@ -1,13 +1,21 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <!-- "Theme.AppCompat.DayNight" -->
         <!-- "Theme.MaterialComponents.DayNight"-->
         <!-- currently "Theme.AppCompat.Light.DarkActionBar" -->
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:colorBackground">@color/offwhitebkg</item>
+        <item name="android:itemBackground">@color/selectedBackground</item>item>
+        <item name="android:backgroundTint">@color/backgroundTint</item>"
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorSecondary">@color/colorSecondary</item>
+        <item name="android:colorPressedHighlight">@color/colorAccent</item>
+        <item name="android:colorButtonNormal">@color/colorButtonNormal</item>
+        <item name="android:colorBackgroundFloating">@color/colorBackgroundFloating</item>
+        <item name="android:colorForeground">@color/colorForeground</item>
+        <item name="android:popupBackground">@color/popupBackground</item>
     </style>
 
     <style name="AppTheme.PopoverTheme">
@@ -15,4 +23,5 @@
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:windowActionBar">false</item>
     </style>
+
 </resources>

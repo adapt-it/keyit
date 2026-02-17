@@ -4,7 +4,7 @@
     android:id="@+id/verseitemlayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#E1E1E1">
+    android:background="?android:attr/colorBackground">
 
     <Button
         android:id="@+id/btn_popover"
@@ -12,7 +12,8 @@
         android:layout_height="33dp"
         android:layout_margin="0dp"
         android:layout_marginStart="8dp"
-        android:backgroundTint="#FFFFFF"
+        android:backgroundTint="?android:attr/colorBackground"
+        android:textColor="?android:attr/textColorPrimary"
         android:padding="2sp"
         android:text="Popover"
         android:textAlignment="center"
@@ -28,7 +29,7 @@
         android:layout_gravity="start|top"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        android:background="#FFFFFF"
+        android:background="?android:attr/colorBackground"
         android:clickable="true"
         android:cursorVisible="true"
         android:inputType="textMultiLine|textNoSuggestions"
@@ -40,7 +41,7 @@
         android:singleLine="false"
         android:text="verseitem"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="?android:attr/textColorPrimary"
         android:textIsSelectable="true"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="4dp"
-        android:background="?android:attr/listDivider"
+        android:background="?android:attr/colorBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_verseitem" />

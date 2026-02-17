@@ -110,6 +110,7 @@ class ChooseChapterActivity : AppCompatActivity() {
 			val prompt =
 				if (bkInst!!.bkID == 19) "Choose " + ps_name else "Choose " + ch_name + " of " + bkInst!!.bkName
 			txt_ch_prompt.setText(prompt)
+			txt_ch_prompt.paint.isUnderlineText = true
 			viewManager = LinearLayoutManager(this)
 			viewAdapter = ChapterAdapter(bkInst!!.BibChaps, this) as ChapterAdapter
 			recyclerView = findViewById<RecyclerView>(R.id.lst_chapters).apply {
